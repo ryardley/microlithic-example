@@ -4,6 +4,7 @@
     "outDir": "build",
     "lib": ["es6", "dom", "esnext"],
     "jsx": "react",
+    "noEmit": false,
     "module": "commonjs",
     "rootDir": "src",
     "experimentalDecorators": true

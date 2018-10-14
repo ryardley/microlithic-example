@@ -1,6 +1,7 @@
 import ApolloClient from 'apollo-boost';
 import * as React from 'react';
 import { ApolloProvider } from 'react-apollo';
+import { hot } from 'react-hot-loader';
 import { BrowserRouter } from 'react-router-dom';
 
 import Auth from '../auth/Auth';
@@ -25,4 +26,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default hot(module)(App);

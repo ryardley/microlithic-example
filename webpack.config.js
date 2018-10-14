@@ -5,17 +5,19 @@ const { NODE_ENV } = process.env;
 const config = {
   entry:
     NODE_ENV === 'development'
-      ? [
-          'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
-          './src/client.ts'
-        ]
-      : './src/client.ts',
+      ? ['webpack-hot-middleware/client', './src/client']
+      : './src/client',
   mode: NODE_ENV || 'development',
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        use: {
+          loader: 'ts-loader',
+          options: {
+            transpileOnly: true //HMR doesn't work without this
+          }
+        },
         exclude: /node_modules/
       }
     ]
@@ -29,12 +31,7 @@ const config = {
     ...(NODE_ENV === 'production' ? { path: runPath('static') } : {})
   },
   plugins:
-    NODE_ENV === 'development'
-      ? [
-          new webpack.HotModuleReplacementPlugin(),
-          new webpack.NoEmitOnErrorsPlugin()
-        ]
-      : []
+    NODE_ENV === 'development' ? [new webpack.HotModuleReplacementPlugin()] : []
 };
 
 module.exports = config;
