@@ -1,0 +1,10 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["./node_modules/tsmill/tslint-default.json"],
+  "jsRules": {},
+  "rules": {
+    "interface-over-type-literal": false,
+    "no-console": false
+  },
+  "rulesDirectory": []
+}

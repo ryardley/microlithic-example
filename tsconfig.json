@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "build",
+    "lib": ["es6", "dom", "esnext"],
+    "jsx": "react",
+    "module": "commonjs",
+    "rootDir": "src",
+    "experimentalDecorators": true
+  },
+  "extends": "./node_modules/tsmill/tsconfig-default.json",
+  "include": ["src"],
+  "exclude": ["node_modules", "src/**/*.test.ts"]
+}

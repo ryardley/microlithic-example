@@ -1,0 +1,5 @@
+{
+  "typescript": ["src/server"],
+  "webpack": ["./webpack.config.js"],
+  "static": ["public"]
+}
