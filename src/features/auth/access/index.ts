@@ -1,7 +1,12 @@
 import { Application, Request } from 'express';
-import session from 'express-session';
-import { AccessContext, UserToken } from '../types';
+import session, { MemoryStore } from 'express-session';
+import handleEvents from '../sync';
+import { AccessContext } from '../types';
 export function applyMiddleware({ app }: { app: Application }) {
+  const store = new MemoryStore();
+
+  handleEvents(store);
+
   app.use(
     session({
       cookie: {
@@ -9,7 +14,8 @@ export function applyMiddleware({ app }: { app: Application }) {
       },
       resave: false,
       saveUninitialized: true,
-      secret: 'asdhasgdjhasgdjhas'
+      secret: 'asdhasgdjhasgdjhas',
+      store
     })
   );
 
@@ -26,16 +32,7 @@ export function apolloContext({
 }: ApolloContext): AccessContext {
   return {
     ...context,
-    doLogin: (userToken: UserToken) => {
-      if (req && req.session) {
-        req.session.userToken = userToken;
-      }
-    },
-    doLogout: () => {
-      if (req && req.session) {
-        delete req.session.userToken;
-      }
-    },
+    sid: req.sessionID,
     userToken: req && req.session && req.session.userToken
   };
 }

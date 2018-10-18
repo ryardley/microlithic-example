@@ -24,11 +24,11 @@ export const typeDefs = gql`
 
 export const resolvers: IResolvers = {
   Mutation: {
-    login: async (_, { email, password }, { doLogin }) => {
-      return await login(email, password, doLogin);
+    login: async (_, { email, password }, { sid }) => {
+      return await login(email, password, sid);
     },
-    logout: async (_, __, auth) => {
-      return await logout(auth.userToken, auth.doLogout);
+    logout: async (_, __, { sid }) => {
+      return await logout(sid);
     },
     register: async (_, { email, password, role }) => {
       return await register(email, password, role);

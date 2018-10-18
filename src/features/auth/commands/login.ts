@@ -1,11 +1,12 @@
 import * as bcrypt from 'bcryptjs';
+import { publish } from '../../../eventbus';
 import { findUserByEmail } from '../queries';
-import { DoLoginFn } from '../types';
+import UserLoggedInEvent from '../sync/UserLoggedInEvent';
 
 export default async function login(
   email: string,
   password: string,
-  doLogin: DoLoginFn
+  sid: string
 ) {
   const user = await findUserByEmail(email);
   if (!user) {
@@ -26,7 +27,7 @@ export default async function login(
     role: user.role
   };
 
-  doLogin(verifiedUser);
+  publish(UserLoggedInEvent.symbol, new UserLoggedInEvent(verifiedUser, sid));
 
   return true;
 }

@@ -1,13 +1,8 @@
-import { DoLogoutFn } from '../types';
-import { UserToken } from '../types';
+import { publish } from '../../../eventbus';
+import UserLoggedOutEvent from '../sync/UserLoggedOutEvent';
 
-export default async function logout(
-  userToken: UserToken,
-  doLogout: DoLogoutFn
-) {
-  if (['admin', 'user'].includes(userToken.role)) {
-    doLogout();
-    return true;
-  }
-  return false;
+export default async function logout(sid: string) {
+  publish(UserLoggedOutEvent.symbol, new UserLoggedOutEvent(sid));
+
+  return true;
 }

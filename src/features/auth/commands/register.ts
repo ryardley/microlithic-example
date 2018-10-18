@@ -1,5 +1,6 @@
 import * as bcrypt from 'bcryptjs';
-import User from '../models/User';
+import { publish } from '../../../eventbus';
+import UserRegisteredEvent from '../sync/UserRegisteredEvent';
 
 export default async function register(
   email: string,
@@ -7,11 +8,10 @@ export default async function register(
   role: 'admin' | 'user'
 ) {
   const hashedPassword = await bcrypt.hash(password, 10);
+  publish(
+    UserRegisteredEvent.symbol,
+    new UserRegisteredEvent(email, hashedPassword, role)
+  );
 
-  await User.create({
-    email,
-    password: hashedPassword,
-    role
-  }).save();
   return true;
 }
