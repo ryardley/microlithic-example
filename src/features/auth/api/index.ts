@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 import { IResolvers } from 'graphql-tools';
-import { findUserById } from '../queries';
+import { me } from '../queries';
 
 import login from '../commands/login';
 import logout from '../commands/logout';
@@ -36,7 +36,7 @@ export const resolvers: IResolvers = {
   },
   Query: {
     me: async (_, __, { userToken }) => {
-      return findUserById(userToken, userToken && userToken.id);
+      return me(userToken, userToken && userToken.id);
     }
   }
 };

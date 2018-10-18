@@ -1,2 +1,1 @@
-export { default as findUserById } from './findUserById';
-export { default as findUserByEmail } from './findUserByEmail';
+export { default as me } from './me';
