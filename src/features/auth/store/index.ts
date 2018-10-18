@@ -20,7 +20,7 @@ function getSession(
   });
 }
 
-export default (store: MemoryStore) => {
+function handleEvents(store: MemoryStore) {
   // UserLoggedInEvent
   bus.subscribe(UserLoggedInEvent.symbol, async (event: UserLoggedInEvent) => {
     const session = await getSession(store, event.sid);
@@ -51,15 +51,19 @@ export default (store: MemoryStore) => {
       });
     }
   );
+}
 
-  bus.subscribe(
-    UserRegisteredEvent.symbol,
-    async (event: UserRegisteredEvent) => {
-      await User.create({
-        email: event.email,
-        password: event.password,
-        role: event.role
-      }).save();
-    }
-  );
-};
+bus.subscribe(
+  UserRegisteredEvent.symbol,
+  async (event: UserRegisteredEvent) => {
+    await User.create({
+      email: event.email,
+      password: event.password,
+      role: event.role
+    }).save();
+  }
+);
+
+const sessionCache = new MemoryStore();
+handleEvents(sessionCache);
+export default sessionCache;

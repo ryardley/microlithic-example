@@ -1,6 +1,6 @@
 import * as bcrypt from 'bcryptjs';
 import { publish } from '../../../eventbus';
-import UserLoggedInEvent from '../sync/UserLoggedInEvent';
+import UserLoggedInEvent from '../store/UserLoggedInEvent';
 import findUserByEmail from './data/findUserByEmail';
 
 export default async function login(

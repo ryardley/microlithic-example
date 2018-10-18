@@ -1,6 +1,6 @@
 import * as bcrypt from 'bcryptjs';
 import { publish } from '../../../eventbus';
-import UserRegisteredEvent from '../sync/UserRegisteredEvent';
+import UserRegisteredEvent from '../store/UserRegisteredEvent';
 
 export default async function register(
   email: string,

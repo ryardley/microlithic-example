@@ -1,12 +1,9 @@
 import { Application, Request } from 'express';
-import session, { MemoryStore } from 'express-session';
-import handleEvents from '../sync';
+import session from 'express-session';
+import store from '../store';
 import { AccessContext } from '../types';
+
 export function applyMiddleware({ app }: { app: Application }) {
-  const store = new MemoryStore();
-
-  handleEvents(store);
-
   app.use(
     session({
       cookie: {
