@@ -1,17 +1,15 @@
-import gql from "graphql-tag";
-import * as React from "react";
-import { withApollo, WithApolloClient } from "react-apollo";
-import { RouteComponentProps, withRouter } from "react-router-dom";
-import LoginForm from "./LoginForm";
-import { LoginUser, LoginUserVariables } from "./types/LoginUser";
+import gql from 'graphql-tag';
+import * as React from 'react';
+import { withApollo, WithApolloClient } from 'react-apollo';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
+import LoginForm from './LoginForm';
+import { LoginUser, LoginUserVariables } from './types/LoginUser';
 
 type Props = {};
 
 const LOGIN_USER_MUTATION = gql`
   mutation LoginUser($email: String!, $password: String!) {
-    login(email: $email, password: $password) {
-      email
-    }
+    login(email: $email, password: $password)
   }
 `;
 class Register extends React.Component<
@@ -28,7 +26,7 @@ class Register extends React.Component<
       variables: { email, password }
     });
     await client.resetStore();
-    history.push("/");
+    history.push('/');
     return true;
   };
 }

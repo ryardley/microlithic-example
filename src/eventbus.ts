@@ -1,0 +1,18 @@
+import { filter } from 'rxjs/operators';
+import { createConsumer, createProducer } from 'rxmsg';
+import { createLoopbackConnector } from 'rxmsg/loopback';
+
+const { receiver, sender } = createLoopbackConnector();
+
+const producer = createProducer(sender());
+const consumer = createConsumer(receiver());
+
+export function publish(eventName: string, payload: any) {
+  producer.next({ content: payload, route: eventName });
+}
+
+export function subscribe<T>(eventName: string, callback: (payload: T) => any) {
+  consumer
+    .pipe(filter(m => m.route === eventName))
+    .subscribe((m: { payload: T }) => callback(m.payload));
+}

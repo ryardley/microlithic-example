@@ -12,4 +12,5 @@ export interface RegisterUser {
 export interface RegisterUserVariables {
   email: string;
   password: string;
+  role: string;
 }

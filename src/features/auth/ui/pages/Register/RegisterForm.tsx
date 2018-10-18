@@ -3,7 +3,11 @@ import * as React from 'react';
 import Layout from '../../../../layout/ui';
 
 type Props = {
-  doRegistration: (email: string, password: string) => Promise<boolean>;
+  doRegistration: (
+    email: string,
+    password: string,
+    role: string
+  ) => Promise<boolean>;
 };
 
 type State = {
@@ -67,7 +71,7 @@ export default class LoginForm extends React.Component<Props, State> {
     const { email, password } = this.state;
 
     this.setState({
-      registered: await doRegistration(email, password)
+      registered: await doRegistration(email, password, 'user')
     });
   };
 

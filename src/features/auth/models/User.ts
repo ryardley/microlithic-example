@@ -10,4 +10,7 @@ export default class User extends BaseEntity {
 
   @Column('text')
   public password: string;
+
+  @Column('text')
+  public role: 'admin' | 'user';
 }
