@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 import * as React from 'react';
 import { Query } from 'react-apollo';
-import Layout from '../../../layout/Layout';
+import Layout from '../../../layout/ui';
 import { GetMe } from './types/GetMe';
 
 const DASHBOARD_QUERY = gql`

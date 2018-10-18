@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { routeLoader } from '../../routeLoader';
+import routeLoader from '../../utils/routeLoader';
 
 import { Route, Switch } from 'react-router';
 
