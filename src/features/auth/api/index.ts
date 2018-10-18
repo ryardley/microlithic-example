@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 import { IResolvers } from 'graphql-tools';
-import { me } from '../queries';
+import { currentUser } from '../queries';
 
 import login from '../commands/login';
 import logout from '../commands/logout';
@@ -12,7 +12,7 @@ export const typeDefs = gql`
   }
 
   type Query {
-    me: User
+    currentUser: User
   }
 
   type Mutation {
@@ -35,8 +35,8 @@ export const resolvers: IResolvers = {
     }
   },
   Query: {
-    me: async (_, __, { userToken }) => {
-      return me(userToken, userToken && userToken.id);
+    currentUser: async (_, __, { userToken }) => {
+      return currentUser(userToken, userToken && userToken.id);
     }
   }
 };

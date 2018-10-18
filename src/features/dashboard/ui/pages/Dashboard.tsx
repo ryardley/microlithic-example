@@ -2,18 +2,18 @@ import gql from 'graphql-tag';
 import * as React from 'react';
 import { Query } from 'react-apollo';
 import Layout from '../../../layout/ui';
-import { GetMe } from './types/GetMe';
+import { GetCurrentUser } from './types/GetCurrentUser';
 
 const DASHBOARD_QUERY = gql`
-  query GetMe {
-    me {
+  query GetCurrentUser {
+    currentUser {
       email
     }
   }
 `;
 
 export default () => (
-  <Query<GetMe> query={DASHBOARD_QUERY}>
+  <Query<GetCurrentUser> query={DASHBOARD_QUERY}>
     {({ loading, data }) => {
       if (loading || !data) {
         return (
@@ -22,7 +22,7 @@ export default () => (
           </Layout>
         );
       }
-      if (!data.me) {
+      if (!data.currentUser) {
         return (
           <Layout>
             <h1>No Authorized User</h1>
@@ -32,7 +32,7 @@ export default () => (
 
       return (
         <Layout>
-          <h1>You are logged in as: {data.me.email}</h1>
+          <h1>You are logged in as: {data.currentUser.email}</h1>
         </Layout>
       );
     }}

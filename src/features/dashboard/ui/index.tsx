@@ -2,10 +2,10 @@ import * as React from 'react';
 import { Route, Switch } from 'react-router';
 import routeLoader from '../../utils/routeLoader';
 
-const Me = routeLoader(() => import('./pages/Me'));
+const Dashboard = routeLoader(() => import('./pages/Dashboard'));
 
 export default () => (
   <Switch>
-    <Route path="/" exact={true} component={Me} />
+    <Route path="/" exact={true} component={Dashboard} />
   </Switch>
 );

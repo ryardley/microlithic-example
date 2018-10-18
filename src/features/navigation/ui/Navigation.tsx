@@ -8,7 +8,7 @@ type Props = {};
 
 const NAVIGATION_DATA_QUERY = gql`
   query NavigationData {
-    me {
+    currentUser {
       email
     }
   }
@@ -22,18 +22,18 @@ class Navigation extends React.Component<WithApolloClient<Props>> {
           if (!data) {
             return null;
           }
-          const { me } = data;
+          const { currentUser } = data;
           return (
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <Link to="/">Dashboard</Link>
-              {(!me || !me.email) && (
+              {(!currentUser || !currentUser.email) && (
                 <React.Fragment>
                   <Link to="/login">Login</Link>
                   <Link to="/register">Register</Link>
                 </React.Fragment>
               )}
-              {me &&
-                me.email && (
+              {currentUser &&
+                currentUser.email && (
                   <a href="#" onClick={this.handleLogoutClicked}>
                     Logout
                   </a>

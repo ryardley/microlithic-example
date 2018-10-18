@@ -2,13 +2,13 @@
 // This file was automatically generated and should not be edited.
 
 // ====================================================
-// GraphQL query operation: GetMe
+// GraphQL query operation: GetCurrentUser
 // ====================================================
 
-export interface GetMe_me {
+export interface GetCurrentUser_me {
   email: string;
 }
 
-export interface GetMe {
-  me: GetMe_me | null;
+export interface GetCurrentUser {
+  currentUser: GetCurrentUser_me | null;
 }

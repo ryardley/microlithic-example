@@ -10,5 +10,5 @@ export interface NavigationData_me {
 }
 
 export interface NavigationData {
-  me: NavigationData_me | null;
+  currentUser: NavigationData_me | null;
 }
