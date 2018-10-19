@@ -2,8 +2,8 @@ import { ApolloServer } from 'apollo-server-express';
 import express from 'express';
 import proxy from 'http-proxy-middleware';
 import { createConnection } from 'typeorm';
-import * as auth from './features/auth/access';
-import { resolvers, typeDefs } from './features/auth/api';
+import * as auth from './features/auth/middleware';
+import { resolvers, typeDefs } from './features/auth/routes';
 
 const startServer = async () => {
   const app = express();
@@ -28,3 +28,9 @@ const startServer = async () => {
 };
 
 startServer();
+
+// applyAccess
+// applyApi
+// applyCommands
+// applyEvents
+// applyQueries

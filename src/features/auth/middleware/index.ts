@@ -1,7 +1,7 @@
 import { Application, Request } from 'express';
 import session from 'express-session';
-import store from '../store';
 import { AccessContext } from '../types';
+import store from './store';
 
 export function applyMiddleware({ app }: { app: Application }) {
   app.use(

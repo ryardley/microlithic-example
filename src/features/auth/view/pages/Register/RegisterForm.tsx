@@ -1,32 +1,47 @@
 import * as React from 'react';
 
-import Layout from '../../../../layout/ui';
+import Layout from '../../../../layout/view';
 
 type Props = {
-  doLogin: (email: string, password: string) => Promise<boolean>;
+  doRegistration: (
+    email: string,
+    password: string,
+    role: string
+  ) => Promise<boolean>;
 };
 
 type State = {
   email: string;
   password: string;
+  registered: boolean;
 };
 
 export default class LoginForm extends React.Component<Props, State> {
   public state = {
     email: '',
-    password: ''
+    password: '',
+    registered: false
   };
   private form: React.RefObject<HTMLFormElement> = React.createRef();
   public render() {
-    const { email, password } = this.state;
-
+    const { email, password, registered } = this.state;
+    if (registered) {
+      return (
+        <Layout>
+          <div>
+            <h1>Thank you</h1>
+            <div>Thank you for registering</div>
+          </div>
+        </Layout>
+      );
+    }
     return (
       <Layout>
         <form ref={this.form} onSubmit={this.handleSubmit}>
-          <h1>Login</h1>
+          <h1>Register</h1>
           <div>
             <input
-              autoComplete="login.email"
+              autoComplete="register.email"
               type="text"
               name="email"
               onChange={this.handleChange}
@@ -35,7 +50,7 @@ export default class LoginForm extends React.Component<Props, State> {
           </div>
           <div>
             <input
-              autoComplete="login.password"
+              autoComplete="register.password"
               type="password"
               name="password"
               onChange={this.handleChange}
@@ -43,7 +58,7 @@ export default class LoginForm extends React.Component<Props, State> {
             />
           </div>
           <div>
-            <button>Login</button>
+            <button>Register</button>
           </div>
         </form>
       </Layout>
@@ -51,15 +66,13 @@ export default class LoginForm extends React.Component<Props, State> {
   }
 
   private handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    const { doLogin } = this.props;
     event.preventDefault();
+    const { doRegistration } = this.props;
     const { email, password } = this.state;
 
-    try {
-      await doLogin(email, password);
-    } catch (err) {
-      console.error(err);
-    }
+    this.setState({
+      registered: await doRegistration(email, password, 'user')
+    });
   };
 
   private handleChange = () => {

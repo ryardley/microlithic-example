@@ -7,9 +7,10 @@ const { receiver, sender } = createLoopbackConnector();
 const producer = createProducer(sender());
 const consumer = createConsumer(receiver());
 
-export function publish(eventName: string, payload: any) {
+export async function publish(eventName: string, payload: any) {
   console.log(JSON.stringify({ eventName, payload }));
   producer.next({ content: payload, route: eventName });
+  return true; // is ack
 }
 
 export function subscribe<T>(eventName: string, callback: (payload: T) => any) {

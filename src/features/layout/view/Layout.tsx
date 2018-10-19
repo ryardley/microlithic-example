@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Navigation from '../../navigation/ui';
+import Navigation from '../../navigation/view';
 
 type Props = {
   children: React.ReactNode;

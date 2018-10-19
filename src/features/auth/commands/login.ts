@@ -1,11 +1,11 @@
 import * as bcrypt from 'bcryptjs';
 import { publish } from '../../../eventbus';
-import UserLoggedInEvent from '../store/UserLoggedInEvent';
-import findUserByEmail from './data/findUserByEmail';
+import UserLoggedInEvent from '../events/UserLoggedInEvent';
+import { findUserByEmail } from './store';
 
 export default async function login(
   email: string,
-  password: string,
+  password: string, // hashed and salted clientside eventually
   sid: string
 ) {
   const user = await findUserByEmail(email);
@@ -27,7 +27,8 @@ export default async function login(
     role: user.role
   };
 
-  publish(UserLoggedInEvent.symbol, new UserLoggedInEvent(verifiedUser, sid));
-
-  return true;
+  return await publish(
+    UserLoggedInEvent.symbol,
+    new UserLoggedInEvent(verifiedUser, sid)
+  );
 }

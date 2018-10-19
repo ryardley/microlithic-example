@@ -4,8 +4,8 @@ import { ApolloProvider } from 'react-apollo';
 import { hot } from 'react-hot-loader';
 import { BrowserRouter } from 'react-router-dom';
 
-import Auth from '../auth/ui';
-import Dashboard from '../dashboard/ui';
+import Auth from '../auth/view';
+import Dashboard from '../dashboard/view';
 
 const client = new ApolloClient({
   uri: 'http://localhost:4000/graphql'
