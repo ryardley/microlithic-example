@@ -11,6 +11,7 @@ const PORT = 4000 || process.env.PORT;
 
 const startServer = async () => {
   try {
+    // express app and middleware
     const app = flow(
       serveGateway,
       serveRoutes,
@@ -19,6 +20,8 @@ const startServer = async () => {
 
     // start command and query listeners
     // as effectively separate processes
+    // they are not exposed to the web
+    // but receive events via the event bus
     await serveCommands();
     await serveQueries();
 
