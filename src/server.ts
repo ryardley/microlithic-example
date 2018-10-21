@@ -2,9 +2,9 @@ import express from 'express';
 import flow from 'lodash/flow';
 import { applyMiddleware as serveView } from 'tsmill/server';
 
-import listenForCommands from './commands';
+import serveCommands from './commands';
 import serveGateway from './gateway';
-import listenForQueries from './queries';
+import serveQueries from './queries';
 import serveRoutes from './routes';
 
 const PORT = 4000 || process.env.PORT;
@@ -18,8 +18,9 @@ const startServer = async () => {
     )(express());
 
     // start command and query listeners
-    await listenForCommands();
-    await listenForQueries();
+    // as effectively separate processes
+    await serveCommands();
+    await serveQueries();
 
     app.listen({ port: PORT }, () => {
       console.log(`Server listening at http://localhost:${PORT}`);
