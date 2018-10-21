@@ -13,8 +13,8 @@ const startServer = async () => {
   try {
     const app = flow(
       serveGateway,
-      serveView,
-      serveRoutes
+      serveRoutes,
+      serveView
     )(express());
 
     // start command and query listeners
