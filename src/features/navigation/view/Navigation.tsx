@@ -1,23 +1,16 @@
-import gql from 'graphql-tag';
 import * as React from 'react';
-import { Query, withApollo, WithApolloClient } from 'react-apollo';
 import { Link } from 'react-router-dom';
-import { NavigationData } from './types/NavigationData';
+import CurrentUserQuery from '../../auth/view/CurrentUserQuery';
+import withLogoutUser, {
+  WithLogoutUserProps
+} from '../../auth/view/withLogoutUser';
 
 type Props = {};
 
-const NAVIGATION_DATA_QUERY = gql`
-  query NavigationData {
-    currentUser {
-      email
-    }
-  }
-`;
-
-class Navigation extends React.Component<WithApolloClient<Props>> {
+class Navigation extends React.Component<WithLogoutUserProps<Props>> {
   public render() {
     return (
-      <Query<NavigationData> query={NAVIGATION_DATA_QUERY}>
+      <CurrentUserQuery>
         {({ data }) => {
           if (!data) {
             return null;
@@ -41,24 +34,14 @@ class Navigation extends React.Component<WithApolloClient<Props>> {
             </div>
           );
         }}
-      </Query>
+      </CurrentUserQuery>
     );
   }
-
-  public handleLogoutClicked = async (
-    e: React.SyntheticEvent<HTMLAnchorElement>
-  ) => {
-    const { client } = this.props;
+  private handleLogoutClicked = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    await client.mutate({
-      mutation: gql`
-        mutation LogoutUser {
-          logout
-        }
-      `
-    });
-    await client.resetStore();
+    const { doLogoutUser } = this.props;
+    doLogoutUser();
   };
 }
 
-export default withApollo<Props>(Navigation);
+export default withLogoutUser<Props>(Navigation);

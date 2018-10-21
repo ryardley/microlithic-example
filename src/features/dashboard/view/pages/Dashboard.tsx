@@ -1,19 +1,9 @@
-import gql from 'graphql-tag';
 import * as React from 'react';
-import { Query } from 'react-apollo';
+import CurrentUserQuery from '../../../auth/view/CurrentUserQuery';
 import Layout from '../../../layout/view';
-import { GetCurrentUser } from './types/GetCurrentUser';
-
-const DASHBOARD_QUERY = gql`
-  query GetCurrentUser {
-    currentUser {
-      email
-    }
-  }
-`;
 
 export default () => (
-  <Query<GetCurrentUser> query={DASHBOARD_QUERY}>
+  <CurrentUserQuery>
     {({ loading, data }) => {
       if (loading || !data) {
         return (
@@ -36,5 +26,5 @@ export default () => (
         </Layout>
       );
     }}
-  </Query>
+  </CurrentUserQuery>
 );
