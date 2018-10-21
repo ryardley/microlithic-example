@@ -1,23 +1,25 @@
 import express from 'express';
 import flow from 'lodash/flow';
-import { applyMiddleware } from 'tsmill/server';
-import { createConnection } from 'typeorm';
-import commands from './commands';
-import applyGateway from './gateway';
-import queries from './queries';
+import { applyMiddleware as serveView } from 'tsmill/server';
+
+import listenForCommands from './commands';
+import serveGateway from './gateway';
+import listenForQueries from './queries';
+import serveRoutes from './routes';
 
 const PORT = 4000 || process.env.PORT;
 
 const startServer = async () => {
   try {
-    await commands();
-    await queries();
-    await createConnection();
-
     const app = flow(
-      applyGateway,
-      applyMiddleware
+      serveGateway,
+      serveView,
+      serveRoutes
     )(express());
+
+    // start command and query listeners
+    await listenForCommands();
+    await listenForQueries();
 
     app.listen({ port: PORT }, () => {
       console.log(`Server listening at http://localhost:${PORT}`);
