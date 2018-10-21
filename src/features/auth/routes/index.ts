@@ -1,10 +1,11 @@
 import gql from 'graphql-tag';
 import { IResolvers } from 'graphql-tools';
-import { currentUser } from '../queries';
 
 import login from '../commands/login';
 import logout from '../commands/logout';
 import register from '../commands/register';
+
+import currentUser from '../queries/currentUser';
 
 export const typeDefs = gql`
   type User {

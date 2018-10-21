@@ -5,8 +5,8 @@ const { NODE_ENV } = process.env;
 const config = {
   entry:
     NODE_ENV === 'development'
-      ? ['webpack-hot-middleware/client', './src/client']
-      : './src/client',
+      ? ['webpack-hot-middleware/client', './src/view']
+      : './src/view',
   mode: NODE_ENV || 'development',
   module: {
     rules: [
@@ -15,7 +15,8 @@ const config = {
         use: {
           loader: 'ts-loader',
           options: {
-            transpileOnly: true //HMR doesn't work without this
+            transpileOnly: true, //HMR doesn't work without this
+            configFile: 'tsconfig-webpack.json'
           }
         },
         exclude: /node_modules/
@@ -28,6 +29,7 @@ const config = {
   output: {
     filename: 'client.js',
     publicPath: '/',
+    chunkFilename: '[name].bundle.js',
     ...(NODE_ENV === 'production' ? { path: runPath('static') } : {})
   },
   plugins:

@@ -1,9 +1,11 @@
 import { Application, Request } from 'express';
 import session from 'express-session';
 import { AccessContext } from '../types';
-import store from './store';
+import { init, store } from './store';
 
-export function applyMiddleware({ app }: { app: Application }) {
+init();
+
+export default function apply(app: Application) {
   app.use(
     session({
       cookie: {
