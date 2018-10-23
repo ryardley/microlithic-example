@@ -1,11 +1,11 @@
 import { Application, Request } from 'express';
 import session from 'express-session';
 import { AccessContext } from '../types';
-import { init, store } from './store';
-
-init();
+import createStore from './store';
 
 export default function apply(app: Application) {
+  const store = createStore();
+
   app.use(
     session({
       cookie: {

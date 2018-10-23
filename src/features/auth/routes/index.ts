@@ -1,11 +1,12 @@
 import gql from 'graphql-tag';
 import { IResolvers } from 'graphql-tools';
+import { sendCommand } from '../../../commandBus';
+import { fetch } from '../../../queryBus';
+// import login from '../commands/login';
+// import logout from '../commands/logout';
+// import register from '../commands/register';
 
-import login from '../commands/login';
-import logout from '../commands/logout';
-import register from '../commands/register';
-
-import currentUser from '../queries/currentUser';
+// import currentUser from '../queries/currentUser';
 
 export const typeDefs = gql`
   type User {
@@ -26,18 +27,24 @@ export const typeDefs = gql`
 export const resolvers: IResolvers = {
   Mutation: {
     login: async (_, { email, password }, { sid }) => {
-      return await login(email, password, sid);
+      sendCommand('login', { email, password, sid });
+      return true;
     },
     logout: async (_, __, { sid }) => {
-      return await logout(sid);
+      sendCommand('logout', { sid });
+      return true;
     },
     register: async (_, { email, password, role }) => {
-      return await register(email, password, role);
+      sendCommand('register', { email, password, role });
+      return true;
     }
   },
   Query: {
     currentUser: async (_, __, { userToken }) => {
-      return currentUser(userToken, userToken && userToken.id);
+      return await fetch('currentUser', {
+        id: userToken && userToken.id,
+        userToken
+      });
     }
   }
 };

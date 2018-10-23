@@ -1,18 +1,22 @@
-import * as bus from '../../../eventbus';
-import User from '../models/User';
-
+import { Connection } from 'typeorm';
+import * as EventBus from '../../../eventBus';
 import UserRegisteredEvent from '../events/UserRegisteredEvent';
+import User from '../models/User';
+import { Store } from './types';
 
-export default async function init() {
-  bus.subscribe(
+export default function createStore(connection: Connection): Store {
+  const userRepo = connection.getRepository(User);
+
+  EventBus.subscribe(
     UserRegisteredEvent.symbol,
-    async (event: UserRegisteredEvent) => {
-      console.log(`Creating user: ${event.email}`);
-      await User.create({
-        email: event.email,
-        password: event.password,
-        role: event.role
-      }).save();
+    async ({ email, password, role }: UserRegisteredEvent) => {
+      await userRepo.create({ email, password, role });
     }
   );
+
+  return {
+    findUserById(id: string) {
+      return userRepo.findOne(id);
+    }
+  };
 }
