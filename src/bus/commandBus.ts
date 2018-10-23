@@ -1,16 +1,18 @@
 import { createEventEmitter } from 'rxmsg';
 import { createLoopbackConnector } from 'rxmsg/loopback';
+import { IBusEvent } from 'src/types';
 
 const emitter = createEventEmitter<any, any>(createLoopbackConnector());
 
-export async function sendCommand(commandName: string, payload: any) {
+export async function sendCommand<T extends IBusEvent>(payload: T) {
+  const commandName = payload.kind;
   console.log(JSON.stringify({ commandName, payload }));
   emitter.emit(commandName, payload);
   return true; // is ack
 }
 
-export function subscribe<T>(
-  commandName: string,
+export function subscribe<T extends IBusEvent>(
+  commandName: T['kind'],
   callback: (payload: T) => any
 ) {
   console.log({ subscribeTo: { commandName } });

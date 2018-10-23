@@ -1,26 +1,22 @@
 import * as bcrypt from 'bcryptjs';
 import { publish } from '../../../bus/eventbus';
-import UserRegisteredEvent from '../events/UserRegisteredEvent';
+import { UserRegisteredEvent } from '../types';
 
-// import {Store} from './types';
-
-export type RegisterCommandArgs = {
-  email: string;
-  password: string;
-  role: 'admin' | 'user';
-};
+import { RegisterCommand } from '../types';
 
 export default (/*store:Store*/) => async ({
   email,
   password,
   role
-}: RegisterCommandArgs) => {
+}: RegisterCommand) => {
   const hashedPassword = await bcrypt.hash(password, 10);
 
-  publish(
-    UserRegisteredEvent.symbol,
-    new UserRegisteredEvent(email, hashedPassword, role)
-  );
+  publish<UserRegisteredEvent>({
+    email,
+    kind: 'UserRegisteredEvent',
+    password: hashedPassword,
+    role
+  });
 
   return true;
 };

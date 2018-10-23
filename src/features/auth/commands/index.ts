@@ -1,15 +1,17 @@
 import { Connection } from 'typeorm';
 import * as CommandBus from '../../../bus/commandBus';
 
-import loginCommand, { LoginCommandArgs } from './login';
-import logoutCommand, { LogoutCommandArgs } from './logout';
-import registerCommand, { RegisterCommandArgs } from './register';
+import { LoginCommand, LogoutCommand, RegisterCommand } from '../types';
+
+import loginCommand from './login';
+import logoutCommand from './logout';
+import registerCommand from './register';
 import createStore from './store';
 
 export default function init(connection: Connection) {
   const store = createStore(connection);
 
-  CommandBus.subscribe<LoginCommandArgs>('login', loginCommand(store));
-  CommandBus.subscribe<LogoutCommandArgs>('logout', logoutCommand());
-  CommandBus.subscribe<RegisterCommandArgs>('register', registerCommand());
+  CommandBus.subscribe<LoginCommand>('LoginCommand', loginCommand(store));
+  CommandBus.subscribe<LogoutCommand>('LogoutCommand', logoutCommand());
+  CommandBus.subscribe<RegisterCommand>('RegisterCommand', registerCommand());
 }

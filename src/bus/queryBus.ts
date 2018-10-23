@@ -6,6 +6,7 @@ import { createLoopbackConnector } from 'rxmsg/loopback';
 const emitter = createEventEmitter(createLoopbackConnector());
 
 export async function fetch(name: string, payload: any) {
+  console.log(JSON.stringify({ query: { name, payload } }));
   // RPC pattern
   return new Promise(res => {
     const correlationId = uuid();
