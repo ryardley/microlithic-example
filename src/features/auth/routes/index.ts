@@ -4,12 +4,6 @@ import { sendCommand } from '../../../bus/commandBus';
 import { fetch } from '../../../bus/queryBus';
 import { LoginCommand, LogoutCommand, RegisterCommand } from '../types';
 
-// import login from '../commands/login';
-// import logout from '../commands/logout';
-// import register from '../commands/register';
-
-// import currentUser from '../queries/currentUser';
-
 export const typeDefs = gql`
   type User {
     email: String!
@@ -28,30 +22,30 @@ export const typeDefs = gql`
 
 export const resolvers: IResolvers = {
   Mutation: {
-    login: async (_, { email, password }, { sid }) => {
-      sendCommand<LoginCommand>({ kind: 'LoginCommand', email, password, sid });
-      return true;
-    },
-    logout: async (_, __, { sid }) => {
-      sendCommand<LogoutCommand>({ kind: 'LogoutCommand', sid });
-      return true;
-    },
-    register: async (_, { email, password, role }) => {
+    login: async (_, { email, password }, { sid }) =>
+      sendCommand<LoginCommand>({
+        email,
+        password,
+        sid,
+        type: 'LoginCommand'
+      }),
+
+    logout: async (_, __, { sid }) =>
+      sendCommand<LogoutCommand>({ type: 'LogoutCommand', sid }),
+
+    register: async (_, { email, password, role }) =>
       sendCommand<RegisterCommand>({
         email,
-        kind: 'RegisterCommand',
         password,
-        role
-      });
-      return true;
-    }
+        role,
+        type: 'RegisterCommand'
+      })
   },
   Query: {
-    currentUser: async (_, __, { userToken }) => {
-      return await fetch('currentUser', {
+    currentUser: async (_, __, { userToken }) =>
+      await fetch('currentUser', {
         id: userToken && userToken.id,
         userToken
-      });
-    }
+      })
   }
 };

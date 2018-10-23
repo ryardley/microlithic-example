@@ -1,5 +1,3 @@
-import { IBusEvent } from '../../types';
-
 export type UserRole = 'admin' | 'user';
 export type UserToken = {
   id: string;
@@ -11,38 +9,38 @@ export type AccessContext = {
   sid?: string;
 };
 
-export type UserLoggedInEvent = IBusEvent & {
-  kind: 'UserLoggedInEvent';
+export type UserLoggedInEvent = {
+  type: 'UserLoggedInEvent';
   userToken: UserToken;
   sid: string;
 };
 
-export type UserLoggedOutEvent = IBusEvent & {
-  kind: 'UserLoggedOutEvent';
+export type UserLoggedOutEvent = {
+  type: 'UserLoggedOutEvent';
   sid: string;
 };
 
-export type UserRegisteredEvent = IBusEvent & {
-  kind: 'UserRegisteredEvent';
+export type UserRegisteredEvent = {
+  type: 'UserRegisteredEvent';
   email: string;
   password: string;
   role: UserRole;
 };
 
 export type LoginCommand = {
-  kind: 'LoginCommand';
+  type: 'LoginCommand';
   email: string;
   password: string; // hashed and salted clientside eventually
   sid: string;
 };
 
 export type LogoutCommand = {
-  kind: 'LogoutCommand';
+  type: 'LogoutCommand';
   sid: string;
 };
 
 export type RegisterCommand = {
-  kind: 'RegisterCommand';
+  type: 'RegisterCommand';
   email: string;
   password: string;
   role: 'admin' | 'user';
