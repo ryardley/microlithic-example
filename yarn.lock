@@ -267,6 +267,12 @@
   dependencies:
     source-map "^0.6.1"
 
+"@types/uuid@^3.4.4":
+  version "3.4.4"
+  resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-3.4.4.tgz#7af69360fa65ef0decb41fd150bf4ca5c0cefdf5"
+  dependencies:
+    "@types/node" "*"
+
 "@types/webpack-dev-middleware@^2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@types/webpack-dev-middleware/-/webpack-dev-middleware-2.0.2.tgz#33934f15de582f1a6c21ea21c42f69282e328c76"
@@ -5136,9 +5142,9 @@ rxjs@^6.2.2:
   dependencies:
     tslib "^1.9.0"
 
-rxmsg@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/rxmsg/-/rxmsg-2.1.1.tgz#b209edb8f86ce9a251fadcbdfddfd9b05689a847"
+rxmsg@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/rxmsg/-/rxmsg-4.0.0.tgz#6138573fdd71791ef63d2f18459ffe4e658519fa"
   dependencies:
     amqp-connection-manager "^2.1.0"
     amqplib "^0.5.2"
