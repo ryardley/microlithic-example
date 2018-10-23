@@ -1,10 +1,10 @@
 import { publish } from '../../../bus/eventbus';
-import UserLoggedOutEvent from '../events/UserLoggedOutEvent';
+import { UserLoggedOutEvent } from '../types';
 
-export type LogoutCommandArgs = { sid: string };
+import { LogoutCommand } from '../types';
 
-export default () => async ({ sid }: LogoutCommandArgs) => {
-  publish(UserLoggedOutEvent.symbol, new UserLoggedOutEvent(sid));
+export default () => async ({ sid }: LogoutCommand) => {
+  publish<UserLoggedOutEvent>({ kind: 'UserLoggedOutEvent', sid });
 
   return true;
 };
