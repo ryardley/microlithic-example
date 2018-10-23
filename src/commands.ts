@@ -2,6 +2,7 @@ import { createConnection } from 'typeorm';
 import databaseConfig from './config/database';
 import auth from './features/auth/commands';
 
+// List of commands
 const config = [auth];
 
 export default async function apply() {
