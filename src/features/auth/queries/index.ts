@@ -1,7 +1,7 @@
 import { Connection } from 'typeorm';
 import * as QueryBus from '../../../bus/queryBus';
 
-import currentUser, { CurrentUserQueryArgs } from './currentUser';
+import currentUser, { CurrentUserQueryArgs } from './handlers/currentUser';
 
 import createStore from './store';
 

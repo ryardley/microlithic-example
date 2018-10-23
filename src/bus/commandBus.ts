@@ -4,7 +4,7 @@ import { IBusEvent } from 'src/types';
 
 const emitter = createEventEmitter<any, any>(createLoopbackConnector());
 
-export async function sendCommand<T extends IBusEvent>(payload: T) {
+export async function dispatch<T extends IBusEvent>(payload: T) {
   const commandName = payload.type;
   console.log(JSON.stringify({ commandName, payload }));
   emitter.emit(commandName, payload);

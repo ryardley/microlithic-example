@@ -1,8 +1,8 @@
 import * as bcrypt from 'bcryptjs';
-import { publish } from '../../../bus/eventbus';
-import { UserRegisteredEvent } from '../types';
+import { publish } from '../../../../bus/eventbus';
+import { UserRegisteredEvent } from '../../types';
 
-import { RegisterCommand } from '../types';
+import { RegisterCommand } from '../../types';
 
 export default (/*store:Store*/) => async ({
   email,

@@ -1,5 +1,5 @@
-import { UserToken } from '../types';
-import { Store } from './types';
+import { UserToken } from '../../types';
+import { Store } from '../types';
 
 export type CurrentUserQueryArgs = {
   userToken: UserToken;

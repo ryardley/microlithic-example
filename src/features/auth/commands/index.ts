@@ -3,9 +3,9 @@ import * as CommandBus from '../../../bus/commandBus';
 
 import { LoginCommand, LogoutCommand, RegisterCommand } from '../types';
 
-import loginCommand from './login';
-import logoutCommand from './logout';
-import registerCommand from './register';
+import loginCommand from './handlers/login';
+import logoutCommand from './handlers/logout';
+import registerCommand from './handlers/register';
 import createStore from './store';
 
 export default function init(connection: Connection) {

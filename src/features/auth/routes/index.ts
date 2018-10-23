@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 import { IResolvers } from 'graphql-tools';
-import { sendCommand } from '../../../bus/commandBus';
+import { dispatch } from '../../../bus/commandBus';
 import { fetch } from '../../../bus/queryBus';
 import { LoginCommand, LogoutCommand, RegisterCommand } from '../types';
 
@@ -23,7 +23,7 @@ export const typeDefs = gql`
 export const resolvers: IResolvers = {
   Mutation: {
     login: async (_, { email, password }, { sid }) =>
-      sendCommand<LoginCommand>({
+      dispatch<LoginCommand>({
         email,
         password,
         sid,
@@ -31,10 +31,10 @@ export const resolvers: IResolvers = {
       }),
 
     logout: async (_, __, { sid }) =>
-      sendCommand<LogoutCommand>({ type: 'LogoutCommand', sid }),
+      dispatch<LogoutCommand>({ type: 'LogoutCommand', sid }),
 
     register: async (_, { email, password, role }) =>
-      sendCommand<RegisterCommand>({
+      dispatch<RegisterCommand>({
         email,
         password,
         role,
