@@ -30,8 +30,8 @@ export default (store: Store) => async ({
   };
 
   return await publish<UserLoggedInEvent>({
-    kind: 'UserLoggedInEvent',
     sid,
+    type: 'UserLoggedInEvent',
     userToken
   });
 };

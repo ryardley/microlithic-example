@@ -5,14 +5,14 @@ import { IBusEvent } from 'src/types';
 const emitter = createEventEmitter<any, any>(createLoopbackConnector());
 
 export async function sendCommand<T extends IBusEvent>(payload: T) {
-  const commandName = payload.kind;
+  const commandName = payload.type;
   console.log(JSON.stringify({ commandName, payload }));
   emitter.emit(commandName, payload);
   return true; // is ack
 }
 
 export function subscribe<T extends IBusEvent>(
-  commandName: T['kind'],
+  commandName: T['type'],
   callback: (payload: T) => any
 ) {
   console.log({ subscribeTo: { commandName } });

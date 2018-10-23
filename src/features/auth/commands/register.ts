@@ -13,9 +13,9 @@ export default (/*store:Store*/) => async ({
 
   publish<UserRegisteredEvent>({
     email,
-    kind: 'UserRegisteredEvent',
     password: hashedPassword,
-    role
+    role,
+    type: 'UserRegisteredEvent'
   });
 
   return true;
