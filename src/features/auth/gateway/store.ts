@@ -26,12 +26,18 @@ export default function createStore() {
   EventBus.subscribe(
     UserLoggedInEvent.symbol,
     async (event: UserLoggedInEvent) => {
+      console.log('I hear the user logged in event!');
       const session = await getSession(store, event.sid);
-
+      console.log('My session is', session);
       if (!session) {
         return;
       }
-
+      console.log(
+        'Setting ',
+        JSON.stringify(event.userToken),
+        ' to ',
+        JSON.stringify(session)
+      );
       store.set(event.sid, {
         ...session,
         userToken: event.userToken

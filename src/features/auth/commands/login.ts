@@ -14,6 +14,7 @@ export default (store: Store) => async ({
   password,
   sid
 }: LoginCommandArgs) => {
+  console.log('Login function running!!');
   const user = await store.findUserByEmail(email);
   if (!user) {
     console.log('No User found: ' + email); // TODO: dispatch event
