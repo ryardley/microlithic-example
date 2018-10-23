@@ -15,7 +15,6 @@ export default (/*store:Store*/) => async ({
   password,
   role
 }: RegisterCommandArgs) => {
-  console.log('Running register function!');
   const hashedPassword = await bcrypt.hash(password, 10);
 
   publish(
