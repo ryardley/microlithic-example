@@ -1,5 +1,5 @@
 import { Connection } from 'typeorm';
-import * as QueryBus from '../../../queryBus';
+import * as QueryBus from '../../../bus/queryBus';
 
 import currentUser, { CurrentUserQueryArgs } from './currentUser';
 

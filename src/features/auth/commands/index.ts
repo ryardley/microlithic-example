@@ -1,5 +1,5 @@
 import { Connection } from 'typeorm';
-import * as CommandBus from '../../../commandBus';
+import * as CommandBus from '../../../bus/commandBus';
 
 import loginCommand, { LoginCommandArgs } from './login';
 import logoutCommand, { LogoutCommandArgs } from './logout';

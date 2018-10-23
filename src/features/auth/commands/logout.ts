@@ -1,4 +1,4 @@
-import { publish } from '../../../eventBus';
+import { publish } from '../../../bus/eventbus';
 import UserLoggedOutEvent from '../events/UserLoggedOutEvent';
 
 export type LogoutCommandArgs = { sid: string };

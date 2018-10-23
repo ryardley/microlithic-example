@@ -1,5 +1,5 @@
 import { MemoryStore } from 'express-session';
-import * as EventBus from '../../../eventBus';
+import * as EventBus from '../../../bus/eventbus';
 import UserLoggedInEvent from '../events/UserLoggedInEvent';
 import UserLoggedOutEvent from '../events/UserLoggedOutEvent';
 

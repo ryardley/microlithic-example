@@ -1,5 +1,5 @@
 import * as bcrypt from 'bcryptjs';
-import { publish } from '../../../eventBus';
+import { publish } from '../../../bus/eventbus';
 import UserLoggedInEvent from '../events/UserLoggedInEvent';
 import { Store } from './types';
 

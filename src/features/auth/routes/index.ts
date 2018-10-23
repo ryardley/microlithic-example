@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 import { IResolvers } from 'graphql-tools';
-import { sendCommand } from '../../../commandBus';
-import { fetch } from '../../../queryBus';
+import { sendCommand } from '../../../bus/commandBus';
+import { fetch } from '../../../bus/queryBus';
 // import login from '../commands/login';
 // import logout from '../commands/logout';
 // import register from '../commands/register';
