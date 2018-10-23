@@ -1,5 +1,5 @@
 import * as bcrypt from 'bcryptjs';
-import { publish } from '../../../../bus/eventbus';
+import { dispatch } from '../../../../bus/eventbus';
 import { UserLoggedInEvent } from '../../types';
 import { Store } from '../types';
 
@@ -26,9 +26,10 @@ export default (store: Store) =>
       role: user.role
     };
 
-    return await publish<UserLoggedInEvent>({
-      sid,
-      type: 'UserLoggedInEvent',
-      userToken
-    });
+    return await dispatch(
+      UserLoggedInEvent({
+        sid,
+        userToken
+      })
+    );
   };

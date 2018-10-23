@@ -1,8 +1,16 @@
 import gql from 'graphql-tag';
 import { IResolvers } from 'graphql-tools';
+import { IBusEvent } from 'src/types';
+import uuid = require('uuid/v4');
 import { dispatch } from '../../../bus/commandBus';
 import { fetch } from '../../../bus/queryBus';
 import { LoginCommand, LogoutCommand, RegisterCommand } from '../types';
+
+function correlatedEvent<T extends IBusEvent>(event: T): T {
+  return Object.assign({}, event, {
+    correlationId: uuid()
+  });
+}
 
 export const typeDefs = gql`
   type User {
@@ -23,23 +31,35 @@ export const typeDefs = gql`
 export const resolvers: IResolvers = {
   Mutation: {
     login: async (_, { email, password }, { sid }) =>
-      dispatch<LoginCommand>({
-        email,
-        password,
-        sid,
-        type: 'LoginCommand'
-      }),
+      dispatch(
+        correlatedEvent(
+          LoginCommand({
+            email,
+            password,
+            sid
+          })
+        )
+      ),
 
     logout: async (_, __, { sid }) =>
-      dispatch<LogoutCommand>({ type: 'LogoutCommand', sid }),
+      dispatch(
+        correlatedEvent(
+          LogoutCommand({
+            sid
+          })
+        )
+      ),
 
     register: async (_, { email, password, role }) =>
-      dispatch<RegisterCommand>({
-        email,
-        password,
-        role,
-        type: 'RegisterCommand'
-      })
+      dispatch(
+        correlatedEvent(
+          RegisterCommand({
+            email,
+            password,
+            role
+          })
+        )
+      )
   },
   Query: {
     currentUser: async (_, __, { userToken }) =>
