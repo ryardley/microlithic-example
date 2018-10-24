@@ -10,8 +10,7 @@ export default (store: Store) => async ({
   userToken,
   id
 }: CurrentUserQueryArgs) => {
-  // TODO: This should maybe happen elsewhere
-  if (!userToken || !['admin', 'user'].includes(userToken.role)) {
+  if (!userToken) {
     return null;
   }
   return await store.findUserById(id);
