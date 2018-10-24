@@ -49,3 +49,22 @@ console.log(reponse); // {email:"foo@bar.com"}
 ```
 
 Naturally you don't need to wait for a response and can simply shoot off a command and continue processing or provide some kind of optimistic response to the user.
+
+You can also wait for events off different buses:
+
+```typescript
+const event = correlatedEvent(
+  LoginCommand({
+    email,
+    password,
+    sid
+  })
+);
+
+CommandBus.dispatch(event);
+
+await EventBus.waitForEvent<UserLoggedInEvent>(
+  event.correlationId,
+  'UserLoggedInEvent'
+);
+```
