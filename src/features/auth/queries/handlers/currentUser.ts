@@ -1,17 +1,23 @@
-import { UserToken } from '../../types';
+import pick from 'lodash/pick';
+import * as QueryBus from '../../../../bus/QueryBus';
+import { CurrentUserRequest, CurrentUserResponse } from '../../types';
 import { Store } from '../types';
-
-export type CurrentUserQueryArgs = {
-  userToken: UserToken;
-  id: string;
-};
 
 export default (store: Store) => async ({
   userToken,
-  id
-}: CurrentUserQueryArgs) => {
+  id,
+  correlationId
+}: CurrentUserRequest) => {
   if (!userToken) {
-    return null;
+    return QueryBus.dispatch(CurrentUserResponse({ correlationId }));
   }
-  return await store.findUserById(id);
+  const user = await store.findUserById(id);
+
+  if (user) {
+    QueryBus.dispatch(
+      CurrentUserResponse({ correlationId, user: pick(user, ['email']) })
+    );
+  } else {
+    QueryBus.dispatch(CurrentUserResponse({ correlationId }));
+  }
 };

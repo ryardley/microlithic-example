@@ -6,7 +6,12 @@ import { Store } from '../types';
 import { LoginCommand } from '../../types';
 
 export default (store: Store) =>
-  async function loginCommand({ email, password, sid }: LoginCommand) {
+  async function loginCommand({
+    email,
+    password,
+    sid,
+    correlationId
+  }: LoginCommand) {
     const user = await store.findUserByEmail(email);
     if (!user) {
       console.log('No User found: ' + email); // TODO: dispatch event
@@ -26,8 +31,9 @@ export default (store: Store) =>
       role: user.role
     };
 
-    return await dispatch(
+    await dispatch(
       UserLoggedInEvent({
+        correlationId,
         sid,
         userToken
       })

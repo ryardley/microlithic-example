@@ -25,12 +25,8 @@ class Register extends React.Component<
       mutation: LOGIN_USER_MUTATION,
       variables: { email, password }
     });
-
-    // TODO: Hook up subscriptions to send the loggedIn event to the browser
-    setTimeout(async () => {
-      await client.resetStore();
-      history.push('/');
-    }, 1000);
+    await client.resetStore();
+    history.push('/');
 
     return true;
   };

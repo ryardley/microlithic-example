@@ -16,6 +16,12 @@ export type Event<T, S> = IBusEvent &
     type: S;
   };
 
+export type CorrelatedData<D> = D & {
+  correlationId?: string;
+};
+
+export * from './CurrentUserRequest';
+export * from './CurrentUserResponse';
 export * from './UserLoggedInEvent';
 export * from './UserLoggedOutEvent';
 export * from './UserRegisteredEvent';

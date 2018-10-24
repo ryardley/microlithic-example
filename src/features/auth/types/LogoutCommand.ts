@@ -1,4 +1,4 @@
-import { Event } from '../types';
+import { CorrelatedData, Event } from '../types';
 
 type RawData = {
   sid: string;
@@ -6,7 +6,7 @@ type RawData = {
 
 export type LogoutCommand = Event<RawData, 'LogoutCommand'>;
 
-export const LogoutCommand = (d: RawData): LogoutCommand => ({
+export const LogoutCommand = (d: CorrelatedData<RawData>): LogoutCommand => ({
   ...d,
   type: 'LogoutCommand'
 });

@@ -1,4 +1,4 @@
-import { Event, UserToken } from '../types';
+import { CorrelatedData, Event, UserToken } from '../types';
 
 type RawData = {
   userToken: UserToken;
@@ -7,7 +7,9 @@ type RawData = {
 
 export type UserLoggedInEvent = Event<RawData, 'UserLoggedInEvent'>;
 
-export const UserLoggedInEvent = (d: RawData): UserLoggedInEvent => ({
+export const UserLoggedInEvent = (
+  d: CorrelatedData<RawData>
+): UserLoggedInEvent => ({
   ...d,
   type: 'UserLoggedInEvent'
 });

@@ -1,4 +1,4 @@
-import { Event } from '../types';
+import { CorrelatedData, Event } from '../types';
 
 type RawData = {
   email: string;
@@ -8,7 +8,7 @@ type RawData = {
 
 export type LoginCommand = Event<RawData, 'LoginCommand'>;
 
-export const LoginCommand = (d: RawData): LoginCommand => ({
+export const LoginCommand = (d: CorrelatedData<RawData>): LoginCommand => ({
   ...d,
   type: 'LoginCommand'
 });

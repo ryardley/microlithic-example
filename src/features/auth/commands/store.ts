@@ -7,9 +7,9 @@ import { Store } from './types';
 export default function createStore(connection: Connection): Store {
   const UserRepo = connection.getRepository(User);
 
-  EventBus.subscribe<UserRegisteredEvent>(
+  EventBus.subscribe(
     'UserRegisteredEvent',
-    async ({ email, password, role }) => {
+    async ({ email, password, role }: UserRegisteredEvent) => {
       try {
         const user = new User();
         user.email = email;

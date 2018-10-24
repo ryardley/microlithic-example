@@ -8,5 +8,5 @@ import createStore from './store';
 export default function init(connection: Connection) {
   const store = createStore(connection);
 
-  QueryBus.subscribe('currentUser', currentUser(store));
+  QueryBus.subscribe('CurrentUserRequest', currentUser(store));
 }

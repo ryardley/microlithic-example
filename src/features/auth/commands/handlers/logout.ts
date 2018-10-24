@@ -5,6 +5,4 @@ import { LogoutCommand } from '../../types';
 
 export default async ({ sid }: LogoutCommand) => {
   dispatch(UserLoggedOutEvent({ sid }));
-
-  return true;
 };
