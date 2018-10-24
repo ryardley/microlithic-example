@@ -90,11 +90,10 @@ A full command function example might look like this:
 ```typescript
 async function registerCommand ({
   email,
-  password:alreadySaltedClientHashedPw,
+  password:hashedPassword,
   role,
   correlationId
 }: RegisterCommand) {
-  const hashedPassword = await bcrypt.hash(alreadySaltedClientHashedPw, 10);
 
   // Go save this user and their data
   dispatch(
