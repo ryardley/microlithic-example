@@ -1,5 +1,5 @@
 import * as bcrypt from 'bcryptjs';
-import { dispatch } from '../../../../bus/eventbus';
+import { dispatch } from '../../../../bus/EventBus';
 import { UserRegisteredEvent } from '../../types';
 
 import { RegisterCommand } from '../../types';

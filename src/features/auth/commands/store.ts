@@ -1,5 +1,5 @@
 import { Connection } from 'typeorm';
-import * as EventBus from '../../../bus/eventbus';
+import * as EventBus from '../../../bus/EventBus';
 import User from '../models/User';
 import { UserRegisteredEvent } from '../types';
 import { Store } from './types';

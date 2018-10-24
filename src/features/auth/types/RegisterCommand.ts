@@ -5,6 +5,7 @@ type RawData = {
   password: string;
   role: 'admin' | 'user';
 };
+
 export type RegisterCommand = Event<RawData, 'RegisterCommand'>;
 
 export const RegisterCommand = (d: RawData): RegisterCommand => ({

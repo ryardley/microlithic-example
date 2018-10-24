@@ -1,5 +1,5 @@
 import { MemoryStore } from 'express-session';
-import * as EventBus from '../../../bus/eventbus';
+import * as EventBus from '../../../bus/EventBus';
 import { UserLoggedInEvent, UserLoggedOutEvent } from '../types';
 
 function getSession(
@@ -22,7 +22,7 @@ export default function createStore() {
   const store = new MemoryStore();
 
   // UserLoggedInEvent
-  EventBus.subscribe<UserLoggedInEvent>('UserLoggedInEvent', async event => {
+  EventBus.subscribe('UserLoggedInEvent', async (event: UserLoggedInEvent) => {
     const session = await getSession(store, event.sid);
     if (!session) {
       return;
@@ -35,18 +35,21 @@ export default function createStore() {
   });
 
   // UserLoggedOutEvent
-  EventBus.subscribe<UserLoggedOutEvent>('UserLoggedOutEvent', async event => {
-    const session = await getSession(store, event.sid);
+  EventBus.subscribe(
+    'UserLoggedOutEvent',
+    async (event: UserLoggedOutEvent) => {
+      const session = await getSession(store, event.sid);
 
-    if (!session) {
-      return;
+      if (!session) {
+        return;
+      }
+
+      store.set(event.sid, {
+        ...session,
+        userToken: undefined
+      });
     }
-
-    store.set(event.sid, {
-      ...session,
-      userToken: undefined
-    });
-  });
+  );
 
   return store;
 }

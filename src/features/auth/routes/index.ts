@@ -2,8 +2,8 @@ import gql from 'graphql-tag';
 import { IResolvers } from 'graphql-tools';
 import { IBusEvent } from 'src/types';
 import uuid = require('uuid/v4');
-import { dispatch } from '../../../bus/commandBus';
-import { fetch } from '../../../bus/queryBus';
+import { dispatch } from '../../../bus/CommandBus';
+import { fetch } from '../../../bus/QueryBus';
 import { LoginCommand, LogoutCommand, RegisterCommand } from '../types';
 
 function correlatedEvent<T extends IBusEvent>(event: T): T {

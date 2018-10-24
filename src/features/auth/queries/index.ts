@@ -1,12 +1,12 @@
 import { Connection } from 'typeorm';
-import * as QueryBus from '../../../bus/queryBus';
+import * as QueryBus from '../../../bus/QueryBus';
 
-import currentUser, { CurrentUserQueryArgs } from './handlers/currentUser';
+import currentUser from './handlers/currentUser';
 
 import createStore from './store';
 
 export default function init(connection: Connection) {
   const store = createStore(connection);
 
-  QueryBus.subscribe<CurrentUserQueryArgs>('currentUser', currentUser(store));
+  QueryBus.subscribe('currentUser', currentUser(store));
 }
