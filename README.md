@@ -50,6 +50,14 @@ console.log(reponse); // {email:"foo@bar.com"}
 
 Naturally you don't need to wait for a response and can simply shoot off a command and continue processing or provide some kind of optimistic response to the user.
 
+```typescript
+CommandBus.dispatch(
+  LogoutCommand({
+    sid
+  })
+);
+```
+
 You can also wait for events off different buses:
 
 ```typescript
