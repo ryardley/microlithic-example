@@ -9,23 +9,24 @@ const configureWaitForEvent = (subscribe: SubscriptionFn) => <
   EventType extends IBusEvent
 >(
   correlationId: string,
-  eventType: EventType['type']
+  eventType: EventType['type'],
+  timeout: number = 5000
 ): Promise<EventType> => {
   return new Promise((resolve, reject) => {
-    let timeout: NodeJS.Timeout;
+    let timeoutId: NodeJS.Timeout;
 
     const unsubscribe = subscribe(eventType, (e: EventType) => {
       if (correlationId === e.correlationId) {
         unsubscribe();
         resolve(e);
-        clearTimeout(timeout);
+        clearTimeout(timeoutId);
       }
     });
 
-    timeout = setTimeout(() => {
+    timeoutId = setTimeout(() => {
       unsubscribe();
       reject(`Operation timed out ${eventType}:${correlationId}`);
-    }, 5000);
+    }, timeout);
   });
 };
 

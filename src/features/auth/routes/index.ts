@@ -35,7 +35,7 @@ export const typeDefs = gql`
 export const resolvers: IResolvers = {
   Mutation: {
     login: async (_, { email, password }, { sid }) => {
-      // Create the command event
+      // Create the command event with a correlationId
       const event = correlatedEvent(
         LoginCommand({
           email,
@@ -47,7 +47,7 @@ export const resolvers: IResolvers = {
       // Dispatch it
       CommandBus.dispatch(event);
 
-      // This is how you can do a synchronous request response using CQRS
+      // This will wait for the corresponding resultant event
       await EventBus.waitForEvent<UserLoggedInEvent>(
         event.correlationId,
         'UserLoggedInEvent'
