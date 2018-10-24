@@ -81,7 +81,7 @@ await EventBus.waitForEvent<UserLoggedInEvent>(
 
 Basically to subscribe to events you simply call the subscribe method on the event bus:
 
-```
+```typescript
 CommandBus.subscribe('MyCommandEvent', myCommandFunction);
 ```
 
