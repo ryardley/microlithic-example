@@ -11,7 +11,6 @@ const configureSubscribe = <T extends IBusEvent, P extends IBusEvent>(
     console.log({ subscribeTo: { eventName } });
     emitter.on(eventName, callback);
     return () => {
-      console.log('Unsubscribing from ' + eventName);
       emitter.off(eventName, callback);
     };
   };
