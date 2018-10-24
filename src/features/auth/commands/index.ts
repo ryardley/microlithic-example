@@ -10,6 +10,6 @@ export default function init(connection: Connection) {
   const store = createStore(connection);
 
   CommandBus.subscribe('LoginCommand', loginCommand(store));
-  CommandBus.subscribe('LogoutCommand', logoutCommand());
-  CommandBus.subscribe('RegisterCommand', registerCommand());
+  CommandBus.subscribe('LogoutCommand', logoutCommand);
+  CommandBus.subscribe('RegisterCommand', registerCommand);
 }
