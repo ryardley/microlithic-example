@@ -76,3 +76,38 @@ await EventBus.waitForEvent<UserLoggedInEvent>(
   'UserLoggedInEvent'
 );
 ```
+
+### Listening for messages
+
+Basically to subscribe to events you simply call the subscribe method on the event bus:
+
+```
+CommandBus.subscribe('MyCommandEvent', myCommandFunction);
+```
+
+A full command function example might look like this:
+
+```typescript
+async function registerCommand ({
+  email,
+  password:alreadySaltedClientHashedPw,
+  role,
+  correlationId
+}: RegisterCommand) {
+  const hashedPassword = await bcrypt.hash(alreadySaltedClientHashedPw, 10);
+
+  // Go save this user and their data
+  dispatch(
+    UserRegisteredEvent({
+      correlationId,
+      email,
+      password: hashedPassword,
+      role
+    })
+  );
+};
+
+CommandBus.subscribe('RegisterCommand', registerCommand);
+```
+
+
