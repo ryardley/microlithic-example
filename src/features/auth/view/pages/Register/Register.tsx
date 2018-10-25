@@ -25,13 +25,16 @@ class Register extends React.Component<WithApolloClient<Props>, State> {
   ) => {
     const { client } = this.props;
 
-    const result = await client.mutate<RegisterUser, RegisterUserVariables>({
-      mutation: REGISTER_MUTATION,
-      variables: { email, password, role }
-    });
+    const { errors } = await client.mutate<RegisterUser, RegisterUserVariables>(
+      {
+        errorPolicy: 'all',
+        mutation: REGISTER_MUTATION,
+        variables: { email, password, role }
+      }
+    );
     await client.resetStore();
 
-    return !!(result && result.data ? result.data.register : false);
+    return errors ? { errors } : { errors: [] };
   };
 }
 

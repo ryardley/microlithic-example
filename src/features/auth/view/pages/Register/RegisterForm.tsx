@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { GraphQLError } from 'graphql';
 import Layout from '../../../../layout/view';
 
 type Props = {
@@ -7,24 +8,26 @@ type Props = {
     email: string,
     password: string,
     role: string
-  ) => Promise<boolean>;
+  ) => Promise<{ errors: ReadonlyArray<GraphQLError> }>;
 };
 
 type State = {
   email: string;
   password: string;
   registered: boolean;
+  errors?: ReadonlyArray<GraphQLError>;
 };
 
 export default class LoginForm extends React.Component<Props, State> {
   public state = {
     email: '',
+    errors: Array<GraphQLError>(),
     password: '',
     registered: false
   };
   private form: React.RefObject<HTMLFormElement> = React.createRef();
   public render() {
-    const { email, password, registered } = this.state;
+    const { email, password, registered, errors } = this.state;
     if (registered) {
       return (
         <Layout>
@@ -57,6 +60,9 @@ export default class LoginForm extends React.Component<Props, State> {
               value={password}
             />
           </div>
+          {errors.map(error => (
+            <div style={{ color: 'red' }}>{error.message}</div>
+          ))}
           <div>
             <button>Register</button>
           </div>
@@ -69,10 +75,9 @@ export default class LoginForm extends React.Component<Props, State> {
     event.preventDefault();
     const { doRegistration } = this.props;
     const { email, password } = this.state;
+    const { errors } = await doRegistration(email, password, 'user');
 
-    this.setState({
-      registered: await doRegistration(email, password, 'user')
-    });
+    this.setState({ errors, registered: errors && errors.length === 0 });
   };
 
   private handleChange = () => {

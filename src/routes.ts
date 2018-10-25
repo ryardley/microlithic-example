@@ -1,3 +1,4 @@
+import { formatError } from 'apollo-errors';
 import { ApolloServer, makeExecutableSchema } from 'apollo-server-express';
 import { Application } from 'express';
 import { apolloContext as context } from './features/auth/gateway';
@@ -13,6 +14,7 @@ const directiveResolvers = {
 export default function applyRoutes(app: Application) {
   new ApolloServer({
     context,
+    formatError,
     schema: makeExecutableSchema({
       directiveResolvers,
       resolvers,

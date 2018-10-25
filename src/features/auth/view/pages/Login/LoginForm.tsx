@@ -1,25 +1,32 @@
 import * as React from 'react';
 
+import { GraphQLError } from 'graphql';
 import Layout from '../../../../layout/view';
 
+type LoginResponse = { errors: ReadonlyArray<GraphQLError> };
+
 type Props = {
-  doLogin: (email: string, password: string) => Promise<boolean>;
+  doLogin: (email: string, password: string) => Promise<LoginResponse>;
 };
 
 type State = {
   email: string;
+  errors?: ReadonlyArray<GraphQLError>;
   password: string;
 };
 
 export default class LoginForm extends React.Component<Props, State> {
   public state = {
     email: '',
+    errors: Array<GraphQLError>(),
     password: ''
   };
-  private form: React.RefObject<HTMLFormElement> = React.createRef();
-  public render() {
-    const { email, password } = this.state;
 
+  private form: React.RefObject<HTMLFormElement> = React.createRef();
+
+  public render() {
+    const { email, password, errors } = this.state;
+    console.log({ errors });
     return (
       <Layout>
         <form ref={this.form} onSubmit={this.handleSubmit}>
@@ -42,6 +49,11 @@ export default class LoginForm extends React.Component<Props, State> {
               value={password}
             />
           </div>
+          {errors.map(error => (
+            <div key={error.name} style={{ color: 'red' }}>
+              {error.message}
+            </div>
+          ))}
           <div>
             <button>Login</button>
           </div>
@@ -50,15 +62,13 @@ export default class LoginForm extends React.Component<Props, State> {
     );
   }
 
-  private handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  public handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     const { doLogin } = this.props;
     event.preventDefault();
     const { email, password } = this.state;
-
-    try {
-      await doLogin(email, password);
-    } catch (err) {
-      console.error(err);
+    const { errors } = await doLogin(email, password);
+    if (errors.length) {
+      this.setState({ errors });
     }
   };
 

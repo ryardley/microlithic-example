@@ -1,7 +1,7 @@
-import { dispatch } from '../../../../bus/EventBus';
 import { LogoutCommand } from '../../types/LogoutCommand';
 import { UserLoggedOutEvent } from '../../types/UserLoggedOutEvent';
+import { Context } from '../index';
 
-export default async ({ sid }: LogoutCommand) => {
+export default ({ dispatch }: Context) => async ({ sid }: LogoutCommand) => {
   dispatch(UserLoggedOutEvent({ sid }));
 };

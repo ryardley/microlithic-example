@@ -1,12 +1,10 @@
 import * as bcrypt from 'bcryptjs';
-import { dispatch } from '../../../../bus/EventBus';
+import { LoginCommand } from '../../types/LoginCommand';
 import { LoginErrorRaised } from '../../types/LoginErrorRaised';
 import { UserLoggedInEvent } from '../../types/UserLoggedInEvent';
-import { Store } from '../types';
+import { Context } from '../index';
 
-import { LoginCommand } from '../../types/LoginCommand';
-
-export default (store: Store) =>
+export default ({ store, dispatch }: Context) =>
   async function loginCommand({
     email,
     password,

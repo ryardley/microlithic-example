@@ -21,14 +21,19 @@ class Register extends React.Component<
 
   private doLogin = async (email: string, password: string) => {
     const { client, history } = this.props;
-    await client.mutate<LoginUser, LoginUserVariables>({
+    const { errors } = await client.mutate<LoginUser, LoginUserVariables>({
+      errorPolicy: 'all',
       mutation: LOGIN_USER_MUTATION,
       variables: { email, password }
     });
-    await client.resetStore();
-    history.push('/');
 
-    return true;
+    if (!errors) {
+      await client.resetStore();
+      history.push('/');
+      return { errors: [] };
+    }
+
+    return { errors };
   };
 }
 

@@ -5,7 +5,7 @@ type SubscriptionFn = (
   eventName: string,
   callback: (event: IBusEvent) => any
 ) => () => void;
-// type EventFactory<T extends IBusEvent> = (a: any) => T;
+
 const configureWaitForFirstEvent = (subscribe: SubscriptionFn) => {
   function waitForEvent<
     T extends IBusEvent,
