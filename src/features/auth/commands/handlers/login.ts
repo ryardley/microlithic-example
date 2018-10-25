@@ -1,9 +1,10 @@
 import * as bcrypt from 'bcryptjs';
 import { dispatch } from '../../../../bus/EventBus';
-import { UserLoggedInEvent } from '../../types';
+import { LoginErrorRaised } from '../../types/LoginErrorRaised';
+import { UserLoggedInEvent } from '../../types/UserLoggedInEvent';
 import { Store } from '../types';
 
-import { LoginCommand } from '../../types';
+import { LoginCommand } from '../../types/LoginCommand';
 
 export default (store: Store) =>
   async function loginCommand({
@@ -13,14 +14,30 @@ export default (store: Store) =>
     correlationId
   }: LoginCommand) {
     const user = await store.findUserByEmail(email);
+
     if (!user) {
-      console.log('No User found: ' + email); // TODO: dispatch event
-      return false;
+      await dispatch(
+        LoginErrorRaised({
+          correlationId,
+          email,
+          errors: ['no_user_found'],
+          sid
+        })
+      );
+      return;
     }
 
     const valid = await bcrypt.compare(password, user.password);
+
     if (!valid) {
-      console.log('User not valid: ' + email); // TODO: dispatch event
+      await dispatch(
+        LoginErrorRaised({
+          correlationId,
+          email,
+          errors: ['invalid_password'],
+          sid
+        })
+      );
       return false;
     }
 

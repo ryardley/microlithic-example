@@ -1,6 +1,7 @@
 import pick from 'lodash/pick';
 import * as QueryBus from '../../../../bus/QueryBus';
-import { CurrentUserRequest, CurrentUserResponse } from '../../types';
+import { CurrentUserRequest } from '../../types/CurrentUserRequest';
+import { CurrentUserResponse } from '../../types/CurrentUserResponse';
 import { Store } from '../types';
 
 export default (store: Store) => async ({

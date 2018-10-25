@@ -1,4 +1,4 @@
-import { CorrelatedData, Event } from '../types';
+import { CorrelatedData, Event } from '../../../bus/types';
 
 type RawData = {
   email: string;

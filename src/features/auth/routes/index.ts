@@ -1,20 +1,18 @@
 import gql from 'graphql-tag';
 import { IResolvers } from 'graphql-tools';
-// import { IBusEvent } from 'src/types';
-// import uuid = require('uuid/v4');
 import * as CommandBus from '../../../bus/CommandBus';
 import correlatedEvent from '../../../bus/correlatedEvents';
 import * as EventBus from '../../../bus/EventBus';
 import * as QueryBus from '../../../bus/QueryBus';
-import {
-  CurrentUserRequest,
-  CurrentUserResponse,
-  LoginCommand,
-  LogoutCommand,
-  RegisterCommand,
-  UserLoggedInEvent,
-  UserRegisteredEvent
-} from '../types';
+
+import { CurrentUserRequest } from '../types/CurrentUserRequest';
+import { CurrentUserResponse } from '../types/CurrentUserResponse';
+import { LoginCommand } from '../types/LoginCommand';
+import { LoginErrorRaised } from '../types/LoginErrorRaised';
+import { LogoutCommand } from '../types/LogoutCommand';
+import { RegisterCommand } from '../types/RegisterCommand';
+import { UserLoggedInEvent } from '../types/UserLoggedInEvent';
+import { UserRegisteredEvent } from '../types/UserRegisteredEvent';
 
 export const typeDefs = gql`
   type User {
@@ -26,8 +24,8 @@ export const typeDefs = gql`
   }
 
   type Mutation {
-    register(email: String!, password: String!, role: String!): Boolean!
-    login(email: String!, password: String!): Boolean!
+    register(email: String!, password: String!, role: String!): Boolean
+    login(email: String!, password: String!): Boolean
     logout: Boolean
   }
 `;
@@ -48,10 +46,16 @@ export const resolvers: IResolvers = {
       CommandBus.dispatch(event);
 
       // This will wait for the corresponding resultant event
-      await EventBus.waitForEvent<UserLoggedInEvent>(
-        event.correlationId,
-        'UserLoggedInEvent'
-      );
+      const answer = await EventBus.waitForEvent(event.correlationId, [
+        UserLoggedInEvent,
+        LoginErrorRaised
+      ]);
+
+      if (answer.type === 'LoginErrorRaised') {
+        // throw new LoginError();
+        return false;
+      }
+
       return true;
     },
 
@@ -74,10 +78,7 @@ export const resolvers: IResolvers = {
 
       CommandBus.dispatch(event);
 
-      await EventBus.waitForEvent<UserRegisteredEvent>(
-        event.correlationId,
-        'UserRegisteredEvent'
-      );
+      await EventBus.waitForEvent(event.correlationId, [UserRegisteredEvent]);
       return true;
     }
   },
@@ -93,12 +94,14 @@ export const resolvers: IResolvers = {
       QueryBus.dispatch(event);
 
       // This is how you can do a synchronous request response using CQRS
-      const response = await QueryBus.waitForEvent<CurrentUserResponse>(
-        event.correlationId,
-        'CurrentUserResponse'
-      );
-
-      return response.user;
+      const response = await QueryBus.waitForEvent(event.correlationId, [
+        CurrentUserResponse
+      ]);
+      if (response.type === 'TimeoutEvent') {
+        // throw new Error()
+        return null;
+      }
+      return (response as CurrentUserResponse).user;
     }
   }
 };

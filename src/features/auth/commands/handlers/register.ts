@@ -1,8 +1,8 @@
 import * as bcrypt from 'bcryptjs';
 import { dispatch } from '../../../../bus/EventBus';
-import { UserRegisteredEvent } from '../../types';
+import { UserRegisteredEvent } from '../../types/UserRegisteredEvent';
 
-import { RegisterCommand } from '../../types';
+import { RegisterCommand } from '../../types/RegisterCommand';
 
 export default async ({
   email,

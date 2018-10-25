@@ -1,7 +1,7 @@
 import { Connection } from 'typeorm';
 import * as EventBus from '../../../bus/EventBus';
 import User from '../models/User';
-import { UserRegisteredEvent } from '../types';
+import { UserRegisteredEvent } from '../types/UserRegisteredEvent';
 import { Store } from './types';
 
 export default function createStore(connection: Connection): Store {

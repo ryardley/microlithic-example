@@ -1,5 +1,5 @@
 import { RxMsgEventEmitter } from 'rxmsg';
-import { IBusEvent } from 'src/types';
+import { IBusEvent } from './IBusEvent';
 
 const configureDispatch = <T extends IBusEvent, P extends IBusEvent>(
   emitter: RxMsgEventEmitter<T, P>

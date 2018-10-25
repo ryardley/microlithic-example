@@ -1,4 +1,5 @@
-import { CorrelatedData, Event, UserRole } from '../types';
+import { CorrelatedData, Event } from '../../../bus/types';
+import { UserRole } from '../types';
 
 export type RawData = {
   email: string;

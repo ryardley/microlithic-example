@@ -1,4 +1,5 @@
-import { CorrelatedData, Event, UserToken } from '../types';
+import { CorrelatedData, Event } from '../../../bus/types';
+import { UserToken } from '../types';
 
 type RawData = {
   userToken: UserToken;

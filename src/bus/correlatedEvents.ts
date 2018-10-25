@@ -1,5 +1,5 @@
 import uuid from 'uuid/v4';
-import { IBusEvent } from '../types';
+import { IBusEvent } from './IBusEvent';
 
 export default function correlatedEvent<T extends IBusEvent>(
   event: T

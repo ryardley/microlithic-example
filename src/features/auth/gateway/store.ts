@@ -1,6 +1,7 @@
 import { MemoryStore } from 'express-session';
 import * as EventBus from '../../../bus/EventBus';
-import { UserLoggedInEvent, UserLoggedOutEvent } from '../types';
+import { UserLoggedInEvent } from '../types/UserLoggedInEvent';
+import { UserLoggedOutEvent } from '../types/UserLoggedOutEvent';
 
 function getSession(
   st: MemoryStore,
