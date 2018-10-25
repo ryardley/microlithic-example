@@ -28,10 +28,11 @@ export default async (_: any, { email, password, role }: InputArgs) => {
     RegisterErrorRaised
   >(event.correlationId, ['UserRegisteredEvent', 'RegisterErrorRaised']);
 
-  if (answer.type === 'RegisterErrorRaised') {
-    if (answer.errors.includes('user_already_exists')) {
-      throw new UserAlreadyExists();
-    }
+  if (
+    answer.type === 'RegisterErrorRaised' &&
+    answer.errors.includes('user_already_exists')
+  ) {
+    throw new UserAlreadyExists();
   }
 
   return true;

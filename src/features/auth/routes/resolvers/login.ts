@@ -11,6 +11,7 @@ import { InvalidCredentialsError, NoUserFoundError } from '../errors';
 
 type InputArgs = { email: string; password: string };
 type InputContext = { sid: string };
+
 export default async (
   _: any,
   { email, password }: InputArgs,
