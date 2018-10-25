@@ -25,9 +25,9 @@ export const resolvers: IResolvers = {
   Mutation: {
     login,
     logout,
-    register
+    register,
   },
   Query: {
-    currentUser
-  }
+    currentUser,
+  },
 };

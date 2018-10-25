@@ -23,7 +23,7 @@ export default function withLogoutUser<P extends object>(
             mutation LogoutUser {
               logout
             }
-          `
+          `,
         });
         await client.resetStore();
       };

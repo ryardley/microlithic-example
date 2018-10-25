@@ -10,5 +10,5 @@ export const UserLoggedOutEvent = (
   d: CorrelatedData<RawData>
 ): UserLoggedOutEvent => ({
   ...d,
-  type: 'UserLoggedOutEvent'
+  type: 'UserLoggedOutEvent',
 });

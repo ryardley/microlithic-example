@@ -12,7 +12,7 @@ export default ({ children }: Props) => (
       style={{
         alignItems: 'center',
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
       }}
     >
       {children}

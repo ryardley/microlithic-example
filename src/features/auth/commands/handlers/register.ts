@@ -8,7 +8,7 @@ export default ({ store, dispatch }: Context) => async ({
   email,
   password,
   role,
-  correlationId
+  correlationId,
 }: RegisterCommand) => {
   const hashedPassword = await bcrypt.hash(password, 10);
   const user = await store.findUserByEmail(email);
@@ -18,7 +18,7 @@ export default ({ store, dispatch }: Context) => async ({
       RegisterErrorRaised({
         correlationId,
         email,
-        errors: ['user_already_exists']
+        errors: ['user_already_exists'],
       })
     );
   }
@@ -28,7 +28,7 @@ export default ({ store, dispatch }: Context) => async ({
       correlationId,
       email,
       password: hashedPassword,
-      role
+      role,
     })
   );
 };

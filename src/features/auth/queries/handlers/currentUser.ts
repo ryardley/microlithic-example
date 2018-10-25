@@ -7,7 +7,7 @@ import { Context } from '../index';
 export default ({ store, dispatch }: Context) => async ({
   userToken,
   id,
-  correlationId
+  correlationId,
 }: CurrentUserRequest) => {
   if (!userToken) {
     return dispatch(CurrentUserResponse({ correlationId }));

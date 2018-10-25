@@ -4,7 +4,20 @@
   "jsRules": {},
   "rules": {
     "interface-over-type-literal": false,
-    "no-console": false
+    "no-console": false,
+    "trailing-comma": [
+      true,
+      {
+        "multiline": {
+          "objects": "always",
+          "arrays": "always",
+          "functions": "ignore",
+          "typeLiterals": "ignore"
+        },
+        "singleline": "never",
+        "esSpecCompliant": true
+      }
+    ]
   },
   "rulesDirectory": []
 }

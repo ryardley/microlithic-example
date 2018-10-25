@@ -19,7 +19,7 @@ export default class LoginForm extends React.Component<Props, State> {
   public state = {
     email: '',
     errors: Array<GraphQLError>(),
-    password: ''
+    password: '',
   };
 
   private form: React.RefObject<HTMLFormElement> = React.createRef();
@@ -79,7 +79,7 @@ export default class LoginForm extends React.Component<Props, State> {
       const passwordField = form.password;
       this.setState({
         email: emailField.value,
-        password: passwordField.value
+        password: passwordField.value,
       });
     }
   };

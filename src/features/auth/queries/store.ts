@@ -25,6 +25,6 @@ export default function createStore(connection: Connection): Store {
   return {
     findUserById(id: string) {
       return UserRepo.findOne(id);
-    }
+    },
   };
 }

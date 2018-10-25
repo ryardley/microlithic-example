@@ -11,5 +11,5 @@ export const RegisterErrorRaised = (
   d: CorrelatedData<RawData>
 ): RegisterErrorRaised => ({
   ...d,
-  type: 'RegisterErrorRaised'
+  type: 'RegisterErrorRaised',
 });

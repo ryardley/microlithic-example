@@ -7,5 +7,5 @@ export default {
   password: 'password',
   port: 5435,
   synchronize: true,
-  username: 'typeormtest'
+  username: 'typeormtest',
 };

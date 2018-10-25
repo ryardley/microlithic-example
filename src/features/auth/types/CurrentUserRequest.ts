@@ -12,5 +12,5 @@ export const CurrentUserRequest = (
   d: CorrelatedData<RawData>
 ): CurrentUserRequest => ({
   ...d,
-  type: 'CurrentUserRequest'
+  type: 'CurrentUserRequest',
 });

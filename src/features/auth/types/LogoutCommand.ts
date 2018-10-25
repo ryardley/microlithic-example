@@ -8,5 +8,5 @@ export type LogoutCommand = Event<RawData, 'LogoutCommand'>;
 
 export const LogoutCommand = (d: CorrelatedData<RawData>): LogoutCommand => ({
   ...d,
-  type: 'LogoutCommand'
+  type: 'LogoutCommand',
 });

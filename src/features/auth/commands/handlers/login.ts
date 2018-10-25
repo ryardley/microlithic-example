@@ -9,7 +9,7 @@ export default ({ store, dispatch }: Context) =>
     email,
     password,
     sid,
-    correlationId
+    correlationId,
   }: LoginCommand) {
     const user = await store.findUserByEmail(email);
 
@@ -19,7 +19,7 @@ export default ({ store, dispatch }: Context) =>
           correlationId,
           email,
           errors: ['no_user_found'],
-          sid
+          sid,
         })
       );
       return;
@@ -33,7 +33,7 @@ export default ({ store, dispatch }: Context) =>
           correlationId,
           email,
           errors: ['invalid_password'],
-          sid
+          sid,
         })
       );
       return false;
@@ -43,14 +43,14 @@ export default ({ store, dispatch }: Context) =>
     //        a JWT here so we can send on the event bus to know auth
     const userToken = {
       id: user.id,
-      role: user.role
+      role: user.role,
     };
 
     await dispatch(
       UserLoggedInEvent({
         correlationId,
         sid,
-        userToken
+        userToken,
       })
     );
   };

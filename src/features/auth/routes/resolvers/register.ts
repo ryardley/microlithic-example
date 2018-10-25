@@ -17,7 +17,7 @@ export default async (_: any, { email, password, role }: InputArgs) => {
     RegisterCommand({
       email,
       password,
-      role
+      role,
     })
   );
 

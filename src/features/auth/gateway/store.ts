@@ -31,7 +31,7 @@ export default function createStore() {
 
     store.set(event.sid, {
       ...session,
-      userToken: event.userToken
+      userToken: event.userToken,
     });
   });
 
@@ -47,7 +47,7 @@ export default function createStore() {
 
       store.set(event.sid, {
         ...session,
-        userToken: undefined
+        userToken: undefined,
       });
     }
   );

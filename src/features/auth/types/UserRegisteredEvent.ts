@@ -13,5 +13,5 @@ export const UserRegisteredEvent = (
   d: CorrelatedData<RawData>
 ): UserRegisteredEvent => ({
   ...d,
-  type: 'UserRegisteredEvent'
+  type: 'UserRegisteredEvent',
 });

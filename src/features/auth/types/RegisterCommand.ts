@@ -12,5 +12,5 @@ export const RegisterCommand = (
   d: CorrelatedData<RawData>
 ): RegisterCommand => ({
   ...d,
-  type: 'RegisterCommand'
+  type: 'RegisterCommand',
 });

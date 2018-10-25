@@ -10,5 +10,5 @@ export type LoginCommand = Event<RawData, 'LoginCommand'>;
 
 export const LoginCommand = (d: CorrelatedData<RawData>): LoginCommand => ({
   ...d,
-  type: 'LoginCommand'
+  type: 'LoginCommand',
 });

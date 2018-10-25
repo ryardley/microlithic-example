@@ -10,7 +10,7 @@ export default async function apply() {
     ...databaseConfig,
     entityPrefix: 'commands_',
     name: 'commands',
-    type: 'postgres'
+    type: 'postgres',
   });
 
   config.forEach(init => {

@@ -29,7 +29,7 @@ class Register extends React.Component<WithApolloClient<Props>, State> {
       {
         errorPolicy: 'all',
         mutation: REGISTER_MUTATION,
-        variables: { email, password, role }
+        variables: { email, password, role },
       }
     );
     await client.resetStore();

@@ -24,7 +24,7 @@ class Register extends React.Component<
     const { errors } = await client.mutate<LoginUser, LoginUserVariables>({
       errorPolicy: 'all',
       mutation: LOGIN_USER_MUTATION,
-      variables: { email, password }
+      variables: { email, password },
     });
 
     if (!errors) {

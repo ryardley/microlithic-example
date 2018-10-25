@@ -12,5 +12,5 @@ export const UserLoggedInEvent = (
   d: CorrelatedData<RawData>
 ): UserLoggedInEvent => ({
   ...d,
-  type: 'UserLoggedInEvent'
+  type: 'UserLoggedInEvent',
 });

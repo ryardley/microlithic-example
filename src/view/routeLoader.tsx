@@ -6,6 +6,6 @@ const LoadingScreen = () => <div>Loading...</div>;
 export default function routeLoader(loader: () => Promise<any>) {
   return Loadable({
     loader,
-    loading: LoadingScreen
+    loading: LoadingScreen,
   });
 }

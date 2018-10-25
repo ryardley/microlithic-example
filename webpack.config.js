@@ -16,7 +16,7 @@ const config = {
           loader: 'ts-loader',
           options: {
             transpileOnly: true, //HMR doesn't work without this
-            configFile: 'tsconfig-webpack.json'
+            configFile: 'tsconfig-client.json'
           }
         },
         exclude: /node_modules/

@@ -8,20 +8,20 @@ import Auth from '../features/auth/view';
 import Dashboard from '../features/dashboard/view';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql'
+  uri: 'http://localhost:4000/graphql',
 });
 
 class App extends React.Component {
   public render() {
     return (
-      <ApolloProvider client={client}>
-        <BrowserRouter>
+      <BrowserRouter>
+        <ApolloProvider client={client}>
           <React.Fragment>
             <Auth />
             <Dashboard />
           </React.Fragment>
-        </BrowserRouter>
-      </ApolloProvider>
+        </ApolloProvider>
+      </BrowserRouter>
     );
   }
 }

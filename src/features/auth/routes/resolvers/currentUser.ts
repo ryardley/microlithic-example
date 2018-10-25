@@ -13,7 +13,7 @@ export default async (
   const event = correlatedEvent(
     CurrentUserRequest({
       id: userToken && userToken.id,
-      userToken
+      userToken,
     })
   );
 

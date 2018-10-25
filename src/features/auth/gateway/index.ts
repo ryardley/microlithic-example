@@ -9,12 +9,12 @@ export default function apply(app: Application) {
   app.use(
     session({
       cookie: {
-        maxAge: 100000
+        maxAge: 100000,
       },
       resave: false,
       saveUninitialized: true,
       secret: 'asdhasgdjhasgdjhas',
-      store
+      store,
     })
   );
 
@@ -32,6 +32,6 @@ export function apolloContext({
   return {
     ...context,
     sid: req.sessionID,
-    userToken: req && req.session && req.session.userToken
+    userToken: req && req.session && req.session.userToken,
   };
 }

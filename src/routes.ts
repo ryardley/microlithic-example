@@ -8,7 +8,7 @@ const directiveResolvers = {
   hasRole: (next: () => void, source: any, foo: any, ctx: any) => {
     console.log({ hasRole: { source, foo, ctx } });
     next();
-  }
+  },
 };
 
 export default function applyRoutes(app: Application) {
@@ -18,8 +18,8 @@ export default function applyRoutes(app: Application) {
     schema: makeExecutableSchema({
       directiveResolvers,
       resolvers,
-      typeDefs
-    })
+      typeDefs,
+    }),
   }).applyMiddleware({ app });
   return app;
 }

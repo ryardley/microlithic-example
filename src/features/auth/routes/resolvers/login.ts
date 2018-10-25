@@ -22,7 +22,7 @@ export default async (
     LoginCommand({
       email,
       password,
-      sid
+      sid,
     })
   );
 
