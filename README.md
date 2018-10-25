@@ -47,6 +47,7 @@ const response = await QueryBus.waitForEvent<CurrentUserResponse>(
 console.log(reponse); // {email:"foo@bar.com"}
 ```
 
+### Sending an Asynchronous Message
 Naturally you don't need to wait for a response and can simply shoot off a command and continue processing or provide some kind of optimistic response to the user.
 
 ```typescript
@@ -57,6 +58,7 @@ CommandBus.dispatch(
 );
 ```
 
+### Multiple Busses
 You can also wait for events off different buses:
 
 ```typescript
@@ -73,6 +75,31 @@ CommandBus.dispatch(event);
 await EventBus.waitForEvent<UserLoggedInEvent>(
   event.correlationId,
   'UserLoggedInEvent'
+);
+```
+
+### Waiting for Multiple Events
+You can wait for the first correlated error event from a selection of events:
+
+```typescript
+const event = correlatedEvent(
+  LoginCommand({
+    email:"foo@bar.com",
+    password: "fa352471287",
+    sid: "12345687651234"
+  })
+);
+
+// Dispatch it
+CommandBus.dispatch(event);
+
+// This will wait for the corresponding resultant event
+const answer = await EventBus.waitForEvent<UserLoggedInEvent,LoginErrorRaised>(
+  event.correlationId, 
+  [
+    'UserLoggedInEvent', 
+    'LoginErrorRaised'
+  ]
 );
 ```
 
