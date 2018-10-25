@@ -5,18 +5,25 @@ type SubscriptionFn = (
   eventName: string,
   callback: (event: IBusEvent) => any
 ) => () => void;
-type EventFactory = (a: any) => IBusEvent;
+// type EventFactory<T extends IBusEvent> = (a: any) => T;
 const configureWaitForFirstEvent = (subscribe: SubscriptionFn) => {
-  function waitForEvent(
+  function waitForEvent<
+    T extends IBusEvent,
+    P extends IBusEvent = T,
+    Q extends IBusEvent = P
+  >(
     correlationId: string,
-    eventList: EventFactory[],
+    possibleEventOrList: Array<T['type'] | P['type'] | Q['type']> | T['type'],
     timeout: number = 5000
-  ): Promise<IBusEvent | TimeoutEvent> {
+  ): Promise<T | P | Q | TimeoutEvent> {
     return new Promise(resolve => {
       let timeoutId: NodeJS.Timeout;
-      const unsubscribes = eventList.map(eventProducer => {
-        const eventType = eventProducer({ correlationId }).type;
-        return subscribe(eventType, e => {
+      const eventList = Array.isArray(possibleEventOrList)
+        ? possibleEventOrList
+        : [possibleEventOrList];
+      const unsubscribes = eventList.map(eventType => {
+        // const eventType = eventProducer({ correlationId }).type;
+        return subscribe(eventType, (e: T | P | Q) => {
           if (correlationId === e.correlationId) {
             unsubscribes.forEach(u => u());
             resolve(e);

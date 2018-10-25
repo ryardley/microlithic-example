@@ -46,10 +46,10 @@ export const resolvers: IResolvers = {
       CommandBus.dispatch(event);
 
       // This will wait for the corresponding resultant event
-      const answer = await EventBus.waitForEvent(event.correlationId, [
+      const answer = await EventBus.waitForEvent<
         UserLoggedInEvent,
         LoginErrorRaised
-      ]);
+      >(event.correlationId, ['UserLoggedInEvent', 'LoginErrorRaised']);
 
       if (answer.type === 'LoginErrorRaised') {
         // throw new LoginError();
@@ -78,7 +78,11 @@ export const resolvers: IResolvers = {
 
       CommandBus.dispatch(event);
 
-      await EventBus.waitForEvent(event.correlationId, [UserRegisteredEvent]);
+      await EventBus.waitForEvent<UserRegisteredEvent>(
+        event.correlationId,
+        'UserRegisteredEvent'
+      );
+
       return true;
     }
   },
@@ -94,14 +98,15 @@ export const resolvers: IResolvers = {
       QueryBus.dispatch(event);
 
       // This is how you can do a synchronous request response using CQRS
-      const response = await QueryBus.waitForEvent(event.correlationId, [
-        CurrentUserResponse
-      ]);
+      const response = await QueryBus.waitForEvent<CurrentUserResponse>(
+        event.correlationId,
+        'CurrentUserResponse'
+      );
       if (response.type === 'TimeoutEvent') {
         // throw new Error()
         return null;
       }
-      return (response as CurrentUserResponse).user;
+      return response.user;
     }
   }
 };
