@@ -93,7 +93,7 @@ const event = correlatedEvent(
 // Dispatch it
 CommandBus.dispatch(event);
 
-// This will wait for the first corresponding resultant event
+// This will wait for the first correlated resultant event
 const answer = await EventBus.waitForEvent<UserLoggedInEvent,LoginErrorRaised>(
   event.correlationId, 
   [
