@@ -16,7 +16,7 @@ Here is a high level overview:
 
 **EventSourcing** means considering the state of your application as an immutable series of events.
 
-**CQRS basically** means separating your query system from your command system.
+**CQRS** basically means separating your query system from your command system.
 
 The advantages of doing this in a microservices architecture is that you can scale your reads at a different rate to your writes and it ensures that so long as you are happy with eventual consistency your app should be able to take a huge amount of traffic.
 
