@@ -30,8 +30,7 @@ Here is an example from our routes file here. In this example we want to get the
 // Create the event
 const event = correlatedEvent(
   CurrentUserRequest({
-    id: userToken && userToken.id,
-    userToken
+    id
   })
 );
 
