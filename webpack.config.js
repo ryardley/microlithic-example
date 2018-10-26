@@ -1,13 +1,16 @@
 const webpack = require('webpack');
+const path = require('path');
 const runPath = require('./lib').runPath;
-const StatsPlugin = require('stats-webpack-plugin');
+const { ReactLoadablePlugin } = require('react-loadable/webpack');
 
 const { NODE_ENV } = process.env;
+
+const prod = NODE_ENV === 'production';
+
 const config = {
-  entry:
-    NODE_ENV === 'development'
-      ? ['webpack-hot-middleware/client', './src/view/renderBrowser']
-      : './src/view/renderBrowser',
+  entry: !prod
+    ? ['webpack-hot-middleware/client', './src/view/renderBrowser']
+    : './src/view/renderBrowser',
   mode: NODE_ENV || 'development',
   module: {
     rules: [
@@ -31,13 +34,13 @@ const config = {
     filename: 'client.js',
     publicPath: '/',
     chunkFilename: '[name].bundle.js',
-    ...(NODE_ENV === 'production' ? { path: runPath('static') } : {})
+    ...(prod ? { path: runPath('static') } : {})
   },
   plugins: [
-    new StatsPlugin('../../stats.json'),
-    ...(NODE_ENV === 'development'
-      ? [new webpack.HotModuleReplacementPlugin()]
-      : [])
+    new ReactLoadablePlugin({
+      filename: 'react-loadable.json'
+    }),
+    ...(!prod ? [new webpack.HotModuleReplacementPlugin()] : [])
   ]
 };
 

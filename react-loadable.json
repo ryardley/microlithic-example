@@ -1,0 +1,2386 @@
+{
+  "../jsutils/orList": [
+    {
+      "id": "./node_modules/graphql/jsutils/orList.mjs",
+      "name": "./node_modules/graphql/jsutils/orList.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "undefined": [
+    {
+      "id": 0,
+      "name": null,
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./../../../tsmill/node_modules/webpack/buildin/module.js": [
+    {
+      "id": "../tsmill/node_modules/webpack/buildin/module.js",
+      "name": "../tsmill/node_modules/webpack/buildin/module.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "strip-ansi": [
+    {
+      "id": "./node_modules/strip-ansi/index.js",
+      "name": "./node_modules/strip-ansi/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "ansi-regex": [
+    {
+      "id": "./node_modules/ansi-regex/index.js",
+      "name": "./node_modules/ansi-regex/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./client-overlay": [
+    {
+      "id": "./node_modules/webpack-hot-middleware/client-overlay.js",
+      "name": "./node_modules/webpack-hot-middleware/client-overlay.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "ansi-html": [
+    {
+      "id": "./node_modules/ansi-html/index.js",
+      "name": "./node_modules/ansi-html/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "html-entities": [
+    {
+      "id": "./node_modules/html-entities/index.js",
+      "name": "./node_modules/html-entities/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./lib/xml-entities.js": [
+    {
+      "id": "./node_modules/html-entities/lib/xml-entities.js",
+      "name": "./node_modules/html-entities/lib/xml-entities.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./lib/html4-entities.js": [
+    {
+      "id": "./node_modules/html-entities/lib/html4-entities.js",
+      "name": "./node_modules/html-entities/lib/html4-entities.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./lib/html5-entities.js": [
+    {
+      "id": "./node_modules/html-entities/lib/html5-entities.js",
+      "name": "./node_modules/html-entities/lib/html5-entities.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./process-update": [
+    {
+      "id": "./node_modules/webpack-hot-middleware/process-update.js",
+      "name": "./node_modules/webpack-hot-middleware/process-update.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./src/view/renderBrowser": [
+    {
+      "id": "./src/view/renderBrowser.tsx",
+      "name": "./src/view/renderBrowser.tsx",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./../../../tsmill/node_modules/webpack/buildin/harmony-module.js": [
+    {
+      "id": "../tsmill/node_modules/webpack/buildin/harmony-module.js",
+      "name": "../tsmill/node_modules/webpack/buildin/harmony-module.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "apollo-boost": [
+    {
+      "id": "./node_modules/apollo-boost/lib/index.js",
+      "name": "./node_modules/apollo-boost/lib/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "apollo-client": [
+    {
+      "id": "./node_modules/apollo-client/index.js",
+      "name": "./node_modules/apollo-client/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "graphql/language/printer": [
+    {
+      "id": "./node_modules/graphql/language/printer.mjs",
+      "name": "./node_modules/graphql/language/printer.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "graphql/language/visitor": [
+    {
+      "id": "./node_modules/graphql/language/visitor.mjs",
+      "name": "./node_modules/graphql/language/visitor.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../jsutils/inspect": [
+    {
+      "id": "./node_modules/graphql/jsutils/inspect.mjs",
+      "name": "./node_modules/graphql/jsutils/inspect.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./core/ObservableQuery": [
+    {
+      "id": "./node_modules/apollo-client/core/ObservableQuery.js",
+      "name": "./node_modules/apollo-client/core/ObservableQuery.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "apollo-utilities": [
+    {
+      "id": "./node_modules/apollo-utilities/lib/index.js",
+      "name": "./node_modules/apollo-utilities/lib/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./directives": [
+    {
+      "id": "./node_modules/apollo-utilities/lib/directives.js",
+      "name": "./node_modules/apollo-utilities/lib/directives.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    },
+    {
+      "id": "./node_modules/graphql/type/directives.mjs",
+      "name": "./node_modules/graphql/type/directives.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./storeUtils": [
+    {
+      "id": "./node_modules/apollo-utilities/lib/storeUtils.js",
+      "name": "./node_modules/apollo-utilities/lib/storeUtils.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "fast-json-stable-stringify": [
+    {
+      "id": "./node_modules/fast-json-stable-stringify/index.js",
+      "name": "./node_modules/fast-json-stable-stringify/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./fragments": [
+    {
+      "id": "./node_modules/apollo-utilities/lib/fragments.js",
+      "name": "./node_modules/apollo-utilities/lib/fragments.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./getFromAST": [
+    {
+      "id": "./node_modules/apollo-utilities/lib/getFromAST.js",
+      "name": "./node_modules/apollo-utilities/lib/getFromAST.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./util/assign": [
+    {
+      "id": "./node_modules/apollo-utilities/lib/util/assign.js",
+      "name": "./node_modules/apollo-utilities/lib/util/assign.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./transform": [
+    {
+      "id": "./node_modules/apollo-utilities/lib/transform.js",
+      "name": "./node_modules/apollo-utilities/lib/transform.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./util/cloneDeep": [
+    {
+      "id": "./node_modules/apollo-utilities/lib/util/cloneDeep.js",
+      "name": "./node_modules/apollo-utilities/lib/util/cloneDeep.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "fclone": [
+    {
+      "id": "./node_modules/fclone/dist/fclone.js",
+      "name": "./node_modules/fclone/dist/fclone.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./../../../../tsmill/node_modules/buffer/index.js": [
+    {
+      "id": "../tsmill/node_modules/buffer/index.js",
+      "name": "../tsmill/node_modules/buffer/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./../../../../tsmill/node_modules/webpack/buildin/global.js": [
+    {
+      "id": "../tsmill/node_modules/webpack/buildin/global.js",
+      "name": "../tsmill/node_modules/webpack/buildin/global.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "base64-js": [
+    {
+      "id": "../tsmill/node_modules/base64-js/index.js",
+      "name": "../tsmill/node_modules/base64-js/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "ieee754": [
+    {
+      "id": "../tsmill/node_modules/ieee754/index.js",
+      "name": "../tsmill/node_modules/ieee754/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "isarray": [
+    {
+      "id": "../tsmill/node_modules/isarray/index.js",
+      "name": "../tsmill/node_modules/isarray/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    },
+    {
+      "id": "./node_modules/path-to-regexp/node_modules/isarray/index.js",
+      "name": "./node_modules/path-to-regexp/node_modules/isarray/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./util/environment": [
+    {
+      "id": "./node_modules/apollo-utilities/lib/util/environment.js",
+      "name": "./node_modules/apollo-utilities/lib/util/environment.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./../../../../../tsmill/node_modules/process/browser.js": [
+    {
+      "id": "../tsmill/node_modules/process/browser.js",
+      "name": "../tsmill/node_modules/process/browser.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./util/errorHandling": [
+    {
+      "id": "./node_modules/apollo-utilities/lib/util/errorHandling.js",
+      "name": "./node_modules/apollo-utilities/lib/util/errorHandling.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./util/isEqual": [
+    {
+      "id": "./node_modules/apollo-utilities/lib/util/isEqual.js",
+      "name": "./node_modules/apollo-utilities/lib/util/isEqual.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./util/maybeDeepFreeze": [
+    {
+      "id": "./node_modules/apollo-utilities/lib/util/maybeDeepFreeze.js",
+      "name": "./node_modules/apollo-utilities/lib/util/maybeDeepFreeze.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./util/warnOnce": [
+    {
+      "id": "./node_modules/apollo-utilities/lib/util/warnOnce.js",
+      "name": "./node_modules/apollo-utilities/lib/util/warnOnce.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./util/stripSymbols": [
+    {
+      "id": "./node_modules/apollo-utilities/lib/util/stripSymbols.js",
+      "name": "./node_modules/apollo-utilities/lib/util/stripSymbols.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./core/networkStatus": [
+    {
+      "id": "./node_modules/apollo-client/core/networkStatus.js",
+      "name": "./node_modules/apollo-client/core/networkStatus.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../util/Observable": [
+    {
+      "id": "./node_modules/apollo-client/util/Observable.js",
+      "name": "./node_modules/apollo-client/util/Observable.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "apollo-link": [
+    {
+      "id": "./node_modules/apollo-link/lib/index.js",
+      "name": "./node_modules/apollo-link/lib/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./link": [
+    {
+      "id": "./node_modules/apollo-link/lib/link.js",
+      "name": "./node_modules/apollo-link/lib/link.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "zen-observable-ts": [
+    {
+      "id": "./node_modules/zen-observable-ts/lib/index.js",
+      "name": "./node_modules/zen-observable-ts/lib/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./zenObservable": [
+    {
+      "id": "./node_modules/zen-observable-ts/lib/zenObservable.js",
+      "name": "./node_modules/zen-observable-ts/lib/zenObservable.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "zen-observable": [
+    {
+      "id": "./node_modules/zen-observable/index.js",
+      "name": "./node_modules/zen-observable/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./lib/Observable.js": [
+    {
+      "id": "./node_modules/zen-observable/lib/Observable.js",
+      "name": "./node_modules/zen-observable/lib/Observable.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./linkUtils": [
+    {
+      "id": "./node_modules/apollo-link/lib/linkUtils.js",
+      "name": "./node_modules/apollo-link/lib/linkUtils.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "symbol-observable": [
+    {
+      "id": "./node_modules/symbol-observable/es/index.js",
+      "name": "./node_modules/symbol-observable/es/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./ponyfill.js": [
+    {
+      "id": "./node_modules/symbol-observable/es/ponyfill.js",
+      "name": "./node_modules/symbol-observable/es/ponyfill.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./errors/ApolloError": [
+    {
+      "id": "./node_modules/apollo-client/errors/ApolloError.js",
+      "name": "./node_modules/apollo-client/errors/ApolloError.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./core/types": [
+    {
+      "id": "./node_modules/apollo-client/core/types.js",
+      "name": "./node_modules/apollo-client/core/types.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./ApolloClient": [
+    {
+      "id": "./node_modules/apollo-client/ApolloClient.js",
+      "name": "./node_modules/apollo-client/ApolloClient.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./core/QueryManager": [
+    {
+      "id": "./node_modules/apollo-client/core/QueryManager.js",
+      "name": "./node_modules/apollo-client/core/QueryManager.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "apollo-link-dedup": [
+    {
+      "id": "./node_modules/apollo-link-dedup/lib/index.js",
+      "name": "./node_modules/apollo-link-dedup/lib/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./dedupLink": [
+    {
+      "id": "./node_modules/apollo-link-dedup/lib/dedupLink.js",
+      "name": "./node_modules/apollo-link-dedup/lib/dedupLink.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../scheduler/scheduler": [
+    {
+      "id": "./node_modules/apollo-client/scheduler/scheduler.js",
+      "name": "./node_modules/apollo-client/scheduler/scheduler.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../data/mutations": [
+    {
+      "id": "./node_modules/apollo-client/data/mutations.js",
+      "name": "./node_modules/apollo-client/data/mutations.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../data/queries": [
+    {
+      "id": "./node_modules/apollo-client/data/queries.js",
+      "name": "./node_modules/apollo-client/data/queries.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./data/store": [
+    {
+      "id": "./node_modules/apollo-client/data/store.js",
+      "name": "./node_modules/apollo-client/data/store.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./version": [
+    {
+      "id": "./node_modules/apollo-client/version.js",
+      "name": "./node_modules/apollo-client/version.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "apollo-cache-inmemory": [
+    {
+      "id": "./node_modules/apollo-cache-inmemory/lib/index.js",
+      "name": "./node_modules/apollo-cache-inmemory/lib/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./inMemoryCache": [
+    {
+      "id": "./node_modules/apollo-cache-inmemory/lib/inMemoryCache.js",
+      "name": "./node_modules/apollo-cache-inmemory/lib/inMemoryCache.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./fixPolyfills": [
+    {
+      "id": "./node_modules/apollo-cache-inmemory/lib/fixPolyfills.js",
+      "name": "./node_modules/apollo-cache-inmemory/lib/fixPolyfills.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "apollo-cache": [
+    {
+      "id": "./node_modules/apollo-cache/lib/index.js",
+      "name": "./node_modules/apollo-cache/lib/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./cache": [
+    {
+      "id": "./node_modules/apollo-cache/lib/cache.js",
+      "name": "./node_modules/apollo-cache/lib/cache.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./utils": [
+    {
+      "id": "./node_modules/apollo-cache/lib/utils.js",
+      "name": "./node_modules/apollo-cache/lib/utils.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    },
+    {
+      "id": "./node_modules/apollo-link-state/lib/utils.js",
+      "name": "./node_modules/apollo-link-state/lib/utils.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    },
+    {
+      "id": "./node_modules/react-helmet-async/lib/utils.js",
+      "name": "./node_modules/react-helmet-async/lib/utils.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./types": [
+    {
+      "id": "./node_modules/apollo-cache/lib/types/index.js",
+      "name": "./node_modules/apollo-cache/lib/types/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./Cache": [
+    {
+      "id": "./node_modules/apollo-cache/lib/types/Cache.js",
+      "name": "./node_modules/apollo-cache/lib/types/Cache.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./fragmentMatcher": [
+    {
+      "id": "./node_modules/apollo-cache-inmemory/lib/fragmentMatcher.js",
+      "name": "./node_modules/apollo-cache-inmemory/lib/fragmentMatcher.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./readFromStore": [
+    {
+      "id": "./node_modules/apollo-cache-inmemory/lib/readFromStore.js",
+      "name": "./node_modules/apollo-cache-inmemory/lib/readFromStore.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./optimism": [
+    {
+      "id": "./node_modules/apollo-cache-inmemory/lib/optimism.js",
+      "name": "./node_modules/apollo-cache-inmemory/lib/optimism.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "optimism": [
+    {
+      "id": "./node_modules/optimism/lib/index.js",
+      "name": "./node_modules/optimism/lib/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./cache.js": [
+    {
+      "id": "./node_modules/optimism/lib/cache.js",
+      "name": "./node_modules/optimism/lib/cache.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "immutable-tuple": [
+    {
+      "id": "./node_modules/immutable-tuple/dist/tuple.mjs",
+      "name": "./node_modules/immutable-tuple/dist/tuple.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./entry.js": [
+    {
+      "id": "./node_modules/optimism/lib/entry.js",
+      "name": "./node_modules/optimism/lib/entry.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./local.js": [
+    {
+      "id": "./node_modules/optimism/lib/local.js",
+      "name": "./node_modules/optimism/lib/local.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./depTrackingCache": [
+    {
+      "id": "./node_modules/apollo-cache-inmemory/lib/depTrackingCache.js",
+      "name": "./node_modules/apollo-cache-inmemory/lib/depTrackingCache.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./queryKeyMaker": [
+    {
+      "id": "./node_modules/apollo-cache-inmemory/lib/queryKeyMaker.js",
+      "name": "./node_modules/apollo-cache-inmemory/lib/queryKeyMaker.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./writeToStore": [
+    {
+      "id": "./node_modules/apollo-cache-inmemory/lib/writeToStore.js",
+      "name": "./node_modules/apollo-cache-inmemory/lib/writeToStore.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./objectCache": [
+    {
+      "id": "./node_modules/apollo-cache-inmemory/lib/objectCache.js",
+      "name": "./node_modules/apollo-cache-inmemory/lib/objectCache.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./recordingCache": [
+    {
+      "id": "./node_modules/apollo-cache-inmemory/lib/recordingCache.js",
+      "name": "./node_modules/apollo-cache-inmemory/lib/recordingCache.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "apollo-link-http": [
+    {
+      "id": "./node_modules/apollo-link-http/lib/index.js",
+      "name": "./node_modules/apollo-link-http/lib/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./httpLink": [
+    {
+      "id": "./node_modules/apollo-link-http/lib/httpLink.js",
+      "name": "./node_modules/apollo-link-http/lib/httpLink.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "apollo-link-http-common": [
+    {
+      "id": "./node_modules/apollo-link-http-common/lib/index.js",
+      "name": "./node_modules/apollo-link-http-common/lib/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "apollo-link-state": [
+    {
+      "id": "./node_modules/apollo-link-state/lib/index.js",
+      "name": "./node_modules/apollo-link-state/lib/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "graphql-anywhere/lib/async": [
+    {
+      "id": "./node_modules/graphql-anywhere/lib/async.js",
+      "name": "./node_modules/graphql-anywhere/lib/async.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "graphql": [
+    {
+      "id": "./node_modules/graphql/index.mjs",
+      "name": "./node_modules/graphql/index.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./graphql": [
+    {
+      "id": "./node_modules/graphql/graphql.mjs",
+      "name": "./node_modules/graphql/graphql.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./type/validate": [
+    {
+      "id": "./node_modules/graphql/type/validate.mjs",
+      "name": "./node_modules/graphql/type/validate.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./definition": [
+    {
+      "id": "./node_modules/graphql/type/definition.mjs",
+      "name": "./node_modules/graphql/type/definition.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../jsutils/defineToJSON": [
+    {
+      "id": "./node_modules/graphql/jsutils/defineToJSON.mjs",
+      "name": "./node_modules/graphql/jsutils/defineToJSON.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../jsutils/defineToStringTag": [
+    {
+      "id": "./node_modules/graphql/jsutils/defineToStringTag.mjs",
+      "name": "./node_modules/graphql/jsutils/defineToStringTag.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../jsutils/instanceOf": [
+    {
+      "id": "./node_modules/graphql/jsutils/instanceOf.mjs",
+      "name": "./node_modules/graphql/jsutils/instanceOf.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../jsutils/invariant": [
+    {
+      "id": "./node_modules/graphql/jsutils/invariant.mjs",
+      "name": "./node_modules/graphql/jsutils/invariant.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../jsutils/keyMap": [
+    {
+      "id": "./node_modules/graphql/jsutils/keyMap.mjs",
+      "name": "./node_modules/graphql/jsutils/keyMap.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./kinds": [
+    {
+      "id": "./node_modules/graphql/language/kinds.mjs",
+      "name": "./node_modules/graphql/language/kinds.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./valueFromASTUntyped": [
+    {
+      "id": "./node_modules/graphql/utilities/valueFromASTUntyped.mjs",
+      "name": "./node_modules/graphql/utilities/valueFromASTUntyped.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../jsutils/keyValMap": [
+    {
+      "id": "./node_modules/graphql/jsutils/keyValMap.mjs",
+      "name": "./node_modules/graphql/jsutils/keyValMap.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../jsutils/isInvalid": [
+    {
+      "id": "./node_modules/graphql/jsutils/isInvalid.mjs",
+      "name": "./node_modules/graphql/jsutils/isInvalid.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./scalars": [
+    {
+      "id": "./node_modules/graphql/type/scalars.mjs",
+      "name": "./node_modules/graphql/type/scalars.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../jsutils/isFinite": [
+    {
+      "id": "./node_modules/graphql/jsutils/isFinite.mjs",
+      "name": "./node_modules/graphql/jsutils/isFinite.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../jsutils/isInteger": [
+    {
+      "id": "./node_modules/graphql/jsutils/isInteger.mjs",
+      "name": "./node_modules/graphql/jsutils/isInteger.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./directiveLocation": [
+    {
+      "id": "./node_modules/graphql/language/directiveLocation.mjs",
+      "name": "./node_modules/graphql/language/directiveLocation.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./introspection": [
+    {
+      "id": "./node_modules/graphql/type/introspection.mjs",
+      "name": "./node_modules/graphql/type/introspection.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../jsutils/objectValues": [
+    {
+      "id": "./node_modules/graphql/jsutils/objectValues.mjs",
+      "name": "./node_modules/graphql/jsutils/objectValues.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./astFromValue": [
+    {
+      "id": "./node_modules/graphql/utilities/astFromValue.mjs",
+      "name": "./node_modules/graphql/utilities/astFromValue.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "iterall": [
+    {
+      "id": "./node_modules/iterall/index.mjs",
+      "name": "./node_modules/iterall/index.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../jsutils/isNullish": [
+    {
+      "id": "./node_modules/graphql/jsutils/isNullish.mjs",
+      "name": "./node_modules/graphql/jsutils/isNullish.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./schema": [
+    {
+      "id": "./node_modules/graphql/type/schema.mjs",
+      "name": "./node_modules/graphql/type/schema.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../jsutils/find": [
+    {
+      "id": "./node_modules/graphql/jsutils/find.mjs",
+      "name": "./node_modules/graphql/jsutils/find.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./GraphQLError": [
+    {
+      "id": "./node_modules/graphql/error/GraphQLError.mjs",
+      "name": "./node_modules/graphql/error/GraphQLError.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./printError": [
+    {
+      "id": "./node_modules/graphql/error/printError.mjs",
+      "name": "./node_modules/graphql/error/printError.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./location": [
+    {
+      "id": "./node_modules/graphql/language/location.mjs",
+      "name": "./node_modules/graphql/language/location.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./assertValidName": [
+    {
+      "id": "./node_modules/graphql/utilities/assertValidName.mjs",
+      "name": "./node_modules/graphql/utilities/assertValidName.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./typeComparators": [
+    {
+      "id": "./node_modules/graphql/utilities/typeComparators.mjs",
+      "name": "./node_modules/graphql/utilities/typeComparators.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "graphql/language/parser": [
+    {
+      "id": "./node_modules/graphql/language/parser.mjs",
+      "name": "./node_modules/graphql/language/parser.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./source": [
+    {
+      "id": "./node_modules/graphql/language/source.mjs",
+      "name": "./node_modules/graphql/language/source.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../error": [
+    {
+      "id": "./node_modules/graphql/error/index.mjs",
+      "name": "./node_modules/graphql/error/index.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./syntaxError": [
+    {
+      "id": "./node_modules/graphql/error/syntaxError.mjs",
+      "name": "./node_modules/graphql/error/syntaxError.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./locatedError": [
+    {
+      "id": "./node_modules/graphql/error/locatedError.mjs",
+      "name": "./node_modules/graphql/error/locatedError.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./formatError": [
+    {
+      "id": "./node_modules/graphql/error/formatError.mjs",
+      "name": "./node_modules/graphql/error/formatError.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./lexer": [
+    {
+      "id": "./node_modules/graphql/language/lexer.mjs",
+      "name": "./node_modules/graphql/language/lexer.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./blockStringValue": [
+    {
+      "id": "./node_modules/graphql/language/blockStringValue.mjs",
+      "name": "./node_modules/graphql/language/blockStringValue.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./validation/validate": [
+    {
+      "id": "./node_modules/graphql/validation/validate.mjs",
+      "name": "./node_modules/graphql/validation/validate.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./TypeInfo": [
+    {
+      "id": "./node_modules/graphql/utilities/TypeInfo.mjs",
+      "name": "./node_modules/graphql/utilities/TypeInfo.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./typeFromAST": [
+    {
+      "id": "./node_modules/graphql/utilities/typeFromAST.mjs",
+      "name": "./node_modules/graphql/utilities/typeFromAST.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./specifiedRules": [
+    {
+      "id": "./node_modules/graphql/validation/specifiedRules.mjs",
+      "name": "./node_modules/graphql/validation/specifiedRules.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/ExecutableDefinitions": [
+    {
+      "id": "./node_modules/graphql/validation/rules/ExecutableDefinitions.mjs",
+      "name": "./node_modules/graphql/validation/rules/ExecutableDefinitions.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./predicates": [
+    {
+      "id": "./node_modules/graphql/language/predicates.mjs",
+      "name": "./node_modules/graphql/language/predicates.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/UniqueOperationNames": [
+    {
+      "id": "./node_modules/graphql/validation/rules/UniqueOperationNames.mjs",
+      "name": "./node_modules/graphql/validation/rules/UniqueOperationNames.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/LoneAnonymousOperation": [
+    {
+      "id": "./node_modules/graphql/validation/rules/LoneAnonymousOperation.mjs",
+      "name": "./node_modules/graphql/validation/rules/LoneAnonymousOperation.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/SingleFieldSubscriptions": [
+    {
+      "id": "./node_modules/graphql/validation/rules/SingleFieldSubscriptions.mjs",
+      "name": "./node_modules/graphql/validation/rules/SingleFieldSubscriptions.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/KnownTypeNames": [
+    {
+      "id": "./node_modules/graphql/validation/rules/KnownTypeNames.mjs",
+      "name": "./node_modules/graphql/validation/rules/KnownTypeNames.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../jsutils/suggestionList": [
+    {
+      "id": "./node_modules/graphql/jsutils/suggestionList.mjs",
+      "name": "./node_modules/graphql/jsutils/suggestionList.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../../jsutils/quotedOrList": [
+    {
+      "id": "./node_modules/graphql/jsutils/quotedOrList.mjs",
+      "name": "./node_modules/graphql/jsutils/quotedOrList.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "webpack-hot-middleware/client": [
+    {
+      "id": "./node_modules/webpack-hot-middleware/client.js",
+      "name": "./node_modules/webpack-hot-middleware/client.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/FragmentsOnCompositeTypes": [
+    {
+      "id": "./node_modules/graphql/validation/rules/FragmentsOnCompositeTypes.mjs",
+      "name": "./node_modules/graphql/validation/rules/FragmentsOnCompositeTypes.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/VariablesAreInputTypes": [
+    {
+      "id": "./node_modules/graphql/validation/rules/VariablesAreInputTypes.mjs",
+      "name": "./node_modules/graphql/validation/rules/VariablesAreInputTypes.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/ScalarLeafs": [
+    {
+      "id": "./node_modules/graphql/validation/rules/ScalarLeafs.mjs",
+      "name": "./node_modules/graphql/validation/rules/ScalarLeafs.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/FieldsOnCorrectType": [
+    {
+      "id": "./node_modules/graphql/validation/rules/FieldsOnCorrectType.mjs",
+      "name": "./node_modules/graphql/validation/rules/FieldsOnCorrectType.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/UniqueFragmentNames": [
+    {
+      "id": "./node_modules/graphql/validation/rules/UniqueFragmentNames.mjs",
+      "name": "./node_modules/graphql/validation/rules/UniqueFragmentNames.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/KnownFragmentNames": [
+    {
+      "id": "./node_modules/graphql/validation/rules/KnownFragmentNames.mjs",
+      "name": "./node_modules/graphql/validation/rules/KnownFragmentNames.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/NoUnusedFragments": [
+    {
+      "id": "./node_modules/graphql/validation/rules/NoUnusedFragments.mjs",
+      "name": "./node_modules/graphql/validation/rules/NoUnusedFragments.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/PossibleFragmentSpreads": [
+    {
+      "id": "./node_modules/graphql/validation/rules/PossibleFragmentSpreads.mjs",
+      "name": "./node_modules/graphql/validation/rules/PossibleFragmentSpreads.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/NoFragmentCycles": [
+    {
+      "id": "./node_modules/graphql/validation/rules/NoFragmentCycles.mjs",
+      "name": "./node_modules/graphql/validation/rules/NoFragmentCycles.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/UniqueVariableNames": [
+    {
+      "id": "./node_modules/graphql/validation/rules/UniqueVariableNames.mjs",
+      "name": "./node_modules/graphql/validation/rules/UniqueVariableNames.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/NoUndefinedVariables": [
+    {
+      "id": "./node_modules/graphql/validation/rules/NoUndefinedVariables.mjs",
+      "name": "./node_modules/graphql/validation/rules/NoUndefinedVariables.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/NoUnusedVariables": [
+    {
+      "id": "./node_modules/graphql/validation/rules/NoUnusedVariables.mjs",
+      "name": "./node_modules/graphql/validation/rules/NoUnusedVariables.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/KnownDirectives": [
+    {
+      "id": "./node_modules/graphql/validation/rules/KnownDirectives.mjs",
+      "name": "./node_modules/graphql/validation/rules/KnownDirectives.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/UniqueDirectivesPerLocation": [
+    {
+      "id": "./node_modules/graphql/validation/rules/UniqueDirectivesPerLocation.mjs",
+      "name": "./node_modules/graphql/validation/rules/UniqueDirectivesPerLocation.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/KnownArgumentNames": [
+    {
+      "id": "./node_modules/graphql/validation/rules/KnownArgumentNames.mjs",
+      "name": "./node_modules/graphql/validation/rules/KnownArgumentNames.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/UniqueArgumentNames": [
+    {
+      "id": "./node_modules/graphql/validation/rules/UniqueArgumentNames.mjs",
+      "name": "./node_modules/graphql/validation/rules/UniqueArgumentNames.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/ValuesOfCorrectType": [
+    {
+      "id": "./node_modules/graphql/validation/rules/ValuesOfCorrectType.mjs",
+      "name": "./node_modules/graphql/validation/rules/ValuesOfCorrectType.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/ProvidedRequiredArguments": [
+    {
+      "id": "./node_modules/graphql/validation/rules/ProvidedRequiredArguments.mjs",
+      "name": "./node_modules/graphql/validation/rules/ProvidedRequiredArguments.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/VariablesInAllowedPosition": [
+    {
+      "id": "./node_modules/graphql/validation/rules/VariablesInAllowedPosition.mjs",
+      "name": "./node_modules/graphql/validation/rules/VariablesInAllowedPosition.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/OverlappingFieldsCanBeMerged": [
+    {
+      "id": "./node_modules/graphql/validation/rules/OverlappingFieldsCanBeMerged.mjs",
+      "name": "./node_modules/graphql/validation/rules/OverlappingFieldsCanBeMerged.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/UniqueInputFieldNames": [
+    {
+      "id": "./node_modules/graphql/validation/rules/UniqueInputFieldNames.mjs",
+      "name": "./node_modules/graphql/validation/rules/UniqueInputFieldNames.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./rules/LoneSchemaDefinition": [
+    {
+      "id": "./node_modules/graphql/validation/rules/LoneSchemaDefinition.mjs",
+      "name": "./node_modules/graphql/validation/rules/LoneSchemaDefinition.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./ValidationContext": [
+    {
+      "id": "./node_modules/graphql/validation/ValidationContext.mjs",
+      "name": "./node_modules/graphql/validation/ValidationContext.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./execution/execute": [
+    {
+      "id": "./node_modules/graphql/execution/execute.mjs",
+      "name": "./node_modules/graphql/execution/execute.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../jsutils/isPromise": [
+    {
+      "id": "./node_modules/graphql/jsutils/isPromise.mjs",
+      "name": "./node_modules/graphql/jsutils/isPromise.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../jsutils/memoize3": [
+    {
+      "id": "./node_modules/graphql/jsutils/memoize3.mjs",
+      "name": "./node_modules/graphql/jsutils/memoize3.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../jsutils/promiseForObject": [
+    {
+      "id": "./node_modules/graphql/jsutils/promiseForObject.mjs",
+      "name": "./node_modules/graphql/jsutils/promiseForObject.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../jsutils/promiseReduce": [
+    {
+      "id": "./node_modules/graphql/jsutils/promiseReduce.mjs",
+      "name": "./node_modules/graphql/jsutils/promiseReduce.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./getOperationRootType": [
+    {
+      "id": "./node_modules/graphql/utilities/getOperationRootType.mjs",
+      "name": "./node_modules/graphql/utilities/getOperationRootType.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./values": [
+    {
+      "id": "./node_modules/graphql/execution/values.mjs",
+      "name": "./node_modules/graphql/execution/values.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./coerceValue": [
+    {
+      "id": "./node_modules/graphql/utilities/coerceValue.mjs",
+      "name": "./node_modules/graphql/utilities/coerceValue.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./valueFromAST": [
+    {
+      "id": "./node_modules/graphql/utilities/valueFromAST.mjs",
+      "name": "./node_modules/graphql/utilities/valueFromAST.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./type": [
+    {
+      "id": "./node_modules/graphql/type/index.mjs",
+      "name": "./node_modules/graphql/type/index.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./language": [
+    {
+      "id": "./node_modules/graphql/language/index.mjs",
+      "name": "./node_modules/graphql/language/index.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./execution": [
+    {
+      "id": "./node_modules/graphql/execution/index.mjs",
+      "name": "./node_modules/graphql/execution/index.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./subscription": [
+    {
+      "id": "./node_modules/graphql/subscription/index.mjs",
+      "name": "./node_modules/graphql/subscription/index.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./subscribe": [
+    {
+      "id": "./node_modules/graphql/subscription/subscribe.mjs",
+      "name": "./node_modules/graphql/subscription/subscribe.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./mapAsyncIterator": [
+    {
+      "id": "./node_modules/graphql/subscription/mapAsyncIterator.mjs",
+      "name": "./node_modules/graphql/subscription/mapAsyncIterator.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./validation": [
+    {
+      "id": "./node_modules/graphql/validation/index.mjs",
+      "name": "./node_modules/graphql/validation/index.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./utilities": [
+    {
+      "id": "./node_modules/graphql/utilities/index.mjs",
+      "name": "./node_modules/graphql/utilities/index.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./introspectionQuery": [
+    {
+      "id": "./node_modules/graphql/utilities/introspectionQuery.mjs",
+      "name": "./node_modules/graphql/utilities/introspectionQuery.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./getOperationAST": [
+    {
+      "id": "./node_modules/graphql/utilities/getOperationAST.mjs",
+      "name": "./node_modules/graphql/utilities/getOperationAST.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./introspectionFromSchema": [
+    {
+      "id": "./node_modules/graphql/utilities/introspectionFromSchema.mjs",
+      "name": "./node_modules/graphql/utilities/introspectionFromSchema.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./buildClientSchema": [
+    {
+      "id": "./node_modules/graphql/utilities/buildClientSchema.mjs",
+      "name": "./node_modules/graphql/utilities/buildClientSchema.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./buildASTSchema": [
+    {
+      "id": "./node_modules/graphql/utilities/buildASTSchema.mjs",
+      "name": "./node_modules/graphql/utilities/buildASTSchema.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./extendSchema": [
+    {
+      "id": "./node_modules/graphql/utilities/extendSchema.mjs",
+      "name": "./node_modules/graphql/utilities/extendSchema.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./lexicographicSortSchema": [
+    {
+      "id": "./node_modules/graphql/utilities/lexicographicSortSchema.mjs",
+      "name": "./node_modules/graphql/utilities/lexicographicSortSchema.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./schemaPrinter": [
+    {
+      "id": "./node_modules/graphql/utilities/schemaPrinter.mjs",
+      "name": "./node_modules/graphql/utilities/schemaPrinter.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./isValidJSValue": [
+    {
+      "id": "./node_modules/graphql/utilities/isValidJSValue.mjs",
+      "name": "./node_modules/graphql/utilities/isValidJSValue.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./isValidLiteralValue": [
+    {
+      "id": "./node_modules/graphql/utilities/isValidLiteralValue.mjs",
+      "name": "./node_modules/graphql/utilities/isValidLiteralValue.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./concatAST": [
+    {
+      "id": "./node_modules/graphql/utilities/concatAST.mjs",
+      "name": "./node_modules/graphql/utilities/concatAST.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./separateOperations": [
+    {
+      "id": "./node_modules/graphql/utilities/separateOperations.mjs",
+      "name": "./node_modules/graphql/utilities/separateOperations.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./findBreakingChanges": [
+    {
+      "id": "./node_modules/graphql/utilities/findBreakingChanges.mjs",
+      "name": "./node_modules/graphql/utilities/findBreakingChanges.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./findDeprecatedUsages": [
+    {
+      "id": "./node_modules/graphql/utilities/findDeprecatedUsages.mjs",
+      "name": "./node_modules/graphql/utilities/findDeprecatedUsages.mjs",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "apollo-link-error": [
+    {
+      "id": "./node_modules/apollo-link-error/lib/index.js",
+      "name": "./node_modules/apollo-link-error/lib/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "graphql-tag": [
+    {
+      "id": "./node_modules/graphql-tag/src/index.js",
+      "name": "./node_modules/graphql-tag/src/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "react": [
+    {
+      "id": "./node_modules/react/index.js",
+      "name": "./node_modules/react/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./cjs/react.development.js": [
+    {
+      "id": "./node_modules/react/cjs/react.development.js",
+      "name": "./node_modules/react/cjs/react.development.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "object-assign": [
+    {
+      "id": "./node_modules/object-assign/index.js",
+      "name": "./node_modules/object-assign/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "prop-types/checkPropTypes": [
+    {
+      "id": "./node_modules/prop-types/checkPropTypes.js",
+      "name": "./node_modules/prop-types/checkPropTypes.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./lib/ReactPropTypesSecret": [
+    {
+      "id": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
+      "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "react-apollo": [
+    {
+      "id": "./node_modules/react-apollo/react-apollo.browser.umd.js",
+      "name": "./node_modules/react-apollo/react-apollo.browser.umd.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "prop-types": [
+    {
+      "id": "./node_modules/prop-types/index.js",
+      "name": "./node_modules/prop-types/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./factoryWithTypeCheckers": [
+    {
+      "id": "./node_modules/prop-types/factoryWithTypeCheckers.js",
+      "name": "./node_modules/prop-types/factoryWithTypeCheckers.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "invariant": [
+    {
+      "id": "./node_modules/invariant/browser.js",
+      "name": "./node_modules/invariant/browser.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "fbjs/lib/shallowEqual": [
+    {
+      "id": "./node_modules/fbjs/lib/shallowEqual.js",
+      "name": "./node_modules/fbjs/lib/shallowEqual.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "hoist-non-react-statics": [
+    {
+      "id": "./node_modules/react-apollo/node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
+      "name": "./node_modules/react-apollo/node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    },
+    {
+      "id": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
+      "name": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "react-is": [
+    {
+      "id": "./node_modules/react-is/index.js",
+      "name": "./node_modules/react-is/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./cjs/react-is.development.js": [
+    {
+      "id": "./node_modules/react-is/cjs/react-is.development.js",
+      "name": "./node_modules/react-is/cjs/react-is.development.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "lodash.flowright": [
+    {
+      "id": "./node_modules/lodash.flowright/index.js",
+      "name": "./node_modules/lodash.flowright/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "react-dom": [
+    {
+      "id": "./node_modules/react-dom/index.js",
+      "name": "./node_modules/react-dom/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./cjs/react-dom.development.js": [
+    {
+      "id": "./node_modules/react-dom/cjs/react-dom.development.js",
+      "name": "./node_modules/react-dom/cjs/react-dom.development.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "schedule": [
+    {
+      "id": "./node_modules/schedule/index.js",
+      "name": "./node_modules/schedule/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./cjs/schedule.development.js": [
+    {
+      "id": "./node_modules/schedule/cjs/schedule.development.js",
+      "name": "./node_modules/schedule/cjs/schedule.development.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "schedule/tracing": [
+    {
+      "id": "./node_modules/schedule/tracing.js",
+      "name": "./node_modules/schedule/tracing.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./cjs/schedule-tracing.development.js": [
+    {
+      "id": "./node_modules/schedule/cjs/schedule-tracing.development.js",
+      "name": "./node_modules/schedule/cjs/schedule-tracing.development.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "react-helmet-async": [
+    {
+      "id": "./node_modules/react-helmet-async/lib/index.js",
+      "name": "./node_modules/react-helmet-async/lib/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./Provider": [
+    {
+      "id": "./node_modules/react-helmet-async/lib/Provider.js",
+      "name": "./node_modules/react-helmet-async/lib/Provider.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./server": [
+    {
+      "id": "./node_modules/react-helmet-async/lib/server.js",
+      "name": "./node_modules/react-helmet-async/lib/server.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./constants": [
+    {
+      "id": "./node_modules/react-helmet-async/lib/constants.js",
+      "name": "./node_modules/react-helmet-async/lib/constants.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "react-fast-compare": [
+    {
+      "id": "./node_modules/react-fast-compare/index.js",
+      "name": "./node_modules/react-fast-compare/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./Dispatcher": [
+    {
+      "id": "./node_modules/react-helmet-async/lib/Dispatcher.js",
+      "name": "./node_modules/react-helmet-async/lib/Dispatcher.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "shallowequal": [
+    {
+      "id": "./node_modules/shallowequal/index.js",
+      "name": "./node_modules/shallowequal/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./client": [
+    {
+      "id": "./node_modules/react-helmet-async/lib/client.js",
+      "name": "./node_modules/react-helmet-async/lib/client.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "react-hot-loader": [
+    {
+      "id": "./node_modules/react-hot-loader/index.js",
+      "name": "./node_modules/react-hot-loader/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./dist/react-hot-loader.production.min.js": [
+    {
+      "id": "./node_modules/react-hot-loader/dist/react-hot-loader.production.min.js",
+      "name": "./node_modules/react-hot-loader/dist/react-hot-loader.production.min.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./dist/react-hot-loader.development.js": [
+    {
+      "id": "./node_modules/react-hot-loader/dist/react-hot-loader.development.js",
+      "name": "./node_modules/react-hot-loader/dist/react-hot-loader.development.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "fast-levenshtein": [
+    {
+      "id": "./node_modules/fast-levenshtein/levenshtein.js",
+      "name": "./node_modules/fast-levenshtein/levenshtein.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "!!webpack amd define": [
+    {
+      "id": "../tsmill/node_modules/webpack/buildin/amd-define.js",
+      "name": "../tsmill/node_modules/webpack/buildin/amd-define.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "!!webpack amd options": [
+    {
+      "id": "../tsmill/node_modules/webpack/buildin/amd-options.js",
+      "name": "../tsmill/node_modules/webpack/buildin/amd-options.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "react-lifecycles-compat": [
+    {
+      "id": "./node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js",
+      "name": "./node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "react-loadable": [
+    {
+      "id": "./node_modules/react-loadable/lib/index.js",
+      "name": "./node_modules/react-loadable/lib/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "react-router-dom": [
+    {
+      "id": "./node_modules/react-router-dom/es/index.js",
+      "name": "./node_modules/react-router-dom/es/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./BrowserRouter": [
+    {
+      "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+      "name": "./node_modules/react-router-dom/es/BrowserRouter.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "warning": [
+    {
+      "id": "./node_modules/warning/warning.js",
+      "name": "./node_modules/warning/warning.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    },
+    {
+      "id": "./node_modules/history/node_modules/warning/browser.js",
+      "name": "./node_modules/history/node_modules/warning/browser.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "history": [
+    {
+      "id": "./node_modules/history/es/index.js",
+      "name": "./node_modules/history/es/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./createBrowserHistory": [
+    {
+      "id": "./node_modules/history/es/createBrowserHistory.js",
+      "name": "./node_modules/history/es/createBrowserHistory.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./LocationUtils": [
+    {
+      "id": "./node_modules/history/es/LocationUtils.js",
+      "name": "./node_modules/history/es/LocationUtils.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "resolve-pathname": [
+    {
+      "id": "./node_modules/resolve-pathname/index.js",
+      "name": "./node_modules/resolve-pathname/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "value-equal": [
+    {
+      "id": "./node_modules/value-equal/index.js",
+      "name": "./node_modules/value-equal/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./PathUtils": [
+    {
+      "id": "./node_modules/history/es/PathUtils.js",
+      "name": "./node_modules/history/es/PathUtils.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./createTransitionManager": [
+    {
+      "id": "./node_modules/history/es/createTransitionManager.js",
+      "name": "./node_modules/history/es/createTransitionManager.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./DOMUtils": [
+    {
+      "id": "./node_modules/history/es/DOMUtils.js",
+      "name": "./node_modules/history/es/DOMUtils.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./createHashHistory": [
+    {
+      "id": "./node_modules/history/es/createHashHistory.js",
+      "name": "./node_modules/history/es/createHashHistory.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./createMemoryHistory": [
+    {
+      "id": "./node_modules/history/es/createMemoryHistory.js",
+      "name": "./node_modules/history/es/createMemoryHistory.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./Router": [
+    {
+      "id": "./node_modules/react-router-dom/es/Router.js",
+      "name": "./node_modules/react-router-dom/es/Router.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    },
+    {
+      "id": "./node_modules/react-router/es/Router.js",
+      "name": "./node_modules/react-router/es/Router.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./HashRouter": [
+    {
+      "id": "./node_modules/react-router-dom/es/HashRouter.js",
+      "name": "./node_modules/react-router-dom/es/HashRouter.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./Link": [
+    {
+      "id": "./node_modules/react-router-dom/es/Link.js",
+      "name": "./node_modules/react-router-dom/es/Link.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./MemoryRouter": [
+    {
+      "id": "./node_modules/react-router-dom/es/MemoryRouter.js",
+      "name": "./node_modules/react-router-dom/es/MemoryRouter.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    },
+    {
+      "id": "./node_modules/react-router/es/MemoryRouter.js",
+      "name": "./node_modules/react-router/es/MemoryRouter.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./NavLink": [
+    {
+      "id": "./node_modules/react-router-dom/es/NavLink.js",
+      "name": "./node_modules/react-router-dom/es/NavLink.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./Route": [
+    {
+      "id": "./node_modules/react-router-dom/es/Route.js",
+      "name": "./node_modules/react-router-dom/es/Route.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    },
+    {
+      "id": "./node_modules/react-router/es/Route.js",
+      "name": "./node_modules/react-router/es/Route.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./matchPath": [
+    {
+      "id": "./node_modules/react-router/es/matchPath.js",
+      "name": "./node_modules/react-router/es/matchPath.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    },
+    {
+      "id": "./node_modules/react-router-dom/es/matchPath.js",
+      "name": "./node_modules/react-router-dom/es/matchPath.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "path-to-regexp": [
+    {
+      "id": "./node_modules/path-to-regexp/index.js",
+      "name": "./node_modules/path-to-regexp/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./Prompt": [
+    {
+      "id": "./node_modules/react-router-dom/es/Prompt.js",
+      "name": "./node_modules/react-router-dom/es/Prompt.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    },
+    {
+      "id": "./node_modules/react-router/es/Prompt.js",
+      "name": "./node_modules/react-router/es/Prompt.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./Redirect": [
+    {
+      "id": "./node_modules/react-router-dom/es/Redirect.js",
+      "name": "./node_modules/react-router-dom/es/Redirect.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    },
+    {
+      "id": "./node_modules/react-router/es/Redirect.js",
+      "name": "./node_modules/react-router/es/Redirect.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./generatePath": [
+    {
+      "id": "./node_modules/react-router/es/generatePath.js",
+      "name": "./node_modules/react-router/es/generatePath.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    },
+    {
+      "id": "./node_modules/react-router-dom/es/generatePath.js",
+      "name": "./node_modules/react-router-dom/es/generatePath.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./StaticRouter": [
+    {
+      "id": "./node_modules/react-router-dom/es/StaticRouter.js",
+      "name": "./node_modules/react-router-dom/es/StaticRouter.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    },
+    {
+      "id": "./node_modules/react-router/es/StaticRouter.js",
+      "name": "./node_modules/react-router/es/StaticRouter.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./Switch": [
+    {
+      "id": "./node_modules/react-router-dom/es/Switch.js",
+      "name": "./node_modules/react-router-dom/es/Switch.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    },
+    {
+      "id": "./node_modules/react-router/es/Switch.js",
+      "name": "./node_modules/react-router/es/Switch.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./withRouter": [
+    {
+      "id": "./node_modules/react-router-dom/es/withRouter.js",
+      "name": "./node_modules/react-router-dom/es/withRouter.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    },
+    {
+      "id": "./node_modules/react-router/es/withRouter.js",
+      "name": "./node_modules/react-router/es/withRouter.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./App": [
+    {
+      "id": "./src/view/App.tsx",
+      "name": "./src/view/App.tsx",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../features/auth/view": [
+    {
+      "id": "./src/features/auth/view/index.tsx",
+      "name": "./src/features/auth/view/index.tsx",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "react-router": [
+    {
+      "id": "./node_modules/react-router/es/index.js",
+      "name": "./node_modules/react-router/es/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./pages/Login": [
+    {
+      "id": "./src/features/auth/view/pages/Login/index.tsx",
+      "name": "./src/features/auth/view/pages/Login/index.tsx",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./pages/Register": [
+    {
+      "id": "./src/features/auth/view/pages/Register/index.tsx",
+      "name": "./src/features/auth/view/pages/Register/index.tsx",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../features/dashboard/view": [
+    {
+      "id": "./src/features/dashboard/view/index.tsx",
+      "name": "./src/features/dashboard/view/index.tsx",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./pages/Dashboard": [
+    {
+      "id": "./src/features/dashboard/view/pages/Dashboard/index.tsx",
+      "name": "./src/features/dashboard/view/pages/Dashboard/index.tsx",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "../../../../auth/view/CurrentUserQuery": [
+    {
+      "id": "./src/features/auth/view/CurrentUserQuery.tsx",
+      "name": "./src/features/auth/view/CurrentUserQuery.tsx",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    },
+    {
+      "id": "./src/features/auth/view/CurrentUserQuery.tsx",
+      "name": "./src/features/auth/view/CurrentUserQuery.tsx",
+      "file": "1.bundle.js",
+      "publicPath": "/1.bundle.js"
+    },
+    {
+      "id": "./src/features/auth/view/CurrentUserQuery.tsx",
+      "name": "./src/features/auth/view/CurrentUserQuery.tsx",
+      "file": "2.bundle.js",
+      "publicPath": "/2.bundle.js"
+    }
+  ],
+  "./Login": [
+    {
+      "id": "./src/features/auth/view/pages/Login/Login.tsx",
+      "name": "./src/features/auth/view/pages/Login/Login.tsx",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./LoginForm": [
+    {
+      "id": "./src/features/auth/view/pages/Login/LoginForm.tsx",
+      "name": "./src/features/auth/view/pages/Login/LoginForm.tsx",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "../../auth/view/withLogoutUser": [
+    {
+      "id": "./src/features/auth/view/withLogoutUser.tsx",
+      "name": "./src/features/auth/view/withLogoutUser.tsx",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    },
+    {
+      "id": "./src/features/auth/view/withLogoutUser.tsx",
+      "name": "./src/features/auth/view/withLogoutUser.tsx",
+      "file": "1.bundle.js",
+      "publicPath": "/1.bundle.js"
+    },
+    {
+      "id": "./src/features/auth/view/withLogoutUser.tsx",
+      "name": "./src/features/auth/view/withLogoutUser.tsx",
+      "file": "2.bundle.js",
+      "publicPath": "/2.bundle.js"
+    }
+  ],
+  "./Layout": [
+    {
+      "id": "./src/features/layout/view/Layout.tsx",
+      "name": "./src/features/layout/view/Layout.tsx",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    },
+    {
+      "id": "./src/features/layout/view/Layout.tsx",
+      "name": "./src/features/layout/view/Layout.tsx",
+      "file": "1.bundle.js",
+      "publicPath": "/1.bundle.js"
+    },
+    {
+      "id": "./src/features/layout/view/Layout.tsx",
+      "name": "./src/features/layout/view/Layout.tsx",
+      "file": "2.bundle.js",
+      "publicPath": "/2.bundle.js"
+    }
+  ],
+  "../../../../layout/view": [
+    {
+      "id": "./src/features/layout/view/index.ts",
+      "name": "./src/features/layout/view/index.ts",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    },
+    {
+      "id": "./src/features/layout/view/index.ts",
+      "name": "./src/features/layout/view/index.ts",
+      "file": "1.bundle.js",
+      "publicPath": "/1.bundle.js"
+    },
+    {
+      "id": "./src/features/layout/view/index.ts",
+      "name": "./src/features/layout/view/index.ts",
+      "file": "2.bundle.js",
+      "publicPath": "/2.bundle.js"
+    }
+  ],
+  "./Navigation": [
+    {
+      "id": "./src/features/navigation/view/Navigation.tsx",
+      "name": "./src/features/navigation/view/Navigation.tsx",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    },
+    {
+      "id": "./src/features/navigation/view/Navigation.tsx",
+      "name": "./src/features/navigation/view/Navigation.tsx",
+      "file": "1.bundle.js",
+      "publicPath": "/1.bundle.js"
+    },
+    {
+      "id": "./src/features/navigation/view/Navigation.tsx",
+      "name": "./src/features/navigation/view/Navigation.tsx",
+      "file": "2.bundle.js",
+      "publicPath": "/2.bundle.js"
+    }
+  ],
+  "../../navigation/view": [
+    {
+      "id": "./src/features/navigation/view/index.ts",
+      "name": "./src/features/navigation/view/index.ts",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    },
+    {
+      "id": "./src/features/navigation/view/index.ts",
+      "name": "./src/features/navigation/view/index.ts",
+      "file": "1.bundle.js",
+      "publicPath": "/1.bundle.js"
+    },
+    {
+      "id": "./src/features/navigation/view/index.ts",
+      "name": "./src/features/navigation/view/index.ts",
+      "file": "2.bundle.js",
+      "publicPath": "/2.bundle.js"
+    }
+  ],
+  "./Register": [
+    {
+      "id": "./src/features/auth/view/pages/Register/Register.tsx",
+      "name": "./src/features/auth/view/pages/Register/Register.tsx",
+      "file": "1.bundle.js",
+      "publicPath": "/1.bundle.js"
+    }
+  ],
+  "./RegisterForm": [
+    {
+      "id": "./src/features/auth/view/pages/Register/RegisterForm.tsx",
+      "name": "./src/features/auth/view/pages/Register/RegisterForm.tsx",
+      "file": "1.bundle.js",
+      "publicPath": "/1.bundle.js"
+    }
+  ],
+  "./Dashboard": [
+    {
+      "id": "./src/features/dashboard/view/pages/Dashboard/Dashboard.tsx",
+      "name": "./src/features/dashboard/view/pages/Dashboard/Dashboard.tsx",
+      "file": "2.bundle.js",
+      "publicPath": "/2.bundle.js"
+    }
+  ]
+}

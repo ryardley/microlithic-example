@@ -28,7 +28,7 @@ function interpolateTemplate(
 async function servePageTemplate(templatePath: string) {
   const template = await readFileAsync(templatePath, 'utf-8');
   return (app: express.Application) => {
-    app.use('*', async (req, res) => {
+    app.use(async (req, res) => {
       const renderedData = await renderServer({ req });
       res.send(interpolateTemplate(template, renderedData));
     });

@@ -6,6 +6,7 @@ import { ApolloProvider } from 'react-apollo';
 import * as ReactDOM from 'react-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { hot } from 'react-hot-loader';
+import Loadable from 'react-loadable';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
@@ -35,8 +36,9 @@ const HotBrowserApp = hot(module)(({ client }: Props) => (
     </BrowserRouter>
   </ApolloProvider>
 ));
-
-ReactDOM.render(
-  <HotBrowserApp client={browserClient} />,
-  document.getElementById('root') as HTMLElement
-);
+Loadable.preloadReady().then(() => {
+  ReactDOM.hydrate(
+    <HotBrowserApp client={browserClient} />,
+    document.getElementById('root') as HTMLElement
+  );
+});

@@ -10,6 +10,7 @@ export default async (
   __: any,
   { userToken }: { userToken: UserToken }
 ) => {
+  console.log('handling currentUser query....');
   const event = correlatedEvent(
     CurrentUserRequest({
       id: userToken && userToken.id,
@@ -23,7 +24,7 @@ export default async (
     event.correlationId,
     'CurrentUserResponse'
   );
-
+  console.log('Received a response!');
   if (response.type === 'TimeoutEvent') {
     throw new TimeoutError();
   }
