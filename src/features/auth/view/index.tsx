@@ -1,10 +1,7 @@
 import * as React from 'react';
-import routeLoader from '../../../view/routeLoader';
-
 import { Route, Switch } from 'react-router';
-
-const Login = routeLoader(() => import('./pages/Login'));
-const Register = routeLoader(() => import('./pages/Register'));
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 export default () => (
   <Switch>

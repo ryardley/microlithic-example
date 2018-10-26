@@ -1,0 +1,15 @@
+<html>
+
+<head>
+  <!--title-->
+  <!--head-->
+  <link href="/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <main id="root"><!--app--></main>
+  <!--script-->
+  <script src="/client.js"></script>
+</body>
+
+</html>

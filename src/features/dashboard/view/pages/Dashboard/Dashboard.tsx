@@ -1,6 +1,6 @@
 import * as React from 'react';
-import CurrentUserQuery from '../../../auth/view/CurrentUserQuery';
-import Layout from '../../../layout/view';
+import CurrentUserQuery from '../../../../auth/view/CurrentUserQuery';
+import Layout from '../../../../layout/view';
 
 export default () => (
   <CurrentUserQuery>
