@@ -26,7 +26,7 @@ type HelmetFilledContext = {
 export default async function renderServer({ req }: { req: Request }) {
   const stats = JSON.parse(
     await readFileAsync(
-      path.resolve(__dirname, '../../react-loadable.json'),
+      path.resolve(__dirname, '../react-loadable.json'),
       'utf-8'
     )
   );

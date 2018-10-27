@@ -2,12 +2,14 @@ const webpack = require('webpack');
 const path = require('path');
 const runPath = require('./lib').runPath;
 const { ReactLoadablePlugin } = require('react-loadable/webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const { NODE_ENV } = process.env;
 
 const prod = NODE_ENV === 'production';
 
 const config = {
+  devtool: prod ? 'source-map' : 'inline-source-map',
   entry: !prod
     ? ['webpack-hot-middleware/client', './src/view/renderBrowser']
     : './src/view/renderBrowser',
@@ -36,9 +38,10 @@ const config = {
     chunkFilename: '[name].bundle.js',
     ...(prod ? { path: runPath('static') } : {})
   },
+
   plugins: [
     new ReactLoadablePlugin({
-      filename: 'react-loadable.json'
+      filename: `${prod ? 'build' : 'src'}/react-loadable.json`
     }),
     ...(!prod ? [new webpack.HotModuleReplacementPlugin()] : [])
   ]
