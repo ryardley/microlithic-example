@@ -9,7 +9,7 @@ export default function apply(app: Application) {
   app.use(
     session({
       cookie: {
-        maxAge: 100000,
+        maxAge: 10 * 60 * 1000,
       },
       resave: false,
       saveUninitialized: true,
