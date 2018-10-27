@@ -1,8 +1,168 @@
 {
-  "../jsutils/orList": [
+  "../../../../auth/view/CurrentUserQuery": [
     {
-      "id": "./node_modules/graphql/jsutils/orList.mjs",
-      "name": "./node_modules/graphql/jsutils/orList.mjs",
+      "id": "./src/features/auth/view/CurrentUserQuery.tsx",
+      "name": "./src/features/auth/view/CurrentUserQuery.tsx",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    },
+    {
+      "id": "./src/features/auth/view/CurrentUserQuery.tsx",
+      "name": "./src/features/auth/view/CurrentUserQuery.tsx",
+      "file": "1.bundle.js",
+      "publicPath": "/1.bundle.js"
+    },
+    {
+      "id": "./src/features/auth/view/CurrentUserQuery.tsx",
+      "name": "./src/features/auth/view/CurrentUserQuery.tsx",
+      "file": "2.bundle.js",
+      "publicPath": "/2.bundle.js"
+    }
+  ],
+  "./Login": [
+    {
+      "id": "./src/features/auth/view/pages/Login/Login.tsx",
+      "name": "./src/features/auth/view/pages/Login/Login.tsx",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "./LoginForm": [
+    {
+      "id": "./src/features/auth/view/pages/Login/LoginForm.tsx",
+      "name": "./src/features/auth/view/pages/Login/LoginForm.tsx",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    }
+  ],
+  "../../auth/view/withLogoutUser": [
+    {
+      "id": "./src/features/auth/view/withLogoutUser.tsx",
+      "name": "./src/features/auth/view/withLogoutUser.tsx",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    },
+    {
+      "id": "./src/features/auth/view/withLogoutUser.tsx",
+      "name": "./src/features/auth/view/withLogoutUser.tsx",
+      "file": "1.bundle.js",
+      "publicPath": "/1.bundle.js"
+    },
+    {
+      "id": "./src/features/auth/view/withLogoutUser.tsx",
+      "name": "./src/features/auth/view/withLogoutUser.tsx",
+      "file": "2.bundle.js",
+      "publicPath": "/2.bundle.js"
+    }
+  ],
+  "./Layout": [
+    {
+      "id": "./src/features/layout/view/Layout.tsx",
+      "name": "./src/features/layout/view/Layout.tsx",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    },
+    {
+      "id": "./src/features/layout/view/Layout.tsx",
+      "name": "./src/features/layout/view/Layout.tsx",
+      "file": "1.bundle.js",
+      "publicPath": "/1.bundle.js"
+    },
+    {
+      "id": "./src/features/layout/view/Layout.tsx",
+      "name": "./src/features/layout/view/Layout.tsx",
+      "file": "2.bundle.js",
+      "publicPath": "/2.bundle.js"
+    }
+  ],
+  "../../../../layout/view": [
+    {
+      "id": "./src/features/layout/view/index.ts",
+      "name": "./src/features/layout/view/index.ts",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    },
+    {
+      "id": "./src/features/layout/view/index.ts",
+      "name": "./src/features/layout/view/index.ts",
+      "file": "1.bundle.js",
+      "publicPath": "/1.bundle.js"
+    },
+    {
+      "id": "./src/features/layout/view/index.ts",
+      "name": "./src/features/layout/view/index.ts",
+      "file": "2.bundle.js",
+      "publicPath": "/2.bundle.js"
+    }
+  ],
+  "./Navigation": [
+    {
+      "id": "./src/features/navigation/view/Navigation.tsx",
+      "name": "./src/features/navigation/view/Navigation.tsx",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    },
+    {
+      "id": "./src/features/navigation/view/Navigation.tsx",
+      "name": "./src/features/navigation/view/Navigation.tsx",
+      "file": "1.bundle.js",
+      "publicPath": "/1.bundle.js"
+    },
+    {
+      "id": "./src/features/navigation/view/Navigation.tsx",
+      "name": "./src/features/navigation/view/Navigation.tsx",
+      "file": "2.bundle.js",
+      "publicPath": "/2.bundle.js"
+    }
+  ],
+  "../../navigation/view": [
+    {
+      "id": "./src/features/navigation/view/index.ts",
+      "name": "./src/features/navigation/view/index.ts",
+      "file": "0.bundle.js",
+      "publicPath": "/0.bundle.js"
+    },
+    {
+      "id": "./src/features/navigation/view/index.ts",
+      "name": "./src/features/navigation/view/index.ts",
+      "file": "1.bundle.js",
+      "publicPath": "/1.bundle.js"
+    },
+    {
+      "id": "./src/features/navigation/view/index.ts",
+      "name": "./src/features/navigation/view/index.ts",
+      "file": "2.bundle.js",
+      "publicPath": "/2.bundle.js"
+    }
+  ],
+  "./Register": [
+    {
+      "id": "./src/features/auth/view/pages/Register/Register.tsx",
+      "name": "./src/features/auth/view/pages/Register/Register.tsx",
+      "file": "1.bundle.js",
+      "publicPath": "/1.bundle.js"
+    }
+  ],
+  "./RegisterForm": [
+    {
+      "id": "./src/features/auth/view/pages/Register/RegisterForm.tsx",
+      "name": "./src/features/auth/view/pages/Register/RegisterForm.tsx",
+      "file": "1.bundle.js",
+      "publicPath": "/1.bundle.js"
+    }
+  ],
+  "./Dashboard": [
+    {
+      "id": "./src/features/dashboard/view/pages/Dashboard/Dashboard.tsx",
+      "name": "./src/features/dashboard/view/pages/Dashboard/Dashboard.tsx",
+      "file": "2.bundle.js",
+      "publicPath": "/2.bundle.js"
+    }
+  ],
+  "./rules/VariablesAreInputTypes": [
+    {
+      "id": "./node_modules/graphql/validation/rules/VariablesAreInputTypes.mjs",
+      "name": "./node_modules/graphql/validation/rules/VariablesAreInputTypes.mjs",
       "file": "client.js",
       "publicPath": "/client.js"
     }
@@ -15,10 +175,10 @@
       "publicPath": "/client.js"
     }
   ],
-  "./../../../tsmill/node_modules/webpack/buildin/module.js": [
+  "./../webpack/buildin/module.js": [
     {
-      "id": "../tsmill/node_modules/webpack/buildin/module.js",
-      "name": "../tsmill/node_modules/webpack/buildin/module.js",
+      "id": "./node_modules/webpack/buildin/module.js",
+      "name": "./node_modules/webpack/buildin/module.js",
       "file": "client.js",
       "publicPath": "/client.js"
     }
@@ -103,10 +263,10 @@
       "publicPath": "/client.js"
     }
   ],
-  "./../../../tsmill/node_modules/webpack/buildin/harmony-module.js": [
+  "./../../node_modules/webpack/buildin/harmony-module.js": [
     {
-      "id": "../tsmill/node_modules/webpack/buildin/harmony-module.js",
-      "name": "../tsmill/node_modules/webpack/buildin/harmony-module.js",
+      "id": "./node_modules/webpack/buildin/harmony-module.js",
+      "name": "./node_modules/webpack/buildin/harmony-module.js",
       "file": "client.js",
       "publicPath": "/client.js"
     }
@@ -237,60 +397,6 @@
       "publicPath": "/client.js"
     }
   ],
-  "fclone": [
-    {
-      "id": "./node_modules/fclone/dist/fclone.js",
-      "name": "./node_modules/fclone/dist/fclone.js",
-      "file": "client.js",
-      "publicPath": "/client.js"
-    }
-  ],
-  "./../../../../tsmill/node_modules/buffer/index.js": [
-    {
-      "id": "../tsmill/node_modules/buffer/index.js",
-      "name": "../tsmill/node_modules/buffer/index.js",
-      "file": "client.js",
-      "publicPath": "/client.js"
-    }
-  ],
-  "./../../../../tsmill/node_modules/webpack/buildin/global.js": [
-    {
-      "id": "../tsmill/node_modules/webpack/buildin/global.js",
-      "name": "../tsmill/node_modules/webpack/buildin/global.js",
-      "file": "client.js",
-      "publicPath": "/client.js"
-    }
-  ],
-  "base64-js": [
-    {
-      "id": "../tsmill/node_modules/base64-js/index.js",
-      "name": "../tsmill/node_modules/base64-js/index.js",
-      "file": "client.js",
-      "publicPath": "/client.js"
-    }
-  ],
-  "ieee754": [
-    {
-      "id": "../tsmill/node_modules/ieee754/index.js",
-      "name": "../tsmill/node_modules/ieee754/index.js",
-      "file": "client.js",
-      "publicPath": "/client.js"
-    }
-  ],
-  "isarray": [
-    {
-      "id": "../tsmill/node_modules/isarray/index.js",
-      "name": "../tsmill/node_modules/isarray/index.js",
-      "file": "client.js",
-      "publicPath": "/client.js"
-    },
-    {
-      "id": "./node_modules/path-to-regexp/node_modules/isarray/index.js",
-      "name": "./node_modules/path-to-regexp/node_modules/isarray/index.js",
-      "file": "client.js",
-      "publicPath": "/client.js"
-    }
-  ],
   "./util/environment": [
     {
       "id": "./node_modules/apollo-utilities/lib/util/environment.js",
@@ -299,10 +405,10 @@
       "publicPath": "/client.js"
     }
   ],
-  "./../../../../../tsmill/node_modules/process/browser.js": [
+  "./../../../node-libs-browser/node_modules/process/browser.js": [
     {
-      "id": "../tsmill/node_modules/process/browser.js",
-      "name": "../tsmill/node_modules/process/browser.js",
+      "id": "./node_modules/node-libs-browser/node_modules/process/browser.js",
+      "name": "./node_modules/node-libs-browser/node_modules/process/browser.js",
       "file": "client.js",
       "publicPath": "/client.js"
     }
@@ -423,6 +529,14 @@
     {
       "id": "./node_modules/symbol-observable/es/index.js",
       "name": "./node_modules/symbol-observable/es/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
+  "./../../webpack/buildin/global.js": [
+    {
+      "id": "./node_modules/webpack/buildin/global.js",
+      "name": "./node_modules/webpack/buildin/global.js",
       "file": "client.js",
       "publicPath": "/client.js"
     }
@@ -1135,10 +1249,10 @@
       "publicPath": "/client.js"
     }
   ],
-  "webpack-hot-middleware/client": [
+  "../jsutils/orList": [
     {
-      "id": "./node_modules/webpack-hot-middleware/client.js",
-      "name": "./node_modules/webpack-hot-middleware/client.js",
+      "id": "./node_modules/graphql/jsutils/orList.mjs",
+      "name": "./node_modules/graphql/jsutils/orList.mjs",
       "file": "client.js",
       "publicPath": "/client.js"
     }
@@ -1151,10 +1265,10 @@
       "publicPath": "/client.js"
     }
   ],
-  "./rules/VariablesAreInputTypes": [
+  "webpack-hot-middleware/client": [
     {
-      "id": "./node_modules/graphql/validation/rules/VariablesAreInputTypes.mjs",
-      "name": "./node_modules/graphql/validation/rules/VariablesAreInputTypes.mjs",
+      "id": "./node_modules/webpack-hot-middleware/client.js",
+      "name": "./node_modules/webpack-hot-middleware/client.js",
       "file": "client.js",
       "publicPath": "/client.js"
     }
@@ -1725,34 +1839,34 @@
       "publicPath": "/client.js"
     }
   ],
-  "schedule": [
+  "scheduler": [
     {
-      "id": "./node_modules/schedule/index.js",
-      "name": "./node_modules/schedule/index.js",
+      "id": "./node_modules/scheduler/index.js",
+      "name": "./node_modules/scheduler/index.js",
       "file": "client.js",
       "publicPath": "/client.js"
     }
   ],
-  "./cjs/schedule.development.js": [
+  "./cjs/scheduler.development.js": [
     {
-      "id": "./node_modules/schedule/cjs/schedule.development.js",
-      "name": "./node_modules/schedule/cjs/schedule.development.js",
+      "id": "./node_modules/scheduler/cjs/scheduler.development.js",
+      "name": "./node_modules/scheduler/cjs/scheduler.development.js",
       "file": "client.js",
       "publicPath": "/client.js"
     }
   ],
-  "schedule/tracing": [
+  "scheduler/tracing": [
     {
-      "id": "./node_modules/schedule/tracing.js",
-      "name": "./node_modules/schedule/tracing.js",
+      "id": "./node_modules/scheduler/tracing.js",
+      "name": "./node_modules/scheduler/tracing.js",
       "file": "client.js",
       "publicPath": "/client.js"
     }
   ],
-  "./cjs/schedule-tracing.development.js": [
+  "./cjs/scheduler-tracing.development.js": [
     {
-      "id": "./node_modules/schedule/cjs/schedule-tracing.development.js",
-      "name": "./node_modules/schedule/cjs/schedule-tracing.development.js",
+      "id": "./node_modules/scheduler/cjs/scheduler-tracing.development.js",
+      "name": "./node_modules/scheduler/cjs/scheduler-tracing.development.js",
       "file": "client.js",
       "publicPath": "/client.js"
     }
@@ -1855,16 +1969,16 @@
   ],
   "!!webpack amd define": [
     {
-      "id": "../tsmill/node_modules/webpack/buildin/amd-define.js",
-      "name": "../tsmill/node_modules/webpack/buildin/amd-define.js",
+      "id": "./node_modules/webpack/buildin/amd-define.js",
+      "name": "./node_modules/webpack/buildin/amd-define.js",
       "file": "client.js",
       "publicPath": "/client.js"
     }
   ],
   "!!webpack amd options": [
     {
-      "id": "../tsmill/node_modules/webpack/buildin/amd-options.js",
-      "name": "../tsmill/node_modules/webpack/buildin/amd-options.js",
+      "id": "./node_modules/webpack/buildin/amd-options.js",
+      "name": "./node_modules/webpack/buildin/amd-options.js",
       "file": "client.js",
       "publicPath": "/client.js"
     }
@@ -2083,6 +2197,14 @@
       "publicPath": "/client.js"
     }
   ],
+  "isarray": [
+    {
+      "id": "./node_modules/path-to-regexp/node_modules/isarray/index.js",
+      "name": "./node_modules/path-to-regexp/node_modules/isarray/index.js",
+      "file": "client.js",
+      "publicPath": "/client.js"
+    }
+  ],
   "./Prompt": [
     {
       "id": "./node_modules/react-router-dom/es/Prompt.js",
@@ -2221,166 +2343,6 @@
       "name": "./src/features/dashboard/view/pages/Dashboard/index.tsx",
       "file": "client.js",
       "publicPath": "/client.js"
-    }
-  ],
-  "../../../../auth/view/CurrentUserQuery": [
-    {
-      "id": "./src/features/auth/view/CurrentUserQuery.tsx",
-      "name": "./src/features/auth/view/CurrentUserQuery.tsx",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    },
-    {
-      "id": "./src/features/auth/view/CurrentUserQuery.tsx",
-      "name": "./src/features/auth/view/CurrentUserQuery.tsx",
-      "file": "1.bundle.js",
-      "publicPath": "/1.bundle.js"
-    },
-    {
-      "id": "./src/features/auth/view/CurrentUserQuery.tsx",
-      "name": "./src/features/auth/view/CurrentUserQuery.tsx",
-      "file": "2.bundle.js",
-      "publicPath": "/2.bundle.js"
-    }
-  ],
-  "./Login": [
-    {
-      "id": "./src/features/auth/view/pages/Login/Login.tsx",
-      "name": "./src/features/auth/view/pages/Login/Login.tsx",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "./LoginForm": [
-    {
-      "id": "./src/features/auth/view/pages/Login/LoginForm.tsx",
-      "name": "./src/features/auth/view/pages/Login/LoginForm.tsx",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    }
-  ],
-  "../../auth/view/withLogoutUser": [
-    {
-      "id": "./src/features/auth/view/withLogoutUser.tsx",
-      "name": "./src/features/auth/view/withLogoutUser.tsx",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    },
-    {
-      "id": "./src/features/auth/view/withLogoutUser.tsx",
-      "name": "./src/features/auth/view/withLogoutUser.tsx",
-      "file": "1.bundle.js",
-      "publicPath": "/1.bundle.js"
-    },
-    {
-      "id": "./src/features/auth/view/withLogoutUser.tsx",
-      "name": "./src/features/auth/view/withLogoutUser.tsx",
-      "file": "2.bundle.js",
-      "publicPath": "/2.bundle.js"
-    }
-  ],
-  "./Layout": [
-    {
-      "id": "./src/features/layout/view/Layout.tsx",
-      "name": "./src/features/layout/view/Layout.tsx",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    },
-    {
-      "id": "./src/features/layout/view/Layout.tsx",
-      "name": "./src/features/layout/view/Layout.tsx",
-      "file": "1.bundle.js",
-      "publicPath": "/1.bundle.js"
-    },
-    {
-      "id": "./src/features/layout/view/Layout.tsx",
-      "name": "./src/features/layout/view/Layout.tsx",
-      "file": "2.bundle.js",
-      "publicPath": "/2.bundle.js"
-    }
-  ],
-  "../../../../layout/view": [
-    {
-      "id": "./src/features/layout/view/index.ts",
-      "name": "./src/features/layout/view/index.ts",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    },
-    {
-      "id": "./src/features/layout/view/index.ts",
-      "name": "./src/features/layout/view/index.ts",
-      "file": "1.bundle.js",
-      "publicPath": "/1.bundle.js"
-    },
-    {
-      "id": "./src/features/layout/view/index.ts",
-      "name": "./src/features/layout/view/index.ts",
-      "file": "2.bundle.js",
-      "publicPath": "/2.bundle.js"
-    }
-  ],
-  "./Navigation": [
-    {
-      "id": "./src/features/navigation/view/Navigation.tsx",
-      "name": "./src/features/navigation/view/Navigation.tsx",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    },
-    {
-      "id": "./src/features/navigation/view/Navigation.tsx",
-      "name": "./src/features/navigation/view/Navigation.tsx",
-      "file": "1.bundle.js",
-      "publicPath": "/1.bundle.js"
-    },
-    {
-      "id": "./src/features/navigation/view/Navigation.tsx",
-      "name": "./src/features/navigation/view/Navigation.tsx",
-      "file": "2.bundle.js",
-      "publicPath": "/2.bundle.js"
-    }
-  ],
-  "../../navigation/view": [
-    {
-      "id": "./src/features/navigation/view/index.ts",
-      "name": "./src/features/navigation/view/index.ts",
-      "file": "0.bundle.js",
-      "publicPath": "/0.bundle.js"
-    },
-    {
-      "id": "./src/features/navigation/view/index.ts",
-      "name": "./src/features/navigation/view/index.ts",
-      "file": "1.bundle.js",
-      "publicPath": "/1.bundle.js"
-    },
-    {
-      "id": "./src/features/navigation/view/index.ts",
-      "name": "./src/features/navigation/view/index.ts",
-      "file": "2.bundle.js",
-      "publicPath": "/2.bundle.js"
-    }
-  ],
-  "./Register": [
-    {
-      "id": "./src/features/auth/view/pages/Register/Register.tsx",
-      "name": "./src/features/auth/view/pages/Register/Register.tsx",
-      "file": "1.bundle.js",
-      "publicPath": "/1.bundle.js"
-    }
-  ],
-  "./RegisterForm": [
-    {
-      "id": "./src/features/auth/view/pages/Register/RegisterForm.tsx",
-      "name": "./src/features/auth/view/pages/Register/RegisterForm.tsx",
-      "file": "1.bundle.js",
-      "publicPath": "/1.bundle.js"
-    }
-  ],
-  "./Dashboard": [
-    {
-      "id": "./src/features/dashboard/view/pages/Dashboard/Dashboard.tsx",
-      "name": "./src/features/dashboard/view/pages/Dashboard/Dashboard.tsx",
-      "file": "2.bundle.js",
-      "publicPath": "/2.bundle.js"
     }
   ]
 }
