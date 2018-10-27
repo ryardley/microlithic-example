@@ -15,7 +15,7 @@
     "@types/react-loadable": "^5.4.1",
     "@types/react-router-dom": "^4.3.1",
     "@types/uuid": "^3.4.4",
-    "tsmill": "^4.0.0"
+    "tsmill": "^4.0.2"
   },
   "scripts": {
     "test": "tsm test",
