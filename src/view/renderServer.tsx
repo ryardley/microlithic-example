@@ -6,7 +6,8 @@ import fs from 'fs';
 import fetch from 'isomorphic-fetch';
 import path from 'path';
 import React from 'react';
-import { ApolloProvider, renderToStringWithData } from 'react-apollo';
+import { ApolloProvider, getDataFromTree } from 'react-apollo';
+import { renderToString } from 'react-dom/server';
 import { HelmetProvider } from 'react-helmet-async';
 import Loadable from 'react-loadable';
 import { getBundles } from 'react-loadable/webpack';
@@ -18,18 +19,35 @@ const readFileAsync = promisify(fs.readFile);
 import App from './App';
 
 type HelmetFilledContext = {
-  helmet: {
+  helmet?: {
     title: string;
   };
 };
 
+function renderApolloState(state: any) {
+  return `<script>window.__APOLLO_STATE__=${JSON.stringify(state)};</script>`;
+}
+
+function renderBundles(
+  bundles: Array<{ file: string }>,
+  publicPath: string = ''
+) {
+  return bundles
+    .map(bundle => `<script src="${publicPath}${bundle.file}"></script>`)
+    .join('');
+}
+
+// This is a bit tricky so I added some comments
 export default async function renderServer({ req }: { req: Request }) {
+  // Pull in stats file to find codesplit client bundles
   const stats = JSON.parse(
     await readFileAsync(
       path.resolve(__dirname, '../react-loadable.json'),
       'utf-8'
     )
   );
+
+  // Setup apollo client
   const client = new ApolloClient({
     cache: new InMemoryCache(),
     link: createHttpLink({
@@ -43,38 +61,44 @@ export default async function renderServer({ req }: { req: Request }) {
     ssrMode: true,
   });
 
-  console.log({ url: req.url });
+  // Variarbles to capture information about rendering
   const routerContext = {};
-  const helmetContext = {};
-  const modules: any[] = [];
-  const app = (
+  const hctx: HelmetFilledContext = {};
+
+  // Create the component tree
+  const appTree = (
+    <ApolloProvider client={client}>
+      <StaticRouter location={req.url} context={routerContext}>
+        <HelmetProvider context={hctx}>
+          <App />
+        </HelmetProvider>
+      </StaticRouter>
+    </ApolloProvider>
+  );
+
+  // Preload all loadable components in the component tree
+  await Loadable.preloadAll();
+
+  // Fetch all apollo queries from the tree (causes a tree render)
+  await getDataFromTree(appTree);
+
+  // Create an array to capture modules
+  const modules = Array<string>();
+
+  // Render the final output capturing loadable modules to a modules array
+  const app = renderToString(
     <Loadable.Capture report={moduleName => modules.push(moduleName)}>
-      <ApolloProvider client={client}>
-        <StaticRouter location={req.url} context={routerContext}>
-          <HelmetProvider context={helmetContext}>
-            <App />
-          </HelmetProvider>
-        </StaticRouter>
-      </ApolloProvider>
+      {appTree}
     </Loadable.Capture>
   );
-  await Loadable.preloadAll();
-  const appAsString = await renderToStringWithData(app);
+
+  // Extract the bundles from the stats json
   const bundles = getBundles(stats, modules);
 
-  const uniqueBundles = [...new Set(bundles.map(item => item))];
-
-  const title =
-    (helmetContext as HelmetFilledContext).helmet.title || 'Microlithic App';
-
-  const script = `
-  <script>
-    window.__APOLLO_STATE__=${JSON.stringify(client.extract())};
-  </script>
-  ${uniqueBundles
-    .map(bundle => `<script src="/${bundle.file}"></script>`)
-    .join('\n')}`;
-
-  const head = '';
-  return { app: appAsString, script, head, title };
+  // return data for templating
+  return {
+    app,
+    script: `${renderApolloState(client.extract())}${renderBundles(bundles)}`,
+    title: (hctx.helmet && hctx.helmet.title) || 'Microlithic App',
+  };
 }
