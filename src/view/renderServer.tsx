@@ -13,10 +13,9 @@ import Loadable from 'react-loadable';
 import { getBundles } from 'react-loadable/webpack';
 import { StaticRouter } from 'react-router';
 import { promisify } from 'util';
+import App from './App';
 
 const readFileAsync = promisify(fs.readFile);
-
-import App from './App';
 
 type HelmetFilledContext = {
   helmet?: {
