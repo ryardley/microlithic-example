@@ -1,6 +1,6 @@
 import { Connection } from 'typeorm';
-import * as CommandBus from '../../../bus/CommandBus';
-import * as EventBus from '../../../bus/EventBus';
+import CommandBus from '../../../bus/CommandBus';
+import EventBus from '../../../bus/EventBus';
 import { IBusEvent } from '../../../bus/IBusEvent';
 import loginCommand from './handlers/login';
 import logoutCommand from './handlers/logout';

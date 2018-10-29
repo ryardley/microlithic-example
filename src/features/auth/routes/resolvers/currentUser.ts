@@ -1,5 +1,5 @@
 import correlatedEvent from '../../../../bus/correlatedEvents';
-import * as QueryBus from '../../../../bus/QueryBus';
+import QueryBus from '../../../../bus/QueryBus';
 import { UserToken } from '../../types';
 import { CurrentUserRequest } from '../../types/CurrentUserRequest';
 import { CurrentUserResponse } from '../../types/CurrentUserResponse';
@@ -10,7 +10,7 @@ export default async (
   __: any,
   { userToken }: { userToken: UserToken }
 ) => {
-  console.log('handling currentUser query....');
+  console.log('Routeing currentUser query....');
   const event = correlatedEvent(
     CurrentUserRequest({
       id: userToken && userToken.id,

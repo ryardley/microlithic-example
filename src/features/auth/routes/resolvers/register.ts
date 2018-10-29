@@ -1,6 +1,6 @@
-import * as CommandBus from '../../../../bus/CommandBus';
+import CommandBus from '../../../../bus/CommandBus';
 import correlatedEvent from '../../../../bus/correlatedEvents';
-import * as EventBus from '../../../../bus/EventBus';
+import EventBus from '../../../../bus/EventBus';
 import { UserRole } from '../../types';
 import { RegisterCommand } from '../../types/RegisterCommand';
 import { RegisterErrorRaised } from '../../types/RegisterErrorRaised';

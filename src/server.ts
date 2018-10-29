@@ -71,12 +71,6 @@ const startServer = async () => {
     await serveCommands();
     await serveQueries();
 
-    // app.get('/foo', async (req, res) => {
-    //   decache('./foo');
-    //   const { default: foo } = await import('./foo');
-    //   foo(req, res);
-    // });
-
     app.listen({ port: PORT }, () => {
       console.log(`Server listening at http://localhost:${PORT}`);
     });

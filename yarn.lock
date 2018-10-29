@@ -5908,10 +5908,10 @@ rxjs@^6.2.2:
   dependencies:
     tslib "^1.9.0"
 
-rxmsg@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/rxmsg/-/rxmsg-4.0.1.tgz#fea380381ff5eec8d9aa4bf0fa6a18ae0a67e27a"
-  integrity sha512-lIMdb6Tx8IuYEL0SP8SP3Hu/OH/0DitXohhWA7fU/7CxY0gm7YNR3QCs59W5+ZWQg/0v7nnU8my/SZyZQhcCDA==
+rxmsg@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/rxmsg/-/rxmsg-4.1.2.tgz#a2af247b5db0a1c9f44642dd1075645754d65e95"
+  integrity sha512-E8bCNIS8bM6CGSNXixjBvgJsXHOdkWc8+Od7DXJnmnJYe/k3d0cxWd/l3M5xglhyxzqxAYNsIf4cjoGIYh4ALQ==
   dependencies:
     amqp-connection-manager "^2.1.0"
     amqplib "^0.5.2"

@@ -1,12 +1,11 @@
-import { createEventEmitter } from 'rxmsg';
 import { createLoopbackConnector } from 'rxmsg/loopback';
+import { createMessageBus } from './createMessageBus';
 
-import configureDispatch from './dispatch';
-import configureSubscribe from './subscribe';
-import configureWaitForEvent from './waitForEvent';
-
-const emitter = createEventEmitter(createLoopbackConnector());
-
-export const dispatch = configureDispatch(emitter);
-export const subscribe = configureSubscribe(emitter);
-export const waitForEvent = configureWaitForEvent(subscribe);
+export default createMessageBus(
+  createLoopbackConnector({
+    persist: async (event: any) => {
+      console.log({ EventBus: { event } });
+      return true;
+    },
+  })
+);

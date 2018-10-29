@@ -1,5 +1,5 @@
 import { Connection } from 'typeorm';
-import { subscribe } from '../../../bus/EventBus';
+import EventBus from '../../../bus/EventBus';
 import User from '../models/User';
 import { UserRegisteredEvent } from '../types/UserRegisteredEvent';
 import { Store } from './types';
@@ -7,7 +7,7 @@ import { Store } from './types';
 export default function createStore(connection: Connection): Store {
   const UserRepo = connection.getRepository(User);
 
-  subscribe(
+  EventBus.subscribe(
     'UserRegisteredEvent',
     async ({ email, password, role }: UserRegisteredEvent) => {
       try {
