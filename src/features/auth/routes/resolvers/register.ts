@@ -1,5 +1,4 @@
 import CommandBus from '../../../../bus/CommandBus';
-import correlatedEvent from '../../../../bus/correlatedEvents';
 import EventBus from '../../../../bus/EventBus';
 import { UserRole } from '../../types';
 import { RegisterCommand } from '../../types/RegisterCommand';
@@ -13,13 +12,11 @@ type InputArgs = {
   role: UserRole;
 };
 export default async (_: any, { email, password, role }: InputArgs) => {
-  const event = correlatedEvent(
-    RegisterCommand({
-      email,
-      password,
-      role,
-    })
-  );
+  const event = RegisterCommand.correlated({
+    email,
+    password,
+    role,
+  });
 
   CommandBus.dispatch(event);
 

@@ -1,5 +1,4 @@
 import CommandBus from '../../../../bus/CommandBus';
-import correlatedEvent from '../../../../bus/correlatedEvents';
 import EventBus from '../../../../bus/EventBus';
 
 import { LoginCommand } from '../../types/LoginCommand';
@@ -18,13 +17,11 @@ export default async (
   { sid }: InputContext
 ) => {
   // Create the command event with a correlationId
-  const event = correlatedEvent(
-    LoginCommand({
-      email,
-      password,
-      sid,
-    })
-  );
+  const event = LoginCommand.correlated({
+    email,
+    password,
+    sid,
+  });
 
   // Dispatch it
   CommandBus.dispatch(event);

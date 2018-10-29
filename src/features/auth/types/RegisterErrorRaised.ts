@@ -1,4 +1,4 @@
-import { CorrelatedData, Event } from '../../../bus/types';
+import defineEvent, { Event } from '../../../bus/defineEvent';
 
 type RawData = {
   email: string;
@@ -6,10 +6,6 @@ type RawData = {
 };
 
 export type RegisterErrorRaised = Event<RawData, 'RegisterErrorRaised'>;
-
-export const RegisterErrorRaised = (
-  d: CorrelatedData<RawData>
-): RegisterErrorRaised => ({
-  ...d,
-  type: 'RegisterErrorRaised',
-});
+export const RegisterErrorRaised = defineEvent<RawData, 'RegisterErrorRaised'>(
+  'RegisterErrorRaised'
+);

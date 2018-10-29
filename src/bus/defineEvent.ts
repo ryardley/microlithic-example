@@ -1,19 +1,39 @@
-interface ICorrelated {
+import uuid from 'uuid/v4';
+
+type WithType<T, P> = T & {
+  type: P;
+};
+
+type Correlated<T> = T & {
   correlationId: string;
-}
+};
+export type Event<EShape, EString> = WithType<Correlated<EShape>, EString>;
 
-interface IWithType {
-  type: string;
-}
-
-function defineEvent<IPropShape>(type: string) {
-  return class implements ICorrelated, IWithType {
-    public type: string;
-    public correlationId: string;
-    public costructor(props: IPropShape & ICorrelated) {
-      this.type = type;
-      this.correlationId = props.correlationId;
-      Object.apply(this, props);
-    }
+export default function defineEvent<EventShape, EventString>(
+  type: EventString
+) {
+  type EventFn = (
+    props: EventShape & { correlationId: string }
+  ) => EventShape & {
+    correlationId: string;
+    type: EventString;
   };
+
+  type EventFnCorrelated = (
+    props: EventShape
+  ) => EventShape & {
+    correlationId: string;
+    type: EventString;
+  };
+
+  type CustomEventFn = EventFn & { correlated: EventFnCorrelated };
+  const CustomEvent = (props: EventShape & { correlationId: string }) =>
+    Object.assign({}, props, { type });
+
+  const wFn = {
+    correlated: (props: EventShape) =>
+      Object.assign({}, props, { correlationId: uuid() }, { type }),
+  };
+
+  return Object.assign(CustomEvent, wFn) as CustomEventFn;
 }

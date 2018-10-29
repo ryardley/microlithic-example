@@ -1,4 +1,4 @@
-import { CorrelatedData, Event } from '../../../bus/types';
+import defineEvent, { Event } from '../../../bus/defineEvent';
 import { UserToken } from '../types';
 
 type RawData = {
@@ -7,10 +7,6 @@ type RawData = {
 };
 
 export type UserLoggedInEvent = Event<RawData, 'UserLoggedInEvent'>;
-
-export const UserLoggedInEvent = (
-  d: CorrelatedData<RawData>
-): UserLoggedInEvent => ({
-  ...d,
-  type: 'UserLoggedInEvent',
-});
+export const UserLoggedInEvent = defineEvent<RawData, 'UserLoggedInEvent'>(
+  'UserLoggedInEvent'
+);

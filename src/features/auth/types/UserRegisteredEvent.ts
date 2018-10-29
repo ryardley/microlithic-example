@@ -1,4 +1,4 @@
-import { CorrelatedData, Event } from '../../../bus/types';
+import defineEvent, { Event } from '../../../bus/defineEvent';
 import { UserRole } from '../types';
 
 export type RawData = {
@@ -8,10 +8,6 @@ export type RawData = {
 };
 
 export type UserRegisteredEvent = Event<RawData, 'UserRegisteredEvent'>;
-
-export const UserRegisteredEvent = (
-  d: CorrelatedData<RawData>
-): UserRegisteredEvent => ({
-  ...d,
-  type: 'UserRegisteredEvent',
-});
+export const UserRegisteredEvent = defineEvent<RawData, 'UserRegisteredEvent'>(
+  'UserRegisteredEvent'
+);

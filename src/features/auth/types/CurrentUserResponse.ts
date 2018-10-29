@@ -1,4 +1,4 @@
-import { CorrelatedData, Event } from '../../../bus/types';
+import defineEvent, { Event } from '../../../bus/defineEvent';
 
 type RawData = {
   user?: {
@@ -7,10 +7,6 @@ type RawData = {
 };
 
 export type CurrentUserResponse = Event<RawData, 'CurrentUserResponse'>;
-
-export const CurrentUserResponse = (
-  d: CorrelatedData<RawData>
-): CurrentUserResponse => ({
-  ...d,
-  type: 'CurrentUserResponse',
-});
+export const CurrentUserResponse = defineEvent<RawData, 'CurrentUserResponse'>(
+  'CurrentUserResponse'
+);

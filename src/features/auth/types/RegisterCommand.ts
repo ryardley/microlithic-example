@@ -1,4 +1,4 @@
-import { CorrelatedData, Event } from '../../../bus/types';
+import defineEvent, { Event } from '../../../bus/defineEvent';
 
 type RawData = {
   email: string;
@@ -7,10 +7,6 @@ type RawData = {
 };
 
 export type RegisterCommand = Event<RawData, 'RegisterCommand'>;
-
-export const RegisterCommand = (
-  d: CorrelatedData<RawData>
-): RegisterCommand => ({
-  ...d,
-  type: 'RegisterCommand',
-});
+export const RegisterCommand = defineEvent<RawData, 'RegisterCommand'>(
+  'RegisterCommand'
+);

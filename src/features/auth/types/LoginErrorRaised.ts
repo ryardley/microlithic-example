@@ -1,4 +1,4 @@
-import { CorrelatedData, Event } from '../../../bus/types';
+import defineEvent, { Event } from '../../../bus/defineEvent';
 
 type RawData = {
   errors: Array<'invalid_password' | 'no_user_found'>;
@@ -7,7 +7,6 @@ type RawData = {
 };
 
 export type LoginErrorRaised = Event<RawData, 'LoginErrorRaised'>;
-
-export const LoginErrorRaised = (
-  d: CorrelatedData<RawData>
-): LoginErrorRaised => ({ ...d, type: 'LoginErrorRaised' });
+export const LoginErrorRaised = defineEvent<RawData, 'LoginErrorRaised'>(
+  'LoginErrorRaised'
+);

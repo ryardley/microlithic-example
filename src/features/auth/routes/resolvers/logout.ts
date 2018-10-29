@@ -3,7 +3,7 @@ import { LogoutCommand } from '../../types/LogoutCommand';
 
 export default async (_: any, __: any, { sid }: { sid: string }) => {
   CommandBus.dispatch(
-    LogoutCommand({
+    LogoutCommand.correlated({
       sid,
     })
   );
