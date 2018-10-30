@@ -1,12 +1,10 @@
-import defineEvent, { Event } from '../../../bus/defineEvent';
+import { BusEvent, declareEvent } from '../../../bus/BusEvent';
 
-type RawData = {
+export type LoginCommand = BusEvent<{
+  type: 'LoginCommand';
   email: string;
   password: string; // hashed and salted clientside eventually
   sid: string;
-};
+}>;
 
-export type LoginCommand = Event<RawData, 'LoginCommand'>;
-export const LoginCommand = defineEvent<RawData, 'LoginCommand'>(
-  'LoginCommand'
-);
+export const LoginCommand = declareEvent<LoginCommand>('LoginCommand');

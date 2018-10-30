@@ -1,12 +1,12 @@
-import defineEvent, { Event } from '../../../bus/defineEvent';
+import { BusEvent, declareEvent } from '../../../bus/BusEvent';
 
-type RawData = {
+export type CurrentUserResponse = BusEvent<{
+  type: 'CurrentUserResponse';
   user?: {
     email: string;
   };
-};
+}>;
 
-export type CurrentUserResponse = Event<RawData, 'CurrentUserResponse'>;
-export const CurrentUserResponse = defineEvent<RawData, 'CurrentUserResponse'>(
+export const CurrentUserResponse = declareEvent<CurrentUserResponse>(
   'CurrentUserResponse'
 );

@@ -1,5 +1,5 @@
 import { Connection } from 'typeorm';
-import { IBusEvent } from '../../../bus/IBusEvent';
+import { BaseEvent } from '../../../bus/BusEvent';
 import QueryBus from '../../../bus/QueryBus';
 import currentUser from './handlers/currentUser';
 
@@ -15,5 +15,5 @@ export default function init(connection: Connection) {
 
 export type Context = {
   store: Store;
-  dispatch: ((a: IBusEvent) => void);
+  dispatch: ((a: BaseEvent) => void);
 };

@@ -1,12 +1,10 @@
-import defineEvent, { Event } from '../../../bus/defineEvent';
+import { BusEvent, declareEvent } from '../../../bus/BusEvent';
 
-type RawData = {
+export type RegisterCommand = BusEvent<{
+  type: 'RegisterCommand';
   email: string;
   password: string;
   role: 'admin' | 'user';
-};
+}>;
 
-export type RegisterCommand = Event<RawData, 'RegisterCommand'>;
-export const RegisterCommand = defineEvent<RawData, 'RegisterCommand'>(
-  'RegisterCommand'
-);
+export const RegisterCommand = declareEvent<RegisterCommand>('RegisterCommand');

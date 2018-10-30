@@ -1,10 +1,10 @@
 import { RxMsgEventEmitter } from 'rxmsg';
-import { IBusEvent } from './IBusEvent';
+import { BaseEvent } from './BusEvent';
 
-const configureSubscribe = <T extends IBusEvent, P extends IBusEvent>(
+const configureSubscribe = <T extends BaseEvent, P extends BaseEvent>(
   emitter: RxMsgEventEmitter<T, P>
 ) =>
-  function subscribe<Q extends IBusEvent>(
+  function subscribe<Q extends BaseEvent>(
     eventName: Q['type'],
     callback: (event: Q) => any
   ) {

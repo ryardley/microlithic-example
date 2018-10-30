@@ -1,10 +1,7 @@
-import { CorrelatedData, Event } from './types';
+import { BusEvent, declareEvent } from './BusEvent';
 
-type RawData = {};
+export type TimeoutEvent = BusEvent<{
+  type: 'TimeoutEvent';
+}>;
 
-export type TimeoutEvent = Event<RawData, 'TimeoutEvent'>;
-
-export const TimeoutEvent = (d: CorrelatedData<RawData>): TimeoutEvent => ({
-  ...d,
-  type: 'TimeoutEvent',
-});
+export const TimeoutEvent = declareEvent<TimeoutEvent>('TimeoutEvent');

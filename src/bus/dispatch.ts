@@ -1,7 +1,7 @@
 import { RxMsgEventEmitter } from 'rxmsg';
-import { IBusEvent } from './IBusEvent';
+import { BaseEvent } from './BusEvent';
 
-const configureDispatch = <T extends IBusEvent, P extends IBusEvent>(
+const configureDispatch = <T extends BaseEvent, P extends BaseEvent>(
   emitter: RxMsgEventEmitter<T, P>
 ) =>
   function dispatch(event: T) {

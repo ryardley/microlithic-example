@@ -1,11 +1,11 @@
-import defineEvent, { Event } from '../../../bus/defineEvent';
+import { BusEvent, declareEvent } from '../../../bus/BusEvent';
 
-type RawData = {
+export type RegisterErrorRaised = BusEvent<{
+  type: 'RegisterErrorRaised';
   email: string;
   errors: Array<'user_already_exists'>;
-};
+}>;
 
-export type RegisterErrorRaised = Event<RawData, 'RegisterErrorRaised'>;
-export const RegisterErrorRaised = defineEvent<RawData, 'RegisterErrorRaised'>(
+export const RegisterErrorRaised = declareEvent<RegisterErrorRaised>(
   'RegisterErrorRaised'
 );

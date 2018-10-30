@@ -1,12 +1,12 @@
-import defineEvent, { Event } from '../../../bus/defineEvent';
+import { BusEvent, declareEvent } from '../../../bus/BusEvent';
 import { UserToken } from '../types';
 
-type RawData = {
+export type UserLoggedInEvent = BusEvent<{
+  type: 'UserLoggedInEvent';
   userToken: UserToken;
   sid: string;
-};
+}>;
 
-export type UserLoggedInEvent = Event<RawData, 'UserLoggedInEvent'>;
-export const UserLoggedInEvent = defineEvent<RawData, 'UserLoggedInEvent'>(
+export const UserLoggedInEvent = declareEvent<UserLoggedInEvent>(
   'UserLoggedInEvent'
 );

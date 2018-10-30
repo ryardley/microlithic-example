@@ -1,13 +1,13 @@
-import defineEvent, { Event } from '../../../bus/defineEvent';
+import { BusEvent, declareEvent } from '../../../bus/BusEvent';
 import { UserRole } from '../types';
 
-export type RawData = {
+export type UserRegisteredEvent = BusEvent<{
+  type: 'UserRegisteredEvent';
   email: string;
   password: string;
   role: UserRole;
-};
+}>;
 
-export type UserRegisteredEvent = Event<RawData, 'UserRegisteredEvent'>;
-export const UserRegisteredEvent = defineEvent<RawData, 'UserRegisteredEvent'>(
+export const UserRegisteredEvent = declareEvent<UserRegisteredEvent>(
   'UserRegisteredEvent'
 );

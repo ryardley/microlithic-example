@@ -1,10 +1,10 @@
-import defineEvent, { Event } from '../../../bus/defineEvent';
+import { BusEvent, declareEvent } from '../../../bus/BusEvent';
 
-type RawData = {
+export type UserLoggedOutEvent = BusEvent<{
+  type: 'UserLoggedOutEvent';
   sid: string;
-};
+}>;
 
-export type UserLoggedOutEvent = Event<RawData, 'UserLoggedOutEvent'>;
-export const UserLoggedOutEvent = defineEvent<RawData, 'UserLoggedOutEvent'>(
+export const UserLoggedOutEvent = declareEvent<UserLoggedOutEvent>(
   'UserLoggedOutEvent'
 );

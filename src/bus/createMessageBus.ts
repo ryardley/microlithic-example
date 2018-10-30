@@ -1,11 +1,11 @@
 import { Connector, createEventEmitter } from 'rxmsg';
 
+import { BaseEvent } from './BusEvent';
 import configureDispatch from './dispatch';
-import { IBusEvent } from './IBusEvent';
 import configureSubscribe from './subscribe';
 import configureWaitForEvent from './waitForEvent';
 
-export function createMessageBus<P extends IBusEvent, Q extends IBusEvent>(
+export function createMessageBus<P extends BaseEvent, Q extends BaseEvent>(
   connector: Connector<{ to: any; body: P }, { to: any; body: Q }>
 ) {
   const emitter = createEventEmitter(connector);

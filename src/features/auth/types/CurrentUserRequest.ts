@@ -1,14 +1,12 @@
-// import { CorrelatedData, Event } from '../../../bus/types';
+import { BusEvent, declareEvent } from '../../../bus/BusEvent';
 import { UserToken } from '../types';
 
-import defineEvent, { Event } from '../../../bus/defineEvent';
-
-type RawData = {
+export type CurrentUserRequest = BusEvent<{
+  type: 'CurrentUserRequest';
   userToken: UserToken;
   id: string;
-};
+}>;
 
-export type CurrentUserRequest = Event<RawData, 'CurrentUserRequest'>;
-export const CurrentUserRequest = defineEvent<RawData, 'CurrentUserRequest'>(
+export const CurrentUserRequest = declareEvent<CurrentUserRequest>(
   'CurrentUserRequest'
 );
