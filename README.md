@@ -28,11 +28,9 @@ Here is an example from our routes file here. In this example we want to get the
 
 ```typescript
 // Create the event
-const event = correlatedEvent(
-  CurrentUserRequest({
-    id: 123
-  })
-);
+const event = CurrentUserRequest.correlated({
+  id: 123
+})
 
 // Dispatch it
 QueryBus.dispatch(event);
@@ -62,13 +60,11 @@ CommandBus.dispatch(
 You can also wait for events off different buses:
 
 ```typescript
-const event = correlatedEvent(
-  LoginCommand({
-    email,
-    password,
-    sid
-  })
-);
+const event = LoginCommand.correlated({
+  email,
+  password,
+  sid
+})
 
 CommandBus.dispatch(event);
 
@@ -82,13 +78,11 @@ await EventBus.waitForEvent<UserLoggedInEvent>(
 You can wait for the first correlated error event from a selection of events:
 
 ```typescript
-const event = correlatedEvent(
-  LoginCommand({
-    email:"foo@bar.com",
-    password: "fa352471287",
-    sid: "12345687651234"
-  })
-);
+const event = LoginCommand.correlated({
+  email:"foo@bar.com",
+  password: "fa352471287",
+  sid: "12345687651234"
+})
 
 // Dispatch it
 CommandBus.dispatch(event);
