@@ -9,7 +9,6 @@ export default async (
   __: any,
   { userToken }: { userToken: UserToken }
 ) => {
-  console.log('Routeing currentUser query....');
   const event = CurrentUserRequest.correlated({
     id: userToken && userToken.id,
     userToken,
@@ -21,7 +20,6 @@ export default async (
     event.correlationId,
     'CurrentUserResponse'
   );
-  console.log('Received a response!');
   if (response.type === 'TimeoutEvent') {
     throw new TimeoutError();
   }

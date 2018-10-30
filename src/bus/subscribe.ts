@@ -8,7 +8,6 @@ const configureSubscribe = <T extends BaseEvent, P extends BaseEvent>(
     eventName: Q['type'],
     callback: (event: Q) => any
   ) {
-    console.log({ subscribeTo: { eventName } });
     emitter.on(eventName, callback);
     return () => {
       emitter.off(eventName, callback);

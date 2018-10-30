@@ -9,7 +9,6 @@ export default ({ store, dispatch }: Context) => async ({
   id,
   correlationId,
 }: CurrentUserRequest) => {
-  console.log('Handling currentUser query....');
   if (!userToken) {
     return dispatch(CurrentUserResponse({ correlationId }));
   }

@@ -9,7 +9,6 @@ const configureDispatch = <T extends BaseEvent, P extends BaseEvent>(
     // and when using synchronous loopbacks this can cause problems
     setTimeout(() => {
       const eventName = event.type;
-      console.log(JSON.stringify({ eventName, event }));
       emitter.emit(eventName, event);
     }, 0);
     return event;

@@ -3,8 +3,8 @@ import { createMessageBus } from './createMessageBus';
 
 export default createMessageBus(
   createLoopbackConnector({
-    persist: async (event: any) => {
-      console.log(JSON.stringify({ QueryBus: { event } }));
+    persist: async ({ body }: any) => {
+      console.log(JSON.stringify({ QueryBus: { [body.type]: body } }));
       return true;
     },
   })
