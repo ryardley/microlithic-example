@@ -1,5 +1,11 @@
 # Microlithic Application
 
+This is a little toy architecture I have been playing around with. The goal here is to outline some concepts and test the use of rxmsg in context. 
+
+I chose the example of trying to spread authentication over an event bus. This is not something I would normally do in a production system however it has some more complex mechanics than basic CRUD or saving a post let's say. 
+
+## Microlithicism
+
 A microlithic application is deployed as a monolith but conceptually functions like a microservice system.
 
 The way we do this is by sending messages between select component boundaries using events.
